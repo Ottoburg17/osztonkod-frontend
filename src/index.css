@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+/* ============================= */
+
+/* Végtelen szimbólum finom áramlása */
+@keyframes infinity-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -260;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease;
+}
+
+
+@keyframes successPop {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-successPop {
+  animation: successPop 0.6s ease;
+}
+
+
+@keyframes glowBorder {
+  0% {
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.animate-glowBorder {
+  animation: glowBorder 1.2s ease;
+}
+
+
+
+/* Dashboard / Dopamine cycle oldalon ne legyen footer-spacing */
+body.dopamine-cycle-page footer {
+  margin-top: 0 !important;
+}
+
+
+@keyframes glowBorder {
+  0% {
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.animate-glowBorder {
+  animation: glowBorder 1.8s ease;
+}
