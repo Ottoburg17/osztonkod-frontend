@@ -74,40 +74,22 @@ export default function Account() {
 
 
 
-
-  const handleSaveProfile = async () => {
+const handleSaveProfile = async () => {
   setSaving(true);
   setMessage(null);
 
   try {
-    const token = localStorage.getItem("token");
-
-    const res = await fetch("http://localhost:5000/api/auth/profile", {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify({ name }),
-    });
-
-    const data = await res.json();
-
-    if (!res.ok) {
-      throw new Error(data.error || "Hiba történt");
-    }
+    await api.put("/auth/profile", { name });
 
     setMessageType("success");
     setMessage("Profil sikeresen frissítve");
   } catch (err) {
     setMessageType("error");
-    setMessage(err.message);
+    setMessage(err.response?.data?.error || "Hiba történt");
   } finally {
     setSaving(false);
   }
 };
-
-
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 pt-40 sm:pt-24 pb-10 space-y-8 sm:space-y-12">
@@ -406,28 +388,13 @@ export default function Account() {
 
 
                   try {
-                    const token = localStorage.getItem("token");
+                      
+                    await api.put("/auth/change-password", {
+                      currentPassword,
+                        newPassword,
+                    });
 
-                    const res = await fetch(
-                      "http://localhost:5000/api/auth/change-password",
-                      {
-                        method: "PUT",
-                        headers: {
-                          "Content-Type": "application/json",
-                          Authorization: `Bearer ${token}`,
-                        },
-                        body: JSON.stringify({
-                          currentPassword,
-                          newPassword,
-                        }),
-                      }
-                    );
-
-                    const data = await res.json();
-                    if (!res.ok) throw new Error(data.error);
-                    
-                    
-                    
+                  
                     setPasswordMessageType("success");
                     setPasswordMessage("Jelszó sikeresen módosítva");
 
@@ -503,32 +470,20 @@ export default function Account() {
 
 
             try {
-              const token = localStorage.getItem("token");
-
-              const res = await fetch(
-                "http://localhost:5000/api/auth/delete-account",
-                {
-                  method: "DELETE",
-                  headers: {
-                    Authorization: `Bearer ${token}`,
-                  },
-                }
-              );
-
-              const data = await res.json();
-              if (!res.ok) throw new Error(data.error);
+              await api.delete("/auth/delete-account");
+              
 
               setDeleteMessageType("success");
               setDeleteMessage("Fiók sikeresen törölve. Átírányítás..");
              
             setTimeout(() => {
               localStorage.removeItem("token");
-              window.location.href = "/login";
+              window.location.href = "/";
             }, 1500);
 
             } catch (err) {
              setDeleteMessageType("error");
-             setDeleteMessage(err.massage || "Hiba történt a fiók törlésekor");
+             setDeleteMessage(err.response?.data?.error || "Hiba történt a fiók törlésekor");
             } finally {
               setDeleteSaving(false);
             }

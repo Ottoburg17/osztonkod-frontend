@@ -302,7 +302,7 @@ return (
              
            <Route index element={<AdminDashboard />} />
               <Route path="dashboard" element={<AdminDashboard />} />
-              <Route path="dashboard" element={<AdminDashboard />} />
+              
               <Route path="orders" element={<AdminOrders />} />
               <Route path="orders/:id" element={<AdminOrderDetails />} />
               <Route path="subscriptions" element={<AdminSubscriptions />} />
