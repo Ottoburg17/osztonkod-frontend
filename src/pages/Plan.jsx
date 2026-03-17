@@ -159,13 +159,13 @@ export default function Plan() {
       content="Interaktív önreflexiós eszköz a viselkedési minták felismeréséhez. A Viselkedési Navigátor segít megfigyelni stressz-, kommunikációs és motivációs helyzeteket."
     />
 
-    <link rel="canonical" href="https://osztonkod.hu/viselkedesi-navigator" />
+    <link rel="canonical" href="https://www.osztonkod.hu/viselkedesi-navigator" />
 
     <meta property="og:title" content="Viselkedési Navigátor – Ösztönkód" />
     <meta property="og:description" content="Interaktív eszköz a viselkedési minták megfigyeléséhez és tudatosításához." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://osztonkod.hu/viselkedesi-navigator" />
-    <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+    <meta property="og:url" content="https://www.osztonkod.hu/viselkedesi-navigator" />
+    <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
     <meta property="og:locale" content="hu_HU" />
 
     </Helmet>

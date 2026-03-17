@@ -16,12 +16,12 @@ export default function Terms() {
             content="Felhasználási feltételek az Ösztönkód weboldal és szolgáltatások igénybevételéhez."
           />
 
-          <link rel="canonical" href="https://osztonkod.hu/terms" />
+          <link rel="canonical" href="https://www.osztonkod.hu/terms" />
 
           <meta property="og:title" content="Felhasználási feltételek – Ösztönkód" />
           <meta property="og:description" content="Felhasználási feltételek az Ösztönkód weboldal használatához." />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://osztonkod.hu/terms" />
+          <meta property="og:url" content="https://www.osztonkod.hu/terms" />
           <meta property="og:site_name" content="Ösztönkód" />
           <meta property="og:locale" content="hu_HU" />
         </Helmet>
@@ -255,7 +255,7 @@ export default function Terms() {
               és visszavonásig érvényesek.
             </p>
             <p className="text-gray-500 text-sm mt-4">
-              Utolsó frissítés: 2025. január 1.
+              Utolsó frissítés: 2026. március 17.
             </p>
           </section>
 

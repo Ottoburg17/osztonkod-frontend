@@ -124,7 +124,22 @@ export default function Footer() {
             >
               Előfizetés
             </Link>
+
+            <span className="opacity-40">|</span>
+
+            {/* ✅ IDE KELL */}
+            <button
+              onClick={() => {
+                localStorage.removeItem("cookie-consent");
+                window.location.reload();
+              }}
+              className="text-white hover:text-amber-300 hover:underline transition"
+            >
+              Cookie beállítások
+            </button>
+
            </div>
+
 
           <p className="mt-2 text-[12px] md:text-[12px] text-white-100/50 max-w-3xl mx-auto leading-relaxed">
             Az oldal nem nyújt mentálhigiénés, pszichológiai vagy egészségügyi szolgáltatást.

@@ -21,7 +21,7 @@ export default function SubscriptionPolicy() {
         />
 
         {/* CANONICAL */}
-        <link rel="canonical" href="https://osztonkod.hu/jogi/elofizetes" />
+        <link rel="canonical" href="https://www.osztonkod.hu/jogi/elofizetes" />
 
         {/* OPEN GRAPH */}
         <meta property="og:title" content="Előfizetés és lemondás – Ösztönkód" />
@@ -30,7 +30,7 @@ export default function SubscriptionPolicy() {
           content="Az Ösztönkód alkalmazás előfizetési és lemondási feltételei."
         />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://osztonkod.hu/jogi/elofizetes" />
+        <meta property="og:url" content="https://www.osztonkod.hu/jogi/elofizetes" />
         <meta property="og:site_name" content="Ösztönkód" />
 
         {/* TWITTER */}
@@ -48,7 +48,7 @@ export default function SubscriptionPolicy() {
               "@context": "https://schema.org",
               "@type": "WebPage",
               "name": "Előfizetés és lemondás",
-              "url": "https://osztonkod.hu/jogi/elofizetes",
+              "url": "https://www.osztonkod.hu/jogi/elofizetes",
               "description": "Az Ösztönkód alkalmazás előfizetési feltételei és lemondási szabályai."
             }
           `}

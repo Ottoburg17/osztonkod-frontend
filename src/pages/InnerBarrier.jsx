@@ -118,13 +118,13 @@ export default function InnerBarrier() {
           content="Interaktív önreflexiós eszköz az ellenállás és a belső gát felismeréséhez. Segít tudatosítani, mi akadályozza a cselekvést egy adott pillanatban."
         />
 
-        <link rel="canonical" href="https://osztonkod.hu/belso-gat" />
+        <link rel="canonical" href="https://www.osztonkod.hu/belso-gat" />
 
         <meta property="og:title" content="Belső gát – önreflexiós eszköz" />
         <meta property="og:description" content="Interaktív eszköz a belső ellenállás felismeréséhez és tudatosításához." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://osztonkod.hu/belso-gat" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+        <meta property="og:url" content="https://www.osztonkod.hu/belso-gat" />
+        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
         <meta property="og:site_name" content="Ösztönkód" />
         <meta property="og:locale" content="hu_HU" />
 

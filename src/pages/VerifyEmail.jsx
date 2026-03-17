@@ -57,7 +57,7 @@ export default function VerifyEmail() {
         {status === "success" && (
           <>
             <h2 className="text-2xl font-bold text-green-600 mb-4">
-              🎉 Email megerősítve
+              Email megerősítve
             </h2>
             <p className="mb-6">{message}</p>
             <button

@@ -71,13 +71,13 @@ export default function Services() {
           content="Fedezd fel az Érzelmi Ösztönkód önismereti programjait és elemzéseit. Eszközök az érzelmi minták felismeréséhez és a tudatos működés kialakításához."
           />
 
-          <link rel="canonical" href="https://osztonkod.hu/services" />
+          <link rel="canonical" href="https://www.osztonkod.hu/services" />
 
           <meta property="og:title" content="Önismereti programok – Érzelmi Ösztönkód" />
           <meta property="og:description" content="Programok és eszközök az érzelmi minták felismeréséhez és a tudatos működéshez." />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://osztonkod.hu/services" />
-          <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+          <meta property="og:url" content="https://www.osztonkod.hu/services" />
+          <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
           <meta property="og:site_name" content="Érzelmi Ösztönkód" />
           <meta property="og:locale" content="hu_HU" />
         

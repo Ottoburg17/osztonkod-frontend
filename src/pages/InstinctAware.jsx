@@ -54,19 +54,19 @@ export default function InstinctAware({
         content="Interaktív önreflexiós eszköz a visszatérő gondolati minták felismeréséhez. Segít tudatosítani az automatikus reakciókat és új nézőpontokat találni."
       />
 
-      <link rel="canonical" href="https://osztonkod.hu/gondolati-minta-felismeres" />
+      <link rel="canonical" href="https://www.osztonkod.hu/gondolati-minta-felismeres" />
 
       <meta property="og:title" content="Gondolati minta felismerés – Ösztönkód" />
       <meta property="og:description" content="Interaktív eszköz a visszatérő gondolati minták felismeréséhez." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://osztonkod.hu/gondolati-minta-felismeres" />
-      <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+      <meta property="og:url" content="https://www.osztonkod.hu/gondolati-minta-felismeres" />
+      <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
       <meta property="og:locale" content="hu_HU" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Gondolati minta felismerés – Ösztönkód" />
       <meta name="twitter:description" content="Interaktív eszköz a visszatérő gondolati minták felismeréséhez." />
-      <meta name="twitter:image" content="https://osztonkod.hu/og-image.jpg" />
+      <meta name="twitter:image" content="https://www.osztonkod.hu/og-image.jpg" />
 
       </Helmet>
 

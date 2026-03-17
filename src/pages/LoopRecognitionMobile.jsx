@@ -116,13 +116,13 @@ export default function LoopRecognitionMobile() {
           content="Interaktív önreflexiós eszköz a viselkedési loopok felismeréséhez. Segít megérteni, hogyan alakul ki a trigger–érzés–viselkedés ciklus."
         />
 
-        <link rel="canonical" href="https://osztonkod.hu/loop-felismeres" />
+        <link rel="canonical" href="https://www.osztonkod.hu/loop-felismeres" />
 
         <meta property="og:title" content="Loop felismerés – Ösztönkód eszköz" />
         <meta property="og:description" content="Interaktív eszköz a viselkedési ciklusok és ismétlődő minták felismeréséhez." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://osztonkod.hu/loop-felismeres" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+        <meta property="og:url" content="https://www.osztonkod.hu/loop-felismeres" />
+        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
         <meta property="og:locale" content="hu_HU" />
 
       </Helmet>

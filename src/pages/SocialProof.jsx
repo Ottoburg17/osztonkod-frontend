@@ -37,13 +37,13 @@ export default function SocialProof() {
   content="Olvasd el mások személyes felismeréseit és megéléseit az Érzelmi Ösztönkód rendszerrel kapcsolatban. Valós tapasztalatok és visszajelzések."
 />
 
-    <link rel="canonical" href="https://osztonkod.hu/visszajelzesek" />
+    <link rel="canonical" href="https://www.osztonkod.hu/visszajelzesek" />
 
     <meta property="og:title" content="Visszajelzések – Érzelmi Ösztönkód" />
     <meta property="og:description" content="Személyes felismerések és megélések az Érzelmi Ösztönkód rendszerrel kapcsolatban." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://osztonkod.hu/visszajelzesek" />
-    <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+    <meta property="og:url" content="https://www.osztonkod.hu/visszajelzesek" />
+    <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
     <meta property="og:site_name" content="Érzelmi Ösztönkód" />
     <meta property="og:locale" content="hu_HU" />
 

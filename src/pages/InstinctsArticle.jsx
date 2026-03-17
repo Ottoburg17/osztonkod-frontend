@@ -18,13 +18,13 @@ export default function InstinctsArticle() {
           content="Az ösztönök típusainak, működési elveinek és fejlődéstani szerepének komplex áttekintése. Biológiai, pszichológiai és evolúciós megközelítésben."
         />
 
-        <link rel="canonical" href="https://osztonkod.hu/osztonok" />
+        <link rel="canonical" href="https://www.osztonkod.hu/osztonok" />
 
         <meta property="og:title" content="Ösztönök – Pszichológiai és Biológiai Áttekintés" />
         <meta property="og:description" content="Az ösztönök típusainak, működési elveinek és fejlődéstani szerepének komplex áttekintése." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://osztonkod.hu/osztonok" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+        <meta property="og:url" content="https://www.osztonkod.hu/osztonok" />
+        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
         <meta property="og:site_name" content="Ösztönkód" />
         <meta property="og:locale" content="hu_HU" />
 
@@ -43,7 +43,7 @@ export default function InstinctsArticle() {
             "@type": "Organization",
             "name": "Ösztönkód"
           },
-          "mainEntityOfPage": "https://osztonkod.hu/osztonok"
+          "mainEntityOfPage": "https://www.osztonkod.hu/osztonok"
           }
           `}
           </script>

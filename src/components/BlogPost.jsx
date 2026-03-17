@@ -967,13 +967,13 @@ export default function BlogPost() {
 
         <meta name="description" content={description} />
 
-        <link rel="canonical" href={`https://osztonkod.hu/blog/${slug}`} />
+        <link rel="canonical" href={`https://www.osztonkod.hu/blog/${slug}`} />
 
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://osztonkod.hu/blog/${slug}`} />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+        <meta property="og:url" content={`https://www.osztonkod.hu/blog/${slug}`} />
+        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
         <meta property="og:site_name" content="Érzelmi Ösztönkód" />
         <meta property="og:locale" content="hu_HU" />
 
@@ -1004,7 +1004,7 @@ export default function BlogPost() {
               "name": "Ösztönkód",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://osztonkod.hu/logo.png"
+                "url": "https://www.osztonkod.hu/logo.png"
               }
             },
             "datePublished": post.publishedAt || post.date,
@@ -1012,7 +1012,7 @@ export default function BlogPost() {
               post.updatedAt || post.publishedAt || post.date,
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://osztonkod.hu/blog/${slug}`
+              "@id": `https://www.osztonkod.hu/blog/${slug}`
             }
           })}
         </script>

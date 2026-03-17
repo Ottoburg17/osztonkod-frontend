@@ -31,7 +31,7 @@ export default function SchemaDetail() {
 
         <link
           rel="canonical"
-          href={`https://osztonkod.hu/schema/${schemaId}`}
+          href={`https://www.osztonkod.hu/schema/${schemaId}`}
         />
 
         <script type="application/ld+json">
@@ -50,7 +50,7 @@ export default function SchemaDetail() {
             },
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://osztonkod.hu/schema/${schemaId}`
+              "@id": `https://www.osztonkod.hu/schema/${schemaId}`
             }
           })}
         </script>

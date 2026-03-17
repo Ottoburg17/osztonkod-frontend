@@ -1,14 +1,26 @@
-import { useState } from "react";
-import { setConsent } from "../cookieConsent";
+import { useEffect, useState } from "react";
+import { getConsent, setConsent } from "../cookieConsent";
 import { loadAnalytics } from "../analytics/loadAnalytics";
 
-
-
 export default function CookieBanner() {
-  const [visible, setVisible] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return !localStorage.getItem("cookie-consent");
-  });
+  const [visible, setVisible] = useState(false);
+
+  // 🔥 Consent betöltés + analytics indítás
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const consent = getConsent();
+
+    if (!consent) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setVisible(true);
+    } else {
+      // ha már elfogadta korábban → töltsük az analytics-et
+      if (consent.analytics) {
+        loadAnalytics();
+      }
+    }
+  }, []);
 
   const acceptNecessary = () => {
     setConsent({
@@ -27,35 +39,38 @@ export default function CookieBanner() {
       marketing: true,
       timestamp: Date.now(),
     });
+
+    loadAnalytics(); // 🔥 csak elfogadás után töltjük
     setVisible(false);
-    loadAnalytics();
   };
 
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-[9999] bg-white border-t">
-      <div className="max-w-6xl mx-auto px-4 py-2 sm:px-6 sm:py-4 flex flex-col sm:flex-row gap-3 justify-between">
+    <div className="fixed bottom-0 inset-x-0 z-[9999] bg-white border-t shadow-lg">
+      <div className="max-w-6xl mx-auto px-4 py-3 sm:px-6 sm:py-4 flex flex-col sm:flex-row gap-4 justify-between items-center">
+
+        {/* SZÖVEG */}
         <p className="text-xs sm:text-sm text-gray-600">
-          Az oldal működéséhez szükséges sütiket használunk. Statisztikai és
-          marketing célú sütik csak az Ön hozzájárulásával kerülnek
-          elhelyezésre.{" "}
+          Az oldal működéséhez szükséges sütiket használunk.
+          Statisztikai és marketing célú sütik csak az Ön hozzájárulásával kerülnek elhelyezésre.{" "}
           <a href="/cookie-tajekoztato" className="underline">
-            További információ
+            Cookie tájékoztató
           </a>
         </p>
 
+        {/* GOMBOK */}
         <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
           <button
             onClick={acceptNecessary}
-            className="px-4 py-2 border rounded"
+            className="px-4 py-2 border rounded-lg text-sm hover:bg-gray-100 transition"
           >
             Csak szükséges
           </button>
 
           <button
             onClick={acceptAll}
-            className="px-4 py-2 bg-green-600 text-white rounded"
+            className="px-4 py-2 bg-green-600 text-white rounded-lg text-sm hover:bg-green-700 transition"
           >
             Elfogadom mindet
           </button>
@@ -64,6 +79,3 @@ export default function CookieBanner() {
     </div>
   );
 }
-
-
-

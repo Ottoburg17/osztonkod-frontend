@@ -18,7 +18,7 @@ export default function FeedbackSuccess() {
           transition={{ delay: 0.2 }}
           className="text-3xl font-bold text-green-600"
         >
-          Köszönjük a megosztást 
+         Köszönjük – a felismerésed számít
         </motion.h1>
 
         <p className="text-gray-700 leading-relaxed">

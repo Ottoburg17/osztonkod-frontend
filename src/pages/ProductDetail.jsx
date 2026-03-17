@@ -71,8 +71,8 @@ export default function ProductDetail() {
       <meta property="og:title" content={`${product.title} | Ösztönkód`} />
       <meta property="og:description" content={product.description} />
       <meta property="og:type" content="product" />
-      <meta property="og:url" content={`https://osztonkod.hu/products/${product.slug}`} />
-      <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+      <meta property="og:url" content={`https://www.osztonkod.hu/products/${product.slug}`} />
+      <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
       <meta property="og:site_name" content="Ösztönkód" />
       <meta property="og:locale" content="hu_HU" />
 

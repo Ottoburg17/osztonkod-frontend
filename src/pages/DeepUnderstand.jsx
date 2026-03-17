@@ -17,13 +17,13 @@ export default function DeepUnderstand() {
           content="Az érzelmi minták, ösztönkódok és tudattalan működés tudományos, pszichológiai és idegrendszeri áttekintése."
         />
 
-        <link rel="canonical" href="https://osztonkod.hu/melyebb-megertes" />
+        <link rel="canonical" href="https://www.osztonkod.hu/melyebb-megertes" />
 
         <meta property="og:title" content="Mélyebb Megértés – Az érzelmi működés tudományos alapjai" />
         <meta property="og:description" content="Az érzelmi minták, ösztönkódok és tudattalan működés pszichológiai és idegrendszeri magyarázata." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://osztonkod.hu/melyebb-megertes" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+        <meta property="og:url" content="https://www.osztonkod.hu/melyebb-megertes" />
+        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
         <meta property="og:site_name" content="Ösztönkód" />
         <meta property="og:locale" content="hu_HU" />
 
@@ -31,7 +31,7 @@ export default function DeepUnderstand() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mélyebb Megértés – Az érzelmi működés tudományos alapjai" />
         <meta name="twitter:description" content="Az érzelmi minták és ösztönkódok pszichológiai és idegrendszeri működése." />
-        <meta name="twitter:image" content="https://osztonkod.hu/og-image.jpg" />
+        <meta name="twitter:image" content="https://www.osztonkod.hu/og-image.jpg" />
       </Helmet>
 
       {/* ----- OPTIMALIZÁLT PARALLAX GLOW ----- */}

@@ -89,8 +89,10 @@ export default function HeroSection() {
         transition={{ duration: 1.1 }}
         className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-amber-400 drop-shadow-md relative z-10 leading-tight"
       >
-      Miért reagálsz mindig ugyanúgy, <br />
-      még akkor is, amikor tudod, hogy nem kellene?
+        Miért reagálsz mindig ugyanúgy? <br />
+        <span className="text-gray-800">
+         Az érzelmi reakcióid mögötti valódi minta
+        </span>
       </motion.h1>
 
       <motion.p
@@ -99,15 +101,25 @@ export default function HeroSection() {
         transition={{ duration: 1, delay: 0.2 }}
         className="text-base sm:text-lg md:text-xl mt-6 max-w-2xl text-gray-700 leading-relaxed relative z-10"
       >
-       Érzelmi Ösztönkód – az észlelési minták megértése,
-       amelyek észrevétlenül formálják a reakcióidat.
+      Érzelmi Ösztönkód – egy önismereti módszer,
+      amely segít megérteni az automatikus érzelmi reakcióidat,
+      és kilépni a visszatérő mintákból.
       </motion.p>
+
+      <motion.p
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, delay: 0.3 }}
+      className="text-base md:text-lg mt-4 text-gray-600 relative z-10"
+    >
+     Ha már próbáltál változtatni, de mégis ugyanazokba a helyzetekbe jutsz vissza
+    </motion.p>
 
       <motion.p
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.35 }}
-        className="text-sm md:text-base mt-6 max-w-xl text-gray-500 italic relative z-10"
+        className="text-sm md:text-base mt-6 max-w-xl text-gray-600 italic relative z-10"
       >
         Ez nem személyiségteszt, és nem tanácsadás –
         hanem egy másfajta ránézés arra, ahogyan működsz.
@@ -126,9 +138,14 @@ export default function HeroSection() {
           className="px-8 py-3 rounded-2xl text-lg font-semibold bg-green-600 hover:bg-green-700 
             text-white shadow-lg transition transform hover:scale-[1.05] relative z-10"
         >
-          Kezdd el a felismerést
+          Kezdd el megérteni a reakcióid →
         </Link>
+
+      <p className="mt-3 text-xs text-gray-500 relative z-10">
+        Nincs regisztráció • 2 perc • azonnali felismerés
+      </p>
       </motion.div>
+     
     </section>
   );
 }

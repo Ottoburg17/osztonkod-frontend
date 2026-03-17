@@ -141,13 +141,13 @@ export default function Blog() {
         content="Önismereti és pszichológiai cikkek az idegrendszer működéséről, traumáról, érzelmi mintákról és tudatos működésről."
         />
 
-        <link rel="canonical" href="https://osztonkod.hu/blog" />
+        <link rel="canonical" href="https://www.osztonkod.hu/blog" />
 
         <meta property="og:title" content="Ösztönkód Blog – Önismereti cikkek" />
         <meta property="og:description" content="Cikkek az idegrendszerről, traumáról és érzelmi mintákról." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://osztonkod.hu/blog" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+        <meta property="og:url" content="https://www.osztonkod.hu/blog" />
+        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
         <meta property="og:site_name" content="Érzelmi Ösztönkód" />
         <meta property="og:locale" content="hu_HU" />
     </Helmet>

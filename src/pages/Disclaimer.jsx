@@ -20,7 +20,7 @@ export default function Disclaimer() {
         />
 
         {/* CANONICAL */}
-        <link rel="canonical" href="https://osztonkod.hu/disclaimer" />
+        <link rel="canonical" href="https://www.osztonkod.hu/disclaimer" />
 
         {/* OPEN GRAPH (social preview) */}
         <meta property="og:title" content="Felelősségkizárás – Ösztönkód" />
@@ -29,7 +29,7 @@ export default function Disclaimer() {
           content="Az Ösztönkód alkalmazás jogi felelősségkizárása és használati feltételei."
         />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://osztonkod.hu/disclaimer" />
+        <meta property="og:url" content="https://www.osztonkod.hu/disclaimer" />
         <meta property="og:site_name" content="Ösztönkód" />
 
         {/* TWITTER (nem kötelező, de jó) */}

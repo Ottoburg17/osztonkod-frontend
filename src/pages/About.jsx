@@ -19,13 +19,13 @@ export default function About() {
             content="Ismerd meg az Érzelmi Ösztönkód történetét és Németh Ottó gondolkodását az ismétlődő érzelmi mintákról, önreflexióról és tudatos működésről."
           />
 
-          <link rel="canonical" href="https://osztonkod.hu/about" />
+          <link rel="canonical" href="https://www.osztonkod.hu/about" />
 
           <meta property="og:title" content="Németh Ottó – Az Érzelmi Ösztönkód megalkotója" />
           <meta property="og:description" content="Ismerd meg az Érzelmi Ösztönkód történetét és a mögötte álló gondolkodást." />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://osztonkod.hu/about" />
-          <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
+          <meta property="og:url" content="https://www.osztonkod.hu/about" />
+          <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
           <meta property="og:site_name" content="Érzelmi Ösztönkód" />
           <meta property="og:locale" content="hu_HU" />
 

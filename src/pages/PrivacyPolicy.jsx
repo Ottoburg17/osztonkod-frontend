@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
           content="Adatkezelési tájékoztató Németh Ottó adószámos magánszemély által üzemeltetett weboldalhoz."
         />
 
-        <link rel="canonical" href="https://osztonkod.hu/privacy" />
+        <link rel="canonical" href="https://www.osztonkod.hu/privacy" />
       </Helmet>
           
 
@@ -159,15 +159,28 @@ export default function PrivacyPolicy() {
 
             <p className="text-gray-700 leading-relaxed mt-4">
               <strong>Tárhelyszolgáltató:</strong><br />
-              [NÉV IDE]<br />
-              [CÍM / SZÉKHELY]
+                  Websupport Magyarország Kft.<br />
+                  1119 Budapest, Fehérvári út 97-99.<br />
+                  Cégjegyzékszám: 01-09-381419<br />
+                  Adószám: 25138205-2-43
             </p>
 
             <p className="text-gray-700 leading-relaxed mt-4">
               <strong>E-mail szolgáltató:</strong><br />
-              [NÉV IDE]<br />
-              [SZÉKHELY]
+              Google Ireland Limited<br />
+              Gordon House, Barrow Street, Dublin 4, Írország
             </p>
+            <p className="text-gray-700 mt-2">
+              Az űrlapon megadott adatok ezen szolgáltatáson keresztül kerülnek továbbításra az adatkezelő részére.
+            </p>
+
+            
+            <p className="text-gray-700 leading-relaxed mt-4">
+            <strong>Űrlapkezelő szolgáltató:</strong><br />
+            FormSubmit<br />
+            https://formsubmit.co
+            </p>
+            
 
             <p className="text-gray-700 leading-relaxed mt-4">
               <strong>Fizetési szolgáltató:</strong><br />
@@ -209,7 +222,7 @@ export default function PrivacyPolicy() {
           {/* 6 */}
           <section>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              6. Az adatok megőrzési ideje
+              6.1 Az adatok megőrzési ideje
             </h2>
             <ul className="list-disc list-inside text-gray-700 space-y-2">
               <li>Felhasználói fiók: törlésig</li>
@@ -316,7 +329,7 @@ export default function PrivacyPolicy() {
                 a tájékoztató egyoldalú módosítására.
             </p>
             <p className="text-gray-500 text-sm mt-4">
-                Utolsó frissítés: 2025. január 1.
+                Utolsó frissítés: 2026. március 17.
             </p>
             </section>
 

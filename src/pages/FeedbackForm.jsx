@@ -54,7 +54,7 @@ export default function FeedbackForm() {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:5173/feedback-success"
+              value="http://www.osztonkod.hu/feedback-success"
             />
 
             {/* TERMÉK LISTA */}
