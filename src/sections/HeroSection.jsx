@@ -147,7 +147,7 @@ export default function HeroSection() {
          Fedezd fel most →
         </Link>
 
-       <div className="mt-4 flex flex-wrap justify-center gap-2 relative z-10">
+       <div className="mt-5 flex flex-wrap justify-center gap-2 relative z-10">
         <span className="px-3 py-1 bg-white/70 backdrop-blur-md border border-gray-200 rounded-full text-xs text-gray-700 shadow-sm">
           🔒 Biztonságos
         </span>

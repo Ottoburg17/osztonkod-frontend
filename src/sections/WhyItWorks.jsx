@@ -11,7 +11,7 @@ export default function WhyItWorks() {
   return (
     <section
       ref={ref}
-      className="relative py-20 px-6 overflow-hidden bg-gradient-to-b from-gray-100 to-white"
+      className="relative py-20 px-6 overflow-hidden bg-gradient-to-b from-gray-200 to-white"
     >
       {/* 🔥 háttér glow (Hero-hoz illesztve) */}
       <div className="absolute top-[-10%] left-[15%] w-[280px] h-[280px] bg-emerald-300 opacity-20 blur-[120px] rounded-full"></div>
