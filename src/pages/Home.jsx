@@ -25,20 +25,20 @@ export default function Home() {
       content="Fedezd fel érzelmi mintáidat és ösztönös reakcióidat. Az Érzelmi Ösztönkód segít megérteni a viselkedési sémákat és mélyebb önismeretet ad."
       />
 
-      <link rel="canonical" href="https://www.osztonkod.hu/" />
+      <link rel="canonical" href="https://osztonkod.hu/" />
 
       <meta property="og:title" content="Érzelmi Ösztönkód – Mély önismeret" />
       <meta property="og:description" content="Ismerd fel érzelmi mintáidat és automatikus reakcióidat modern önismereti módszerrel." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.osztonkod.hu/" />
+      <meta property="og:url" content="https://osztonkod.hu/" />
       <meta property="og:site_name" content="Érzelmi Ösztönkód" />
       <meta property="og:locale" content="hu_HU" />
-      <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
+      <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
       
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Érzelmi Ösztönkód – Mély önismeret" />
       <meta name="twitter:description" content="Ismerd fel érzelmi mintáidat és automatikus reakcióidat modern önismereti módszerrel." />
-      <meta name="twitter:image" content="https://www.osztonkod.hu/og-image.jpg" />
+      <meta name="twitter:image" content="https://osztonkod.hu/og-image.jpg" />
       </Helmet>
           
       <main>
@@ -46,7 +46,7 @@ export default function Home() {
         <AboutSection />
         <InfinitySection />
         <SchemasSection />
-      
+  
         <SocialProofPreview />
          
         <BlogGrid />

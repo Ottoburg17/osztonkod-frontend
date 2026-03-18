@@ -17,13 +17,13 @@ export default function Schemas() {
           content="Az érzelmi ösztönkódok és viselkedési sémák áttekintése. Ismerd meg azokat a belső mintákat, amelyek befolyásolják a reakcióidat és kapcsolataidat."
         />
 
-        <link rel="canonical" href="https://www.osztonkod.hu/schemas" />
+        <link rel="canonical" href="https://osztonkod.hu/schemas" />
 
         <meta property="og:title" content="Ösztönkódok – érzelmi sémák és viselkedési minták" />
         <meta property="og:description" content="Ismerd meg az érzelmi sémákat és viselkedési mintákat, amelyek az ösztönkód működését formálják." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.osztonkod.hu/schemas" />
-        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
+        <meta property="og:url" content="https://osztonkod.hu/schemas" />
+        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
         <meta property="og:site_name" content="Ösztönkód" />
         <meta property="og:locale" content="hu_HU" />
       </Helmet>

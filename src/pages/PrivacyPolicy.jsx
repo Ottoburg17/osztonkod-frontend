@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
           content="Adatkezelési tájékoztató Németh Ottó adószámos magánszemély által üzemeltetett weboldalhoz."
         />
 
-        <link rel="canonical" href="https://www.osztonkod.hu/privacy" />
+        <link rel="canonical" href="https://osztonkod.hu/privacy" />
       </Helmet>
           
 

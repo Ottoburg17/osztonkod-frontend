@@ -62,13 +62,13 @@ export default function InnerLoop() {
         content="Ismerd meg a dopamin-alapú jutalmazási ciklus működését: trigger, viselkedés, jutalom és rögzülés. Miért válnak bizonyos szokások automatikussá?"
       />
 
-      <link rel="canonical" href="https://www.osztonkod.hu/dopamin-ciklus" />
+      <link rel="canonical" href="https://osztonkod.hu/dopamin-ciklus" />
 
       <meta property="og:title" content="Dopamin ciklus – Hogyan működik a jutalmazási kör" />
       <meta property="og:description" content="A dopamin-alapú jutalmazási ciklus működése és hatása a szokások kialakulására." />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content="https://www.osztonkod.hu/dopamin-ciklus" />
-      <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
+      <meta property="og:url" content="https://osztonkod.hu/dopamin-ciklus" />
+      <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
       <meta property="og:site_name" content="Ösztönkód" />
       <meta property="og:locale" content="hu_HU" />
 
