@@ -64,7 +64,7 @@ import BillingPage from "./pages/BillingPage";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import StripeCancel from "./pages/StripeCancel.jsx";
 import StripeSuccess from "./pages/StripeSuccess.jsx";
-
+import WhyItWorks from "./sections/WhyItWorks.jsx";
 
 /*  Admin   */
 import Admin from "./pages/Admin";
@@ -123,7 +123,7 @@ return (
           <Route path="/socialproof" element={<SocialProof />} />
           <Route path="/feedback" element={<FeedbackForm />} />
           <Route path="/blog" element={<Blog />} />
-
+          <Route path="/whyitworks" element={<WhyItWorks />} />
           <Route path="/my-patterns" element={<MyPatterns />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/adatkezeles" element={<PrivacyPolicy /> } />

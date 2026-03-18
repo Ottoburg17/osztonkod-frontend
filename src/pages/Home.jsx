@@ -7,7 +7,7 @@ import AboutSection from "../sections/AboutSection";
 import InfinitySection from "../sections/InfinitySection";
 import SchemasSection from "../sections/SchemasSection";
 import SocialProofPreview from "../sections/SocialProofPreview";
-
+import WhyItWorks from "../sections/WhyItWorks";
 import BlogGrid from "../components/BlogGrid";
 
 
@@ -43,6 +43,7 @@ export default function Home() {
           
       <main>
         <HeroSection />
+        <WhyItWorks />
         <AboutSection />
         <InfinitySection />
         <SchemasSection />

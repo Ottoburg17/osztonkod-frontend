@@ -87,11 +87,15 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1.1 }}
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-amber-400 drop-shadow-md relative z-10 leading-tight"
+        className="max-w-3xl mx-auto text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-amber-400 drop-shadow-md relative z-10 leading-tight"
       >
         Miért reagálsz mindig ugyanúgy? <br />
-        <span className="text-gray-800">
-         Az érzelmi reakcióid mögötti valódi minta
+
+       <span className="block mt-2 text-green-800">
+          Fedezd fel az érzelmi reakcióid mögötti <br className="hidden sm:block" />
+          <span className="text-amber-500 font-semibold drop-shadow-sm">
+            valódi mintát
+          </span>
         </span>
       </motion.h1>
 
@@ -99,7 +103,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 35 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, delay: 0.2 }}
-        className="text-base sm:text-lg md:text-xl mt-6 max-w-2xl text-gray-700 leading-relaxed relative z-10"
+        className="text-base sm:text-lg md:text-xl mt-6 max-w-xl md:max-w-2xl text-gray-700 leading-relaxed relative z-10"
       >
       Érzelmi Ösztönkód – egy önismereti módszer,
       amely segít megérteni az automatikus érzelmi reakcióidat,
@@ -135,15 +139,25 @@ export default function HeroSection() {
 
         <Link
           to="/instinctsarticle"
-          className="px-8 py-3 rounded-2xl text-lg font-semibold bg-green-600 hover:bg-green-700 
-            text-white shadow-lg transition transform hover:scale-[1.05] relative z-10"
+          className="px-10 py-4 rounded-2xl text-lg font-semibold 
+                    bg-gradient-to-r from-green-500 to-emerald-600 
+                    hover:from-green-600 hover:to-emerald-700
+                    text-white shadow-xl transition transform hover:scale-[1.06] active:scale-[0.98]"
         >
-          Kezdd el megérteni a reakcióid →
+         Fedezd fel most →
         </Link>
 
-      <p className="mt-3 text-xs text-gray-500 relative z-10">
-        Nincs regisztráció • 2 perc • azonnali felismerés
-      </p>
+       <div className="mt-4 flex flex-wrap justify-center gap-2 relative z-10">
+        <span className="px-3 py-1 bg-white/70 backdrop-blur-md border border-gray-200 rounded-full text-xs text-gray-700 shadow-sm">
+          🔒 Biztonságos
+        </span>
+        <span className="px-3 py-1 bg-white/70 backdrop-blur-md border border-gray-200 rounded-full text-xs text-gray-700 shadow-sm">
+          ⏱ 2 perc
+        </span>
+        <span className="px-3 py-1 bg-white/70 backdrop-blur-md border border-gray-200 rounded-full text-xs text-gray-700 shadow-sm">
+          🚫 Nincs regisztráció
+        </span>
+      </div>
       </motion.div>
      
     </section>
