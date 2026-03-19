@@ -74,6 +74,7 @@ export default function ForgotPassword() {
           />
 
           <button
+            type="submit"
             disabled={loading}
             className="
              block mx-auto
