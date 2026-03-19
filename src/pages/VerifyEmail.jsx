@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { useSearchParams, useNavigate, Link } from "react-router-dom";
+import {  useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/useAuth";
 import api from "../api/axios";
 
 export default function VerifyEmail() {
-  const [searchParams] = useSearchParams();
+ 
   const navigate = useNavigate();
   const { loginWithToken } = useAuth();
 
@@ -12,7 +12,11 @@ export default function VerifyEmail() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    const token = searchParams.get("token");
+
+    const token = new URLSearchParams(window.location.search).get("token");
+   
+
+
 
     if (!token) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -44,7 +48,7 @@ export default function VerifyEmail() {
     };
 
     verifyEmail();
-  }, [searchParams, navigate, loginWithToken]);
+  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
