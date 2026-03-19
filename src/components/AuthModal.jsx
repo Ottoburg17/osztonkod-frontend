@@ -298,28 +298,27 @@ export default function AuthModal() {
                   </p>
 
                   {/* 🔁 ÚJ MEGERŐSÍTŐ EMAIL – CSAK LOGINNÁL */}
-                  {!isRegistering &&
-                    errorMessage.toLowerCase().includes("email") &&
-                    errorMessage.toLowerCase().includes("megerősít") && (
+                   {!isRegistering &&
+                    errorMessage.toLowerCase().includes("email") && (
                       <button
-                      onClick={async () => {
-                        try {
-                          await api.post("/auth/resend-verification", {
-                            email: formData.email,
-                          });
+                        onClick={async () => {
+                          try {
+                            await api.post("/auth/resend-verification", {
+                              email: formData.email,
+                            });
 
-                          setErrorMessage("Új megerősítő email elküldve.");
-                          setMessageType("success");
-                        } catch (err) {
-                          setErrorMessage("Hiba történt az email küldésekor.");
-                          setMessageType("error");
-                        }
-                      }}
-                      className="block text-sm text-green-600 hover:underline"
-                    >
-                      Új megerősítő email kérése
-                    </button>
-                    )}
+                            setErrorMessage("Új megerősítő email elküldve.");
+                            setMessageType("success");
+                          } catch (err) {
+                            setErrorMessage("Hiba történt az email küldésekor.");
+                            setMessageType("error");
+                          }
+                        }}
+                        className="block text-sm text-green-600 hover:underline"
+                      >
+                        Új megerősítő email kérése
+                      </button>
+                  )}
                 </div>
               )}
 
