@@ -107,8 +107,16 @@ export default function AuthModal() {
 
   // 🔐 LOGIN / REGISZTRÁCIÓ
   const handleSubmit = async (e) => {
+    console.log("SUBMIT START");
+
     e.preventDefault();
     setErrorMessage("");
+
+    console.log("STATE:", {
+    isRegistering,
+    acceptedLegal,
+    formData
+   });
 
     console.log("LOGIN SUBMIT FUT");
 
