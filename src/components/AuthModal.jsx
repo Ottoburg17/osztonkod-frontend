@@ -159,6 +159,8 @@ export default function AuthModal() {
       
         setErrorMessage("Sikeres regisztráció! Küldtünk egy megerősítő emailt. Kattints a linkre, majd jelentkezz be.");
         setMessageType("success");
+
+        setIsLoading(false);
        
         setTimeout(() => {
           setIsRegistering(false);   
@@ -166,6 +168,8 @@ export default function AuthModal() {
         }, 3000);
 
         return;
+
+        
       }
 
       console.log("LOGIN API HÍVÁS");
