@@ -64,6 +64,7 @@ export default function UserMenuMobile({ onClose }) {
       </div>
 
       {/* ===== MENU ===== */}
+      <div className="flex-1 overflow-y-auto">
       <nav className="flex flex-col px-6 py-8 gap-5 text-lg text-white">
 
            {/* ===== SHOP SECTION ===== */}
@@ -124,6 +125,8 @@ export default function UserMenuMobile({ onClose }) {
           </>
         )}
       </nav>
+      </div>
+
 
       {/* ===== FOOTER / LOGOUT ===== */}
       <div className="mt-auto px-6 py-6 border-t border-white/10 pb-10">
