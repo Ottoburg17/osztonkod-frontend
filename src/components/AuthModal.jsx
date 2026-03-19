@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
@@ -300,12 +301,24 @@ export default function AuthModal() {
                   {!isRegistering &&
                     errorMessage.toLowerCase().includes("email") &&
                     errorMessage.toLowerCase().includes("megerősít") && (
-                      <Link
-                        to="/resend-verification"
-                        className="block text-sm text-green-600 hover:underline"
-                      >
-                        Új megerősítő email kérése
-                      </Link>
+                      <button
+                      onClick={async () => {
+                        try {
+                          await api.post("/auth/resend-verification", {
+                            email: formData.email,
+                          });
+
+                          setErrorMessage("Új megerősítő email elküldve.");
+                          setMessageType("success");
+                        } catch (err) {
+                          setErrorMessage("Hiba történt az email küldésekor.");
+                          setMessageType("error");
+                        }
+                      }}
+                      className="block text-sm text-green-600 hover:underline"
+                    >
+                      Új megerősítő email kérése
+                    </button>
                     )}
                 </div>
               )}
