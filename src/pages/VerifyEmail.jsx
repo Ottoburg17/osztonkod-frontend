@@ -10,7 +10,7 @@ export default function VerifyEmail() {
   const [status, setStatus] = useState("loading"); // loading | success | error
   const [message, setMessage] = useState("");
 
-  // 🔥 EZ A FIX (dupla hívás ellen)
+  // 🔥 dupla hívás ellen
   const hasRun = useRef(false);
 
   useEffect(() => {
@@ -54,7 +54,7 @@ export default function VerifyEmail() {
           err.response?.data?.message ||
           "A megerősítő link érvénytelen vagy lejárt.";
 
-        // 🔥 HA MÁR VERIFY-OLTÁK (fallback)
+        // 🔥 fallback: már verify-olták
         if (
           msg.toLowerCase().includes("már megerősítve") ||
           msg.toLowerCase().includes("already")
@@ -70,7 +70,7 @@ export default function VerifyEmail() {
     };
 
     verifyEmail();
-  }, [loginWithToken, navigate]);
+  }, []); // ✅ FONTOS: nincs dependency!
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
