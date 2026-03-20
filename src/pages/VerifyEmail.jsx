@@ -13,6 +13,9 @@ export default function VerifyEmail() {
   // 🔥 dupla hívás ellen
   const hasRun = useRef(false);
 
+  // 🔥 response guard (race condition ellen)
+  const hasHandledResponse = useRef(false);
+
   useEffect(() => {
     if (hasRun.current) return;
     hasRun.current = true;
@@ -27,10 +30,16 @@ export default function VerifyEmail() {
     }
 
     const verifyEmail = async () => {
+      // 🔥 ha már volt válasz, ne fusson újra
+      if (hasHandledResponse.current) return;
+
       try {
         const res = await api.get(`/auth/verify-email?token=${token}`);
 
-        // ✅ SIKERES VERIFY
+        // 🔥 ha már kezeltük, kilép
+        if (hasHandledResponse.current) return;
+        hasHandledResponse.current = true;
+
         if (res.data.status === "verified") {
           if (res.data.token) {
             loginWithToken(res.data.token);
@@ -43,13 +52,15 @@ export default function VerifyEmail() {
           return;
         }
 
-        // ❌ NEM VERIFIED
         setStatus("error");
         setMessage(
           res.data.message || "A megerősítő link érvénytelen vagy lejárt."
         );
 
       } catch (err) {
+        if (hasHandledResponse.current) return;
+        hasHandledResponse.current = true;
+
         const msg =
           err.response?.data?.message ||
           "A megerősítő link érvénytelen vagy lejárt.";
@@ -70,7 +81,7 @@ export default function VerifyEmail() {
     };
 
     verifyEmail();
-  }, []); // ✅ FONTOS: nincs dependency!
+  }, []);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
