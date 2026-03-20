@@ -21,15 +21,19 @@ export default function VerifyEmail() {
 
       if (done.current) return;
 
-      if (res.data.status === "verified") {
-        done.current = true;
-
+      
         if (res.data.token) {
+          done.current = true;
           loginWithToken(res.data.token);
           navigate("/dashboard", { replace: true });
           return;
         }
 
+        if (
+          res.data.status === "verified" ||
+          res.data.status === "already_verified"
+      ) {
+        done.current = true;
         setStatus("success");
         setMessage(res.data.message || "Email sikeresen megerősítve!");
         return;
