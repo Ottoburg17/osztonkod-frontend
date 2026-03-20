@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import {  useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/useAuth";
 import api from "../api/axios";
 
 export default function VerifyEmail() {
- 
   const navigate = useNavigate();
   const { loginWithToken } = useAuth();
 
@@ -12,11 +11,7 @@ export default function VerifyEmail() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-
     const token = new URLSearchParams(window.location.search).get("token");
-   
-
-
 
     if (!token) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -38,12 +33,24 @@ export default function VerifyEmail() {
 
         setStatus("success");
         setMessage(res.data.message || "Email sikeresen megerősítve!");
+
       } catch (err) {
-        setStatus("error");
-        setMessage(
+        const msg =
           err.response?.data?.message ||
-            "A megerősítő link érvénytelen vagy lejárt."
-        );
+          "A megerősítő link érvénytelen vagy lejárt.";
+
+        // 🔥 ha már meg volt erősítve
+        if (
+          msg.toLowerCase().includes("már megerősítve") ||
+          msg.toLowerCase().includes("already")
+        ) {
+          setStatus("success");
+          setMessage("Email már meg volt erősítve.");
+          return;
+        }
+
+        setStatus("error");
+        setMessage(msg);
       }
     };
 
