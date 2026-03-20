@@ -14,22 +14,31 @@ export default function VerifyEmail() {
   const done = useRef(false); // 🔥 race condition védelem
 
   const verifyEmail = async (token) => {
+     console.log("VERIFY EMAIL START");
+
     if (done.current) return;
+
 
     try {
       const res = await api.get(`/auth/verify-email?token=${token}`);
+      console.log("API RESPONSE:", res.data);
 
-      if (done.current) return;
+      if (done.current) {
+        console.log("SKIP - done true");
+        return
+      }
 
       
         if (res.data.token) {
           done.current = true;
 
+          console.log("LOGIN WITH TOKEN");
+
           loginWithToken(res.data.token);
 
           setTimeout(() => { 
+            console.log("NAVIGATE DASHBOARD");
             navigate("/dashboard", { replace: true });
-
           }, 100);
           
           return;
@@ -74,9 +83,10 @@ export default function VerifyEmail() {
   };
 
   useEffect(() => {
-   
+   console.log("USE EFFECT FUT");
    
     const token = new URLSearchParams(window.location.search).get("token");
+    console.log("TOKEN:", token);
 
     if (!token) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
