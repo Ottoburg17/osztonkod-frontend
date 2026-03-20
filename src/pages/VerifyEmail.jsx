@@ -75,6 +75,7 @@ export default function VerifyEmail() {
 
   useEffect(() => {
    
+   
     const token = new URLSearchParams(window.location.search).get("token");
 
     if (!token) {
@@ -83,8 +84,11 @@ export default function VerifyEmail() {
       setMessage("Hiányzó vagy érvénytelen token.");
       return;
     }
-
-    verifyEmail(token);
+  
+   setTimeout(() => {
+       verifyEmail(token);
+   }, 0);
+   
   }, []);
 
   return (
