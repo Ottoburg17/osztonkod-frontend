@@ -7,14 +7,50 @@ export default function VerifyEmail() {
   const navigate = useNavigate();
   const { loginWithToken } = useAuth();
 
-  const [status, setStatus] = useState("loading"); // loading | success | error
+  const [status, setStatus] = useState("loading");
   const [message, setMessage] = useState("");
 
-  // 🔥 dupla hívás ellen
   const hasRun = useRef(false);
 
-  // 🔥 response guard (race condition ellen)
-  const hasHandledResponse = useRef(false);
+  const verifyEmail = async (token) => {
+    try {
+      const res = await api.get(`/auth/verify-email?token=${token}`);
+
+      if (res.data.status === "verified") {
+        if (res.data.token) {
+          loginWithToken(res.data.token);
+          navigate("/dashboard", { replace: true });
+          return;
+        }
+
+        setStatus("success");
+        setMessage(res.data.message || "Email sikeresen megerősítve!");
+        return;
+      }
+
+      setStatus("error");
+      setMessage(
+        res.data.message || "A megerősítő link érvénytelen vagy lejárt."
+      );
+
+    } catch (err) {
+      const msg =
+        err.response?.data?.message ||
+        "A megerősítő link érvénytelen vagy lejárt.";
+
+      if (
+        msg.toLowerCase().includes("már megerősítve") ||
+        msg.toLowerCase().includes("already")
+      ) {
+        setStatus("success");
+        setMessage("Email már meg volt erősítve.");
+        return;
+      }
+
+      setStatus("error");
+      setMessage(msg);
+    }
+  };
 
   useEffect(() => {
     if (hasRun.current) return;
@@ -29,58 +65,7 @@ export default function VerifyEmail() {
       return;
     }
 
-    const verifyEmail = async () => {
-      // 🔥 ha már volt válasz, ne fusson újra
-      if (hasHandledResponse.current) return;
-
-      try {
-        const res = await api.get(`/auth/verify-email?token=${token}`);
-
-        // 🔥 ha már kezeltük, kilép
-        if (hasHandledResponse.current) return;
-        hasHandledResponse.current = true;
-
-        if (res.data.status === "verified") {
-          if (res.data.token) {
-            loginWithToken(res.data.token);
-            navigate("/dashboard", { replace: true });
-            return;
-          }
-
-          setStatus("success");
-          setMessage(res.data.message || "Email sikeresen megerősítve!");
-          return;
-        }
-
-        setStatus("error");
-        setMessage(
-          res.data.message || "A megerősítő link érvénytelen vagy lejárt."
-        );
-
-      } catch (err) {
-        if (hasHandledResponse.current) return;
-        hasHandledResponse.current = true;
-
-        const msg =
-          err.response?.data?.message ||
-          "A megerősítő link érvénytelen vagy lejárt.";
-
-        // 🔥 fallback: már verify-olták
-        if (
-          msg.toLowerCase().includes("már megerősítve") ||
-          msg.toLowerCase().includes("already")
-        ) {
-          setStatus("success");
-          setMessage("Email már meg volt erősítve.");
-          return;
-        }
-
-        setStatus("error");
-        setMessage(msg);
-      }
-    };
-
-    verifyEmail();
+    verifyEmail(token);
   }, []);
 
   return (
