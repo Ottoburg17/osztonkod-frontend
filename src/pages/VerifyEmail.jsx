@@ -11,12 +11,19 @@ export default function VerifyEmail() {
   const [message, setMessage] = useState("");
 
   const hasRun = useRef(false);
+  const done = useRef(false); // 🔥 race condition védelem
 
   const verifyEmail = async (token) => {
+    if (done.current) return;
+
     try {
       const res = await api.get(`/auth/verify-email?token=${token}`);
 
+      if (done.current) return;
+
       if (res.data.status === "verified") {
+        done.current = true;
+
         if (res.data.token) {
           loginWithToken(res.data.token);
           navigate("/dashboard", { replace: true });
@@ -28,12 +35,16 @@ export default function VerifyEmail() {
         return;
       }
 
+      done.current = true;
       setStatus("error");
       setMessage(
         res.data.message || "A megerősítő link érvénytelen vagy lejárt."
       );
 
     } catch (err) {
+      if (done.current) return;
+      done.current = true;
+
       const msg =
         err.response?.data?.message ||
         "A megerősítő link érvénytelen vagy lejárt.";
