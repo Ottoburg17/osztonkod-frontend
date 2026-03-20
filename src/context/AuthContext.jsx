@@ -133,6 +133,21 @@ export function AuthProvider({ children }) {
     ]);
   };
 
+  const loginWithToken = async (token) => {
+  localStorage.setItem("token", token);
+
+  setUserFromToken(token);
+
+    await Promise.all([
+      loadSubscriptions(),
+      loadUserFlags(),
+      loadUserProducts(),
+    ]);
+  };
+
+
+
+
   /* ======================================================
      LOGOUT
   ====================================================== */
@@ -164,6 +179,7 @@ export function AuthProvider({ children }) {
         purchasedProducts,
         loading,
         login,
+        loginWithToken,
         logout,
         refreshAuth,
         isAdmin,
