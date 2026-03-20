@@ -24,8 +24,14 @@ export default function VerifyEmail() {
       
         if (res.data.token) {
           done.current = true;
+
           loginWithToken(res.data.token);
-          navigate("/dashboard", { replace: true });
+
+          setTimeout(() => { 
+            navigate("/dashboard", { replace: true });
+
+          }, 100);
+          
           return;
         }
 
