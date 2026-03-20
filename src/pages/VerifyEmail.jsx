@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/useAuth";
 import api from "../api/axios";
@@ -10,7 +10,13 @@ export default function VerifyEmail() {
   const [status, setStatus] = useState("loading"); // loading | success | error
   const [message, setMessage] = useState("");
 
+  // 🔥 EZ A FIX (dupla hívás ellen)
+  const hasRun = useRef(false);
+
   useEffect(() => {
+    if (hasRun.current) return;
+    hasRun.current = true;
+
     const token = new URLSearchParams(window.location.search).get("token");
 
     if (!token) {
@@ -24,7 +30,7 @@ export default function VerifyEmail() {
       try {
         const res = await api.get(`/auth/verify-email?token=${token}`);
 
-        // ✅ AUTOMATIKUS LOGIN
+        // ✅ SIKERES VERIFY
         if (res.data.status === "verified") {
           if (res.data.token) {
             loginWithToken(res.data.token);
@@ -37,17 +43,18 @@ export default function VerifyEmail() {
           return;
         }
 
-        // ❌ HA NEM VERIFIED → ERROR
+        // ❌ NEM VERIFIED
         setStatus("error");
-        setMessage(res.data.message || "A megerősítő link érvénytelen vagy lejárt.");
-              
+        setMessage(
+          res.data.message || "A megerősítő link érvénytelen vagy lejárt."
+        );
 
       } catch (err) {
         const msg =
           err.response?.data?.message ||
           "A megerősítő link érvénytelen vagy lejárt.";
 
-        // 🔥 ha már meg volt erősítve
+        // 🔥 HA MÁR VERIFY-OLTÁK (fallback)
         if (
           msg.toLowerCase().includes("már megerősítve") ||
           msg.toLowerCase().includes("already")
@@ -63,14 +70,16 @@ export default function VerifyEmail() {
     };
 
     verifyEmail();
-  }, []);
+  }, [loginWithToken, navigate]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full text-center border border-emerald-200">
 
         {status === "loading" && (
-          <p className="text-gray-600">Email megerősítése folyamatban...</p>
+          <p className="text-gray-600">
+            Email megerősítése folyamatban...
+          </p>
         )}
 
         {status === "success" && (
