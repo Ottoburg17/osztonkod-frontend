@@ -5,48 +5,38 @@ import api from "../api/axios";
 
 export default function VerifyEmail() {
   const navigate = useNavigate();
-  const { loginWithToken } = useAuth();
+  const { loginWithToken, user } = useAuth(); // 🔥 user is kell
 
   const [status, setStatus] = useState("loading");
   const [message, setMessage] = useState("");
 
-  
-  const done = useRef(false); // 🔥 race condition védelem
+  const done = useRef(false);
 
   const verifyEmail = async (token) => {
-     console.log("VERIFY EMAIL START");
+    console.log("VERIFY EMAIL START");
 
     if (done.current) return;
-
 
     try {
       const res = await api.get(`/auth/verify-email?token=${token}`);
       console.log("API RESPONSE:", res.data);
 
-      if (done.current) {
-        console.log("SKIP - done true");
-        return
+      if (done.current) return;
+
+      // 🔐 AUTOMATIKUS LOGIN
+      if (res.data.token) {
+        done.current = true;
+
+        console.log("LOGIN WITH TOKEN");
+        loginWithToken(res.data.token);
+
+        return; // ❌ nincs navigate itt
       }
 
-      
-        if (res.data.token) {
-          done.current = true;
-
-          console.log("LOGIN WITH TOKEN");
-
-          loginWithToken(res.data.token);
-
-          setTimeout(() => { 
-            console.log("NAVIGATE DASHBOARD");
-            navigate("/dashboard", { replace: true });
-          }, 100);
-          
-          return;
-        }
-
-        if (
-          res.data.status === "verified" ||
-          res.data.status === "already_verified"
+      // ✅ success fallback (ha nincs token)
+      if (
+        res.data.status === "verified" ||
+        res.data.status === "already_verified"
       ) {
         done.current = true;
         setStatus("success");
@@ -54,13 +44,15 @@ export default function VerifyEmail() {
         return;
       }
 
+      // ❌ error
       done.current = true;
       setStatus("error");
       setMessage(
         res.data.message || "A megerősítő link érvénytelen vagy lejárt."
       );
-
     } catch (err) {
+      console.log("ERROR:", err);
+
       if (done.current) return;
       done.current = true;
 
@@ -82,9 +74,10 @@ export default function VerifyEmail() {
     }
   };
 
+  // 🔥 VERIFY FUTTATÁS
   useEffect(() => {
-   console.log("USE EFFECT FUT");
-   
+    console.log("USE EFFECT FUT");
+
     const token = new URLSearchParams(window.location.search).get("token");
     console.log("TOKEN:", token);
 
@@ -94,12 +87,19 @@ export default function VerifyEmail() {
       setMessage("Hiányzó vagy érvénytelen token.");
       return;
     }
-  
-   setTimeout(() => {
-       verifyEmail(token);
-   }, 0);
-   
+
+    setTimeout(() => {
+      verifyEmail(token);
+    }, 0);
   }, []);
+
+  // 🔥 EZ A KULCS: STATE-ALAPÚ NAVIGÁCIÓ
+  useEffect(() => {
+    if (user) {
+      console.log("USER READY → NAVIGATE");
+      navigate("/dashboard", { replace: true });
+    }
+  }, [user]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
