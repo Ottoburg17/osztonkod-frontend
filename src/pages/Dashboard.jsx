@@ -15,7 +15,7 @@ export default function Dashboard() {
   subscriptions, 
   purchasedProducts,  
   loading: authLoading,
-  refreshAuth
+  
 } = useAuth();
 
 
@@ -27,11 +27,7 @@ useEffect(() => {
   );
 }, [subscriptions]);
  
-  useEffect(() => {
-    if (!authLoading && user) {
-      refreshAuth();
-    }
-  }, [authLoading, user]);
+
 
   
   const openStripePortal = async () => {
