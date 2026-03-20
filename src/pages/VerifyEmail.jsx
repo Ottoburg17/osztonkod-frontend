@@ -10,7 +10,7 @@ export default function VerifyEmail() {
   const [status, setStatus] = useState("loading");
   const [message, setMessage] = useState("");
 
-  const hasRun = useRef(false);
+  
   const done = useRef(false); // 🔥 race condition védelem
 
   const verifyEmail = async (token) => {
@@ -64,9 +64,7 @@ export default function VerifyEmail() {
   };
 
   useEffect(() => {
-    if (hasRun.current) return;
-    hasRun.current = true;
-
+   
     const token = new URLSearchParams(window.location.search).get("token");
 
     if (!token) {
