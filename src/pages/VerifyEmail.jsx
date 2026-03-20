@@ -25,14 +25,22 @@ export default function VerifyEmail() {
         const res = await api.get(`/auth/verify-email?token=${token}`);
 
         // ✅ AUTOMATIKUS LOGIN
-        if (res.data.status === "verified" && res.data.token) {
-          loginWithToken(res.data.token);
-          navigate("/dashboard", { replace: true });
+        if (res.data.status === "verified") {
+          if (res.data.token) {
+            loginWithToken(res.data.token);
+            navigate("/dashboard", { replace: true });
+            return;
+          }
+
+          setStatus("success");
+          setMessage(res.data.message || "Email sikeresen megerősítve!");
           return;
         }
 
-        setStatus("success");
-        setMessage(res.data.message || "Email sikeresen megerősítve!");
+        // ❌ HA NEM VERIFIED → ERROR
+        setStatus("error");
+        setMessage(res.data.message || "A megerősítő link érvénytelen vagy lejárt.");
+              
 
       } catch (err) {
         const msg =
