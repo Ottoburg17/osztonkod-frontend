@@ -8,6 +8,17 @@ export const schemaDetails = {
         'A Belső Hiányérzet Kódja egy olyan belső tapasztalás, amely abból az érzésből ered, hogy az érzelmi kötődések törékenyek, kiszámíthatatlanok, és hogy nem lehetséges igazán biztonságos, szeretetteljes kapcsolatok kialakítása. Azok, akik ezt a kódot hordozzák, gyakran úgy érzik, hogy el fognak hagyni őket, vagy hogy kapcsolataik instabilak és végül összeomlanak.',
       additionalInfo: (
         <div className="space-y-6 mt-6">
+
+          <p className="text-sm text-gray-500 italic">
+            Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+          </p>
+           <Section title="Pszichológiai párhuzam" items={[
+            'Ez a minta hasonlít a következő pszichológiai jelenségekhez:',
+            '• Kötődési sérülések (attachment insecurity)',
+            '• Elhagyatottság séma (schema therapy)',
+            '• Érzelmi depriváció (emotional deprivation)',
+            '• Szorongó kötődési stílus (anxious attachment)'
+          ]} />
           <Section title="Jellemzők" items={[
             'Az érzelmi biztonság és a szeretet megélésének nehézségei jellemzik...',
             'Gyakori az egyedüllét érzése és a meg-nem-értettség.',
@@ -34,6 +45,8 @@ export const schemaDetails = {
             'Új viselkedési minták tanulása.',
             'Megküzdési stratégiák fejlesztése a félelem csökkentésére.'
           ]} />
+
+         
           <p className="text-gray-700 text-base leading-relaxed">
             A Belső Hiányérzet Kódja egy mély, érzelmi alapú tapasztalás, amely a biztonság és érzelmi támogatás hiányáról szól. Gyakran a gyermekkorban kezdődik, és ha nem dolgozzák fel, életünk során visszatérhet. A cél a kód feloldása és új, egészségesebb viselkedési minták kialakítása.
              Az érintettek gyakran érzik úgy, hogy nem méltók a szeretetre, vagy hogy a közelség idővel mindig elveszik. Ez a belső bizonytalanság tartós szorongást, kapcsolati instabilitást és önértékelési problémákat okozhat.
@@ -55,6 +68,17 @@ export const schemaDetails = {
         'Az érzelmi üresség kódja akkor alakul ki, amikor valaki úgy érzi, hogy nem kapja meg azokat az alapvető érzelmi támogatásokat...',
       additionalInfo: (
         <div className="space-y-6 mt-6">
+          <p className="text-sm text-gray-500 italic">
+           'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:'
+         </p>
+          <Section title="Pszichológiai párhuzam" items={[
+            'Ez a minta hasonlít a következő pszichológiai jelenségekhez:',
+            '• Érzelmi elhanyagolás (emotional neglect)',
+            '• Depresszív tünetekhez kapcsolódó ürességérzés',
+            '• Disszociatív élmények enyhébb formái',
+            '• Alacsony érzelmi tudatosság (alexithymia)'
+          ]} />
+
           <Section title="Jellemzők" items={[
             'Érzelmi szükségletek kielégítetlensége.',
             'Hit abban, hogy nem érdemel szeretetet.',
@@ -105,6 +129,17 @@ export const schemaDetails = {
         'Az önértékelési hiány kódja akkor alakul ki, amikor egy személy úgy érzi, hogy nem érdemes szeretetre, tiszteletre, vagy hogy másokhoz képest alacsonyabb értékkel bír, ami miatt folyamatosan kétségbe vonja saját értékét és helyét a világban.',
       additionalInfo: (
         <div className="space-y-6 mt-6">
+          <p className="text-sm text-gray-500 italic">
+            Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+          </p>
+          <Section title="Pszichológiai párhuzam" items={[
+            'Ez a minta hasonlít a következő pszichológiai jelenségekhez:',
+            '• Alacsony önértékelés (low self-esteem)',
+            '• Negatív alaphiedelmek (CBT)',
+            '• Szégyen alapú identitás',
+            '• Imposter szindróma'
+          ]} />
+
           <Section title="Jellemzők" items={[
             'Alacsony önbecsülés: az érzés, hogy nem elég jó, és nem képes megfelelni sem a saját, sem mások elvárásainak.',
             'Folyamatos önkritika: úgy érzi, hogy bármit is tesz, az nem elegendő, és mindig a legjobbnak kell lennie az elfogadáshoz.',
@@ -157,6 +192,19 @@ export const schemaDetails = {
     'A Kirekesztettség Érzésének Kódja egy olyan érzelmi minta, amely abból az érzésből fakad, hogy az ember kívülálló, nem illeszkedik be, és nem tartozik sehova. Jellemző rá a közösségi kapcsolatok hiánya, az elszigetelődés és az érzelmi távolságtartás.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+    <p className="text-sm text-gray-500 italic">
+       Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+    </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+          'Ez a minta hasonlít a következő pszichológiai jelenségekhez:',
+          '• Társas szorongás (social anxiety)',
+          '• Elutasítástól való félelem',
+          '• Alacsony társas önértékelés',
+          '• Magány és izoláció pszichológiája'
+        ]} />
+
+
       <Section title="Jellemzők" items={[
         'Tartós magányérzet, még emberek között is.',
         'Kívülállóság érzése: „nem vagyok olyan, mint mások”.',
@@ -196,7 +244,7 @@ export const schemaDetails = {
         A Kirekesztettség Érzésének Kódja mélyen gyökerező hiedelmekhez és fájdalmas tapasztalatokhoz kapcsolódik. A feloldása lehetséges tudatos kapcsolódással, bizalmi építkezéssel és érzelmi önfeltárással. A cél, hogy újra képesek legyünk közösséghez tartozni, elfogadva önmagunkat és másokat is.
       </p>
       <div className="text-green-700 text-base leading">
-        <strong>Kapcsolódó ösztön:</strong> <em>Összetartozás ösztöne</em> – az emberi szükséglet arra, hogy közösséghez tartozzunk, kapcsolódjunk másokhoz és elfogadottnak érezzük magunkat.  
+        <strong>Kapcsolódó ösztön:</strong> <em>Összetartozás ösztöne</em> – az emberi alapvető késztetése arra, hogy közösséghez tartozzon, kapcsolódjunk másokhoz és elfogadottnak érezze magát.  
         Ha ez az ösztön sérül – például gyermekkori elhanyagolás, kiközösítés vagy érzelmi elérhetetlenség miatt –, kialakulhat a kirekesztettség érzése, a tartós magány és a kívülállóság belső hiedelme.
       </div>
     </div>
@@ -208,6 +256,18 @@ export const schemaDetails = {
     'A Bizalmi Védekezés Kódja egy olyan érzelmi minta, amely abból a meggyőződésből fakad, hogy mások kihasználják, manipulálják vagy ártani akarnak. Ennek hatására az egyén nehezen enged közel bárkit, gyanakvó, és gyakran védekező, kontrolláló viselkedést tanúsít.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+       
+       <p className="text-sm text-gray-500 italic">
+      Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Bizalmatlanság / abúzus séma (schema therapy)',
+        '• Hipervigilancia (fokozott éberség)',
+        '• Traumára adott védekező reakciók',
+        '• Paranoid gondolkodási minták enyhébb formái'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Állandó gyanakvás mások szándékaival kapcsolatban.',
         'Félelem attól, hogy mások kihasználják, elárulják vagy becsapják.',
@@ -262,6 +322,20 @@ export const schemaDetails = {
     'Az Önállótlanság Kódja egy olyan érzelmi séma, amely azt az érzést és meggyőződést hordozza, hogy az ember képtelen egyedül megbirkózni a mindennapi élet kihívásaival, és másokra kell támaszkodnia. A személy alulértékeli saját kompetenciáját, és állandó segítségre, irányításra vagy megerősítésre van szüksége.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+         Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Alacsony önhatékonyság (low self-efficacy)',
+        '• Tanult tehetetlenség (learned helplessness)',
+        '• Függő viselkedési minták (dependent tendencies)',
+        '• Autonómia sérülése (autonomy impairment)',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Gyenge önbizalom a döntéshozatalban.',
         'Félelem attól, hogy hibázik, ha egyedül cselekszik.',
@@ -303,6 +377,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         Az Önállótlanság Kódja gyakran visszavezethető a túlzott védelemre és a gyermekkorban elszenvedett alábecsülésre. A kód oldása segít az egyénnek megtanulni bízni önmagában, önálló döntéseket hozni, és fokozatosan visszaszerezni az irányítást az élete felett.
       </p>
+      <div className="text-green-700 text-base leading">
+         <strong>Kapcsolódó ösztön:</strong> <em>Autonómia és kompetencia ösztöne</em> – az ember alapvető késztetése arra, hogy képesnek érezze magát a világban való eligazodásra, önálló döntéseket hozzon, és hatékonyan kezelje a kihívásokat.  
+          Ha ez az ösztön sérül – például túlzott kontroll, kritika vagy az önállóság hiánya miatt –, kialakulhat az a belső meggyőződés, hogy az ember nem képes egyedül boldogulni, és másokra kell támaszkodnia.
+      </div>
     </div>
   )
  },
@@ -313,6 +391,19 @@ export const schemaDetails = {
     'A Fenyegetettség Kódja egy mélyen gyökerező érzelmi minta, amelyet állandó, irracionális félelem jellemez attól, hogy valamilyen váratlan katasztrófa, veszély vagy tragédia fog bekövetkezni. Az érintett személy gyakran túlbecsüli a veszélyeket, és nehezen éli meg a biztonság érzését.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+      Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a minta hasonlít a következő pszichológiai jelenségekhez:',
+        '• Krónikus szorongás (generalized anxiety)',
+        '• Amygdala túlaktiváció (veszélyészlelés)',
+        '• Katasztrofizáló gondolkodás (CBT)',
+        '• Hipervigilancia'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Folyamatos szorongás, még akkor is, ha nincsenek valós fenyegetések.',
         'Rettegés természeti katasztrófáktól, betegségektől, balesetektől vagy társadalmi összeomlástól.',
@@ -354,6 +445,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Fenyegetettség Kódja gyakran egy belső bizonytalanságból fakad, amelyet múltbeli események vagy állandó külső hatások alakítottak ki. A kód feloldásához szükséges új, biztonságot adó tapasztalatok szerzése, valamint annak megtanulása, hogy a világ nem minden pillanatban veszélyes hely. Ezáltal visszanyerhető a nyugalom és az önbizalom.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Önfenntartási ösztön</em> – az ember alapvető késztetése arra, hogy észlelje a veszélyt, megvédje magát, és biztonságban maradjon.  
+        Ha ez az ösztön túlzottan aktiválódik – például bizonytalan környezet, trauma vagy folyamatos negatív hatások miatt –, az egyén a valósnál nagyobb veszélyt érzékelhet, és állandó készenléti állapotba kerülhet, ami tartós szorongáshoz vezet.
+      </div>
     </div>
   )
 },
@@ -364,6 +459,19 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Összefonódás (enmeshment)',
+        '• Gyenge énhatárok (poor boundaries)',
+        '• Kodependens minták (codependency)',
+        '• Identitás diffúzió (identity diffusion)',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
       <Section title="Jellemzők" items={[
         'Túlzott érzelmi függés másoktól.',
         'Nehézségek a saját vélemény, akarat vagy érzések megfogalmazásában.',
@@ -405,6 +513,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         Az Énhatárok Feloldódása Kódja gyakran rejtett formában jelenik meg, mégis mély hatással van az egyén autonómiájára és kapcsolataira. A gyógyulás kulcsa az, hogy az egyén megtanulja felismerni saját érzéseit, igényeit, és biztonsággal képviselje önmagát másokkal szemben – anélkül, hogy elveszítené a kapcsolódás lehetőségét.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Kötődés és autonómia egyensúlyának ösztöne</em> – az ember alapvető késztetése arra, hogy egyszerre tudjon kapcsolódni másokhoz, miközben megőrzi saját identitását, határait és önállóságát.  
+         Ha ez az egyensúly sérül – például túlzott érzelmi összefonódás vagy kontrolláló kapcsolatok miatt –, az egyén elveszítheti saját határait, és nehezen tudja elkülöníteni saját érzéseit és szükségleteit másokétól.
+      </div>
     </div>
   )
 },
@@ -415,6 +527,20 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+       
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+          'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+          '• Kudarckerülés (failure avoidance)',
+          '• Alacsony önhatékonyság (low self-efficacy)',
+          '• Tanult tehetetlenség (learned helplessness)',
+          '• Impostor-szindróma elemei',
+          '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Folyamatos kételkedés a saját képességekben és teljesítményben.',
         'Bénító szorongás a megmérettetéstől, vizsgáktól, felelősségteljes feladatoktól.',
@@ -457,6 +583,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Sikertelenség Kódja gyakran láthatatlan falat húz az ember és a lehetőségei közé. A kód feloldása azt jelenti, hogy az egyén felismeri: a hibázás nem a gyengeség jele, hanem az élet része. Ha képes tanulni belőle, megerősödve és bátrabban léphet tovább a saját útján.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Kompetencia és önértékelés ösztöne</em> – az ember alapvető késztetése arra, hogy képesnek, hatékonynak és értékesnek érezze magát a világban.  
+        Ha ez az ösztön sérül – például túlzott kritika, megszégyenítés vagy irreális elvárások miatt –, kialakulhat az a belső meggyőződés, hogy az egyén nem elég jó vagy nem képes megfelelni, ami elkerüléshez, szorongáshoz és önkorlátozáshoz vezet.
+      </div>
     </div>
   )
 },
@@ -467,6 +597,20 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Feljogosítottság / grandiozitás (entitlement)',
+        '• Nárcisztikus jegyek enyhébb formái',
+        '• Alacsony frusztrációtűrés',
+        '• Impulzuskontroll nehézségek',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Az az érzés, hogy rá nem vonatkoznak a szabályok.',
         'Mások igényeinek és határainak figyelmen kívül hagyása.',
@@ -510,6 +654,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Kiváltságosság Kódja mögött gyakran mélyebb érzelmi hiányok húzódnak meg, amelyeket a kiváltságokkal próbál az egyén kompenzálni. A kód oldásával lehetőség nyílik az empatikus, kiegyensúlyozott kapcsolatok kialakítására, ahol a kölcsönösség és tisztelet válik alapértékké.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Szükségletérvényesítés és határkezelés ösztöne</em> – az ember alapvető késztetése arra, hogy saját szükségleteit érvényesítse, miközben figyelembe veszi mások határait és igényeit is.  
+          Ha ez az ösztön torzul – például határok hiánya vagy túlzott engedékenység miatt –, az egyén túlhangsúlyozhatja saját igényeit, és nehézséget okozhat számára a kölcsönös, egyensúlyon alapuló kapcsolatok kialakítása.
+      </div>
     </div>
   )
 },
@@ -520,6 +668,20 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Impulzuskontroll zavarok',
+        '• Gyenge érzelemszabályozás (emotion regulation difficulty)',
+        '• Alacsony frusztrációtűrés',
+        '• Késleltetett jutalmazás nehézsége (delay of gratification)',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Impulzív viselkedés: gyakran cselekszik hirtelen, átgondolatlanul.',
         'Az azonnali kielégülés keresése hosszú távú célok rovására.',
@@ -616,6 +778,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         Az Alávetettség Kódja gyakran mély gyermekkori tapasztalatokon alapul, amelyek során az egyén azt tanulta meg, hogy csak akkor elfogadható, ha alárendeli magát másoknak. A változás lehetősége abban rejlik, hogy fokozatosan újra kapcsolódunk saját belső szükségleteinkhez, megtanuljuk kifejezni önmagunkat, és kiállni azért, akik vagyunk – szerethető és értékes emberként.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Önszabályozás és késleltetés ösztöne</em> – az ember alapvető késztetése arra, hogy képes legyen irányítani impulzusait, érzelmeit és viselkedését, valamint rövid távú késztetéseit hosszabb távú célok érdekében szabályozni.  
+        Ha ez az ösztön sérül – például következetlen nevelés, túlzott engedékenység vagy érzelmi túlterhelés miatt –, az egyén nehezen viseli a késleltetést és a frusztrációt, és hajlamos lehet impulzív, azonnali kielégülést kereső viselkedésre.
+      </div>
     </div>
   )
 },
@@ -626,6 +792,22 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Kodependencia (codependency)',
+        '• Önfeláldozás séma (self-sacrifice schema)',
+        '• People-pleasing viselkedés',
+        '• Gyenge határhúzás (poor boundaries)',
+        '• Parentifikáció (korai gondoskodó szerep)',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Saját szükségletek és vágyak háttérbe szorítása mások érdekében.',
         'Folyamatos segítségnyújtás, még saját kárunkra is.',
@@ -669,6 +851,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Túlzott Gondoskodás Kódja mögött gyakran az a mély meggyőződés húzódik meg, hogy csak akkor vagyunk szerethetők, ha másokért élünk. A kód feloldása nem önzőséget jelent, hanem az egészséges önszeretet és kapcsolati egyensúly megteremtését – ahol az önmagunkkal való törődés is helyet kap a mindennapokban.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Kapcsolódás és önérték egyensúlyának ösztöne</em> – az ember alapvető késztetése arra, hogy kapcsolódjon másokhoz, miközben saját szükségleteit, határait és értékességét is megőrzi.  
+        Ha ez az egyensúly sérül – például feltételes szeretet vagy túlzott gondoskodó szerep miatt –, az egyén mások igényeit helyezheti saját maga elé, és önfeladás árán próbálhat kapcsolódni, ami hosszú távon kimerüléshez és belső hiányhoz vezet.
+      </div>
     </div>
   )
 },
@@ -679,6 +865,20 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+       Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+          'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+          '• Külső validáció-függőség (external validation dependence)',
+          '• Feltételes önértékelés (contingent self-worth)',
+          '• People-pleasing viselkedés',
+          '• Impostor-szindróma elemei',
+          '• Közösségi média okozta önértékelési torzulások',
+          '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+        ]} />
       <Section title="Jellemzők" items={[
         'Erős belső késztetés arra, hogy mások pozitív véleményét elnyerje.',
         'Önértékelés a külső elismerésektől függ.',
@@ -722,6 +922,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Figyelemigény Kódja mögött gyakran az a félelem áll, hogy önmagunkban nem vagyunk elégségesek. A kód feloldása során megtanulhatjuk belső forrásból táplálni önértékelésünket, és ráébredni, hogy a valódi szeretet nem teljesítményhez kötött, hanem az önazonosságban gyökerezik.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Önértékelés és társas visszajelzés ösztöne</em> – az ember alapvető késztetése arra, hogy értékesnek és elfogadottnak érezze magát mások szemében, és visszajelzést kapjon a környezetétől.  
+        Ha ez az ösztön túlzottan a külső megerősítésekhez kötődik – például feltételes szeretet vagy teljesítményhez kötött elismerés miatt –, az egyén önértékelése instabillá válhat, és folyamatos visszacsatolásra szorulhat másoktól.
+      </div>
     </div>
   )
 },
@@ -732,6 +936,21 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+          'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+          '• Negativitási torzítás (negativity bias)',
+          '• Depresszív gondolkodási minták (cognitive distortions)',
+          '• Tanult tehetetlenség (learned helplessness)',
+          '• Krónikus pesszimizmus',
+          '• Katasztrofizáló gondolkodás',
+          '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Állandó aggódás és pesszimizmus a jövővel kapcsolatban.',
         'Fókusz a problémákon és veszteségeken, a pozitívumok elhanyagolása.',
@@ -775,6 +994,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         Az Ellenséges Belátás Kódja mélyen befolyásolja a mindennapi életminőséget és a kapcsolatok minőségét. A kód felismerése és kezelése révén újra felfedezhető a remény és a pozitív életszemlélet, amely javítja az érzelmi jóllétet és a társas kapcsolatok minőségét.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Biztonságérzékelés és jelentésalkotás ösztöne</em> – az ember alapvető késztetése arra, hogy értelmezze a világot, felismerje a veszélyeket, és jelentést adjon a tapasztalatainak.  
+        Ha ez az ösztön torzul – például ismétlődő negatív élmények vagy tanult minták hatására –, az egyén hajlamos lehet a világot veszélyesnek, reménytelennek vagy ellenségesnek látni, ami tartós pesszimizmushoz és érzelmi kimerültséghez vezethet.
+      </div>
     </div>
   )
 },
@@ -785,6 +1008,21 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Érzelmi gátoltság (emotional inhibition)',
+        '• Érzelemelkerülés (emotional avoidance)',
+        '• Szégyenalapú működés (shame-based patterns)',
+        '• Alexithymia (érzelmek felismerésének nehézsége)',
+        '• Túlzott önkontroll (overcontrol)',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Érzelmek elfojtása vagy tagadása, még akkor is, ha intenzívek.',
         'Nehezére esik megnyílni mások előtt, különösen negatív érzések esetén.',
@@ -827,6 +1065,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Belső Önkorlátozás Kódja mély belső korlátokat hoz létre az érzelmi önkifejezésben és kapcsolódásban. Ennek tudatosítása és kezelése lehetővé teszi az érzelmi szabadságot és az egészségesebb, mélyebb emberi kapcsolatokat.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Önkifejezés és érzelmi biztonság ösztöne</em> – az ember alapvető késztetése arra, hogy érzéseit, gondolatait és belső élményeit szabadon és biztonságosan kifejezze.  
+        Ha ez az ösztön sérül – például kritikus vagy elutasító környezet hatására –, az egyén megtanulhatja elfojtani vagy kontrollálni saját érzelmeit, hogy elkerülje a szégyent vagy az elutasítást, ami hosszú távon érzelmi távolsághoz és belső feszültséghez vezethet.
+      </div>
     </div>
   )
 },
@@ -837,6 +1079,19 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Perfekcionizmus (maladaptive perfectionism)',
+        '• Könyörtelen mércék / túlzott elvárások séma (unrelenting standards – schema therapy)',
+        '• Belső kritikus (inner critic)',
+        '• Szégyenalapú önértékelés (shame-based self-worth)',
+        '• Kényszeres kontrolligény (overcontrol)',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
       <Section title="Jellemzők" items={[
         'Állandó belső kritikus hang, amely sosem elégedett.',
         'Túlzott perfekcionizmus minden élethelyzetben.',
@@ -879,6 +1134,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Perfekcionizmus Kódja gyakran megnehezíti az egyén számára, hogy elfogadja saját hibáit és emberi korlátait. Ennek tudatosítása és feldolgozása segíthet abban, hogy egy egészségesebb, elfogadóbb és szeretetteljesebb belső hangot alakítsunk ki.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Önértékelés és kompetencia ösztöne</em> – az ember alapvető késztetése arra, hogy értékesnek, kompetensnek és elfogadhatónak érezze magát.  
+        Ha ez az ösztön sérül – például túlzott elvárások, kritika vagy feltételes elfogadás hatására –, az egyénben kialakulhat a folyamatos megfelelési kényszer és a perfekcionizmus, amely a hibák elkerülésére és az önérték folyamatos bizonyítására irányul.
+      </div>
     </div>
   )
 },
@@ -889,6 +1148,21 @@ export const schemaDetails = {
 
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Büntető szülő mód (punitive parent mode – schema therapy)',
+        '• Belső kritikus (inner critic)',
+        '• Magas lelkiismeretesség torzult formája (overactive superego)',
+        '• Fekete-fehér gondolkodás (moral rigidity)',
+        '• Szégyen- és bűntudat alapú önszabályozás',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Erős ítélkezés és kritika mások hibái felett.',
         'Túlzott büntető reakciók kisebb vétségekre is.',
@@ -930,6 +1204,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Belső Bíró Kódja gyakran a belső szigorúság és ítélkezés eredménye, amely megnehezíti a kapcsolatokban a megbocsátást és elfogadást. Ennek tudatosítása és kezelése segíthet az egészségesebb és elfogadóbb viselkedés kialakításában.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Rend és igazságosság ösztöne</em> – az ember belső késztetése arra, hogy a világ kiszámítható, szabályozott és igazságos legyen.  
+          Ha ez az ösztön túlzottan vagy torzultan működik – például szigorú, büntető nevelés hatására –, az egyén hajlamossá válhat a hibák túlzott büntetésére, merev ítélkezésre és a megbocsátás hiányára, ami önmagával és másokkal szemben is kemény, kritikus hozzáállást eredményez.
+      </div>
     </div>
   )
 },
@@ -940,6 +1218,21 @@ export const schemaDetails = {
     'A Digitális Elidegenedés Kódja abból a hiedelemből fakad, hogy a technológia és a digitális kapcsolatok miatt az emberi kapcsolatok felszínessé, hiteltelenné és érzelmileg kielégítetlenné váltak. Az érintett személy gyakran érzi magát magányosnak és üresnek, különösen az online térben, ahol folyamatosan attól tart, hogy nem elég jó vagy elfogadott.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+       
+       <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több modern pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Társas összehasonlítás elmélete (social comparison theory)',
+        '• Közösségi média okozta önértékelési zavarok',
+        '• Magány és társas izoláció modern formái (perceived loneliness)',
+        '• FOMO – kimaradástól való félelem (fear of missing out)',
+        '• Digitális túlterheltség és dopaminfüggő viselkedési minták',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek megérteni a működését'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Magány és érzelmi üresség az online kapcsolatok mögött.',
         'Szorongás és önértékelési problémák a közösségi média használata során.',
@@ -980,6 +1273,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Digitális Elidegenedés Kódja a modern technológiai környezet kihívásaira adott érzelmi válasz, amely megnehezíti az autentikus emberi kapcsolódást. Tudatos jelenléttel és emberi kapcsolatok ápolásával enyhíthető a kód okozta érzelmi hiány.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Kapcsolódás és elismerés ösztöne</em> – az ember alapvető szükséglete arra, hogy valódi, mély kapcsolatokban éljen, és elfogadottnak, értékesnek érezze magát mások szemében.  
+        A digitális tér torz visszajelzései és felszínes interakciói ezt az ösztönt félrevezethetik, ami érzelmi ürességhez, összehasonlításhoz és a valódi kapcsolódás hiányának élményéhez vezethet.
+      </div>
     </div>
   )
 },
@@ -990,6 +1287,21 @@ export const schemaDetails = {
     'A Teljesítmény-kényszer Kódja abból a meggyőződésből ered, hogy folyamatosan maximalizálni kell a produktivitást és alkalmazkodni kell a gyorsan változó munka- és életkörnyezethez, különben lemaradok vagy nem vagyok elég jó. Ez a kód gyakran vezet kiégéshez és identitásválsághoz.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Teljesítményalapú önértékelés (performance-based self-worth)',
+        '• Kiégés szindróma (burnout)',
+        '• Hustle culture / túlhajszoltság pszichológiája',
+        '• Belső hajtóerő túlaktiválása (overachievement drive)',
+        '• Krónikus stressz és túlterhelés',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Állandó nyomás a maximális teljesítmény elérésére.',
         'Folyamatos stressz és fáradtság érzése.',
@@ -1030,6 +1342,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Teljesítmény-kényszer Kódja a modern kor elvárásainak és a személyes belső nyomásnak az összjátéka, amely megnehezíti a kiegyensúlyozott életet és az egészséges önelfogadást. Tudatos szemlélettel és önmagunk támogatásával kezelhető.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Érvényesülés és kompetencia ösztöne</em> – az ember belső késztetése arra, hogy fejlődjön, teljesítsen és értékesnek érezze magát a világban.  
+        Ha ez az ösztön túlzott nyomás alá kerül – például külső elvárások vagy belső bizonyítási kényszer hatására –, az egyén folyamatos teljesítménykényszerben élhet, amely kimerültséghez, kiégéshez és az önérték teljesítményhez kötéséhez vezet.
+      </div>
     </div>
   )
 },
@@ -1040,6 +1356,21 @@ export const schemaDetails = {
     'Az Információs Túlterheltség Kódja azon a meggyőződésen alapul, hogy túl sok információ és választási lehetőség áll rendelkezésre, ezért képtelen vagyok dönteni vagy cselekedni. Ez gyakran szorongáshoz és halogatáshoz vezet.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+         Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Döntési paralízis (analysis paralysis)',
+        '• Döntési túlterheltség (decision fatigue)',
+        '• Választási paradoxon (paradox of choice – Barry Schwartz)',
+        '• Kognitív túlterheltség (cognitive overload)',
+        '• Perfekcionista döntéshozatal',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Állandó bizonytalanság és szorongás a döntéshozatalban.',
         'Halogatás és tétovaság a cselekvésben.',
@@ -1080,6 +1411,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         Az Információs Túlterheltség Kódja a modern világ információs áradatának és a tökéletességre való törekvésnek a következménye, amely gátolja a hatékony döntéshozatalt és a cselekvést. Tudatos gyakorlással és támogatással kezelhető.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Kontroll és biztonság ösztöne</em> – az ember belső késztetése arra, hogy átlássa a helyzeteket, jó döntéseket hozzon és biztonságban érezze magát a választásai következményeivel kapcsolatban.  
+        Ha ez az ösztön túlterhelődik – például túl sok információ és lehetőség hatására –, az egyén elveszítheti a kontrollérzetét, ami döntési bénultsághoz, szorongáshoz és halogatáshoz vezethet.
+      </div>
     </div>
   )
 },
@@ -1090,6 +1425,21 @@ export const schemaDetails = {
     'A Külső Validáció-függőség Kódja az a hiedelem, hogy az önértékelésem kizárólag mások visszajelzésein és lájkjain múlik, ami állandó megfelelési kényszert eredményez. Ez az állapot szorongást, önbizalomhiányt és állandó összehasonlítást okoz.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Külső megerősítés-függőség (external validation dependence)',
+        '• Feltételes önértékelés (contingent self-worth)',
+        '• Társas összehasonlítás (social comparison theory)',
+        '• Önértékelési instabilitás (unstable self-esteem)',
+        '• Közösségi média által erősített identitásfüggés',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Állandó bizonytalanság önmagammal kapcsolatban mások visszajelzései nélkül.',
         'Megfelelési kényszer és túlzott figyelem mások véleményére.',
@@ -1130,6 +1480,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Külső Validáció-függőség Kódja a külső visszajelzések iránti túlzott igény következménye, amely megnehezíti az egészséges önértékelés kialakítását. Tudatos gyakorlással és támogatással oldható.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Önértékelés és elfogadás ösztöne</em> – az ember alapvető szükséglete arra, hogy értékesnek és elfogadhatónak érezze magát.  
+        Ha ez az ösztön külső forrásokra épül – például mások visszajelzéseire vagy elismerésére –, az önértékelés instabillá válhat, és az egyén folyamatos megerősítésre szorulhat ahhoz, hogy jól érezze magát önmagával.
+      </div>
     </div>
   )
 },
@@ -1140,6 +1494,21 @@ export const schemaDetails = {
     'A Klíma- és Jövőfélelem Kódja azon a meggyőződésen alapul, hogy a világ és a jövő fenyegetett, és én tehetetlen vagyok a változásokkal szemben. Ez az érzés szorongást, kilátástalanságot és apátiát eredményezhet.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több modern pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Klímaszorongás (eco-anxiety)',
+        '• Tanult tehetetlenség (learned helplessness)',
+        '• Egzisztenciális szorongás (existential anxiety)',
+        '• Krónikus jövőorientált szorongás',
+        '• Média által erősített fenyegetésérzet',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek mélyebben megérteni a működést'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Folyamatos félelem és szorongás a környezeti és társadalmi változások miatt.',
         'Kilátástalanság és tehetetlenség érzése.',
@@ -1180,6 +1549,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         A Klíma- és Jövőfélelem Kódja a globális problémákra adott érzelmi reakció, amely megnehezíti a remény és cselekvés megtartását. Tudatossággal és közösségi támogatással enyhíthető.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Biztonság és túlélés ösztöne</em> – az ember alapvető késztetése arra, hogy biztonságban érezze magát és képes legyen hatni a jövőjére.  
+        Ha ez az ösztön globális fenyegetések – például klímaváltozás vagy társadalmi bizonytalanság – hatására aktiválódik, de az egyén tehetetlennek érzi magát, kialakulhat a szorongás, kilátástalanság és passzivitás élménye.
+      </div>
     </div>
   )
 },
@@ -1190,6 +1563,20 @@ export const schemaDetails = {
     'Az Önállóság-Elszakadottság Paradoxon Kódja abból a hiedelemből fakad, hogy bár önállónak kell lennem, valójában egyedül vagyok és nem számíthatok másokra. Ez az ellentmondás izolációhoz, magányhoz és nehézségekhez vezet a segítségkérésben.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+       Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Elkerülő kötődési stílus (avoidant attachment)',
+        '• Kapcsolati depriváció és izoláció',
+        '• Tanult függetlenség (defenzív önállóság)',
+        '• Bizalmi sérülések (relational trauma)',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek megérteni a működését'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Erős önállóság igénye, ugyanakkor magányosság érzése.',
         'Nehezen kér segítséget vagy támogatást másoktól.',
@@ -1230,6 +1617,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         Az Önállóság-Elszakadottság Paradoxon Kódja belső feszültséget okoz az önállóság és a kapcsolódás igénye között. Tudatos önismerettel és támogatással oldható ez a paradoxon.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Kötődés és autonómia egyensúlyának ösztöne</em> – az ember alapvető szükséglete arra, hogy egyszerre legyen képes kapcsolódni másokhoz és önálló, autonóm egyénként működni.  
+        Ha ez az egyensúly sérül – például csalódások vagy elutasítás miatt –, az egyén túlzott önállóságba menekülhet, miközben belül megmarad a kapcsolódás iránti vágy, ami belső feszültséget és elszigeteltséget eredményez.
+      </div>
     </div>
   )
 },
@@ -1240,6 +1631,20 @@ export const schemaDetails = {
     'Az Érzelmi Túlterheltség és Kiégés Kódja abból a hiedelemből ered, hogy folyamatosan erősnek kell lennem, nem mutathatok gyengeséget, különben nem vagyok értékes vagy elismerhető. Ez belső feszültséghez, kimerültséghez és elfojtott érzelmekhez vezet.',
   additionalInfo: (
     <div className="space-y-6 mt-6">
+
+      <p className="text-sm text-gray-500 italic">
+        Ez a kód nem klinikai diagnózis, de több ismert pszichológiai jelenséggel mutat párhuzamot.
+      </p>
+
+      <Section title="Pszichológiai párhuzam" items={[
+        'Ez a kód több ismert pszichológiai jelenséggel is párhuzamba állítható:',
+        '• Érzelmi elfojtás (emotional suppression)',
+        '• Kiégés szindróma (burnout)',
+        '• Túlkompenzáló megküzdés (overcompensation coping)',
+        '• Szégyenalapú önértékelés (shame-based identity)',
+        '• Ezek nem azonosak ezzel a modellel, de segítenek megérteni a működését'
+      ]} />
+
       <Section title="Jellemzők" items={[
         'Folyamatos belső nyomás az erősség és kontroll fenntartására.',
         'Nem engedi meg magának a gyengeség vagy sebezhetőség kifejezését.',
@@ -1280,6 +1685,10 @@ export const schemaDetails = {
       <p className="text-gray-700 text-base leading-relaxed">
         Az Érzelmi Túlterheltség és Kiégés Kódja megnehezíti az érzelmi kifejezést és a belső egyensúlyt. Tudatossággal és támogatással enyhíthető a belső feszültség.
       </p>
+      <div className="text-green-700 text-base leading">
+        <strong>Kapcsolódó ösztön:</strong> <em>Önérték és érzelmi biztonság ösztöne</em> – az ember alapvető szükséglete arra, hogy értékesnek érezze magát, és biztonságban megélhesse saját érzelmeit.  
+        Ha ez az ösztön sérül – például amikor a gyengeséget elutasítás vagy szégyen követi –, az egyén megtanulhatja elfojtani érzéseit, és folyamatos erősséget mutatni. Ez hosszú távon érzelmi túlterheltséghez, kimerültséghez és kiégéshez vezethet.
+      </div>
     </div>
   )
 }
