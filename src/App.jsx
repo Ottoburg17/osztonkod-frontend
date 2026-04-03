@@ -58,6 +58,7 @@ import Disclaimer from "./pages/Disclaimer.jsx";
 import SubscriptionPolicy from "./pages/SubscriptionPolicy.jsx";
 import Invoices from "./pages/Invoices.jsx";
 import AutomaticThinking from "./pages/AutomaticThinking.jsx";
+import TestPage from "./pages/TestPage";
 import AnalyticsListener from "./analytics/AnalyticsListener";
 import { loadAnalytics } from "./analytics/loadAnalytics";
 import BillingPage from "./pages/BillingPage";
@@ -127,6 +128,7 @@ return (
           <Route path="/my-patterns" element={<MyPatterns />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/adatkezeles" element={<PrivacyPolicy /> } />
+          <Route path="/test" element={<TestPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/jogi/elofizetes" element={<SubscriptionPolicy />} />

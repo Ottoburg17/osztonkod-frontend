@@ -49,8 +49,18 @@ export default function About() {
             transition={{ duration: 1 }}
             className="text-4xl md:text-5xl font-extrabold text-green-600 mb-12"
           >
-            Németh Ottó & Az Érzelmi Ösztönkód
+            Az ismétlődő minták mögött mindig van egy működés.
+            És ha felismered, meg tudod változtatni.
           </motion.h1>
+
+           <motion.p
+            initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-lg text-gray-600"
+            >
+              Németh Ottó – Az Érzelmi Ösztönkód megalkotója
+          </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
@@ -167,6 +177,24 @@ export default function About() {
             </p>
           </section>
 
+
+          <section>
+            <h3 className="text-2xl font-bold text-green-600 mb-4">
+              Hogyan segít az Ösztönkód?
+            </h3>
+
+            <p className="text-gray-700 mb-4">
+            Lehet, hogy már te is próbáltál változtatni — mégis ugyanoda jutottál vissza.
+            </p>
+
+            <ul className="space-y-3 text-gray-700">
+              <li>• Felismered az ismétlődő reakcióidat</li>
+              <li>• Megérted, mi váltja ki őket</li>
+              <li>• Képes leszel megszakítani az automatikus mintát</li>
+              <li>• Tudatosabb döntéseket hozol</li>
+            </ul>
+          </section>
+
           {/* ALKOTÓ */}
           <section>
             <h3 className="text-2xl md:text-3xl font-bold text-green-600 mb-4">
@@ -281,6 +309,10 @@ export default function About() {
             Az Ösztönkód ebből a felismerésből született:
             ha látod a működést, megszakíthatod.
             És ha megszakítod, visszaveszed az irányítást.
+          </motion.p>
+
+          <motion.p className="text-gray-700 leading-relaxed mt-6">
+            Ezért hoztam létre ezt a rendszert — hogy másoknak ne kelljen ugyanazokat a köröket végigjárniuk, amiket én.
           </motion.p>
 
           <motion.p

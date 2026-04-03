@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 export default function InfinitySection() {
   return (
     <section className="relative pt-24 pb-32 px-6 md:px-16 
@@ -100,7 +103,34 @@ export default function InfinitySection() {
           </p>
 
         </div>
+
+         
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/test"
+            className="
+            px-8 py-4 
+            bg-green-600 text-white 
+            rounded-2xl 
+            font-semibold 
+            shadow-xl
+            hover:bg-green-700 
+            hover:scale-105 
+            active:scale-95
+            transition-all duration-200
+            relative
+            before:absolute before:inset-0
+            before:rounded-2xl
+            before:blur-xl before:opacity-0
+            hover:before:opacity-40
+            before:bg-green-400"
+            >
+            Tudd meg, mi irányít valójában →
+          </Link>
+        </div>
+
       </div>
+       
     </section>
   );
 }
