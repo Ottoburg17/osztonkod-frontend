@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence, PanInfo } from "framer-motion";
+import { motion, AnimatePresence} from "framer-motion";
 import { useEffect } from "react";
 import { TEST_QUESTIONS, CATEGORY_LABELS } from "../../data/testQuestions";
 import { useTestEngine } from "../../hooks/useTestEngine";

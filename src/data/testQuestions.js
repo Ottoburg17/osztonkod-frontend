@@ -1,18 +1,4 @@
-export type QuestionCategory =
-  | "SELF_WORTH"
-  | "INNER_INSECURITY"
-  | "TRUST_DEFENSE"
-  | "PERFECTIONISM"
-  | "VALIDATION_NEED";
-
-export type Question = {
-  id: string;
-  category: QuestionCategory;
-  text: string;
-};
-
-export const TEST_QUESTIONS: Question[] = [
-  // SELF WORTH
+export const TEST_QUESTIONS = [
   {
     id: "q1",
     category: "SELF_WORTH",
@@ -23,8 +9,6 @@ export const TEST_QUESTIONS: Question[] = [
     category: "SELF_WORTH",
     text: "Sokszor hasonlítom magam másokhoz negatívan."
   },
-
-  // INNER INSECURITY
   {
     id: "q3",
     category: "INNER_INSECURITY",
@@ -35,8 +19,6 @@ export const TEST_QUESTIONS: Question[] = [
     category: "INNER_INSECURITY",
     text: "Nehéz biztonságban éreznem magam egy kapcsolatban."
   },
-
-  // TRUST DEFENSE
   {
     id: "q5",
     category: "TRUST_DEFENSE",
@@ -47,8 +29,6 @@ export const TEST_QUESTIONS: Question[] = [
     category: "TRUST_DEFENSE",
     text: "Gyakran attól tartok, hogy mások kihasználnak."
   },
-
-  // PERFECTIONISM
   {
     id: "q7",
     category: "PERFECTIONISM",
@@ -59,8 +39,6 @@ export const TEST_QUESTIONS: Question[] = [
     category: "PERFECTIONISM",
     text: "Zavar, ha nem csinálok valamit tökéletesen."
   },
-
-  // VALIDATION NEED
   {
     id: "q9",
     category: "VALIDATION_NEED",
@@ -72,3 +50,11 @@ export const TEST_QUESTIONS: Question[] = [
     text: "Rosszul esik, ha nem kapok visszajelzést."
   }
 ];
+
+export const CATEGORY_LABELS = {
+  SELF_WORTH: "Önértékelési hiány",
+  INNER_INSECURITY: "Belső hiányérzet",
+  TRUST_DEFENSE: "Bizalmi védekezés",
+  PERFECTIONISM: "Perfekcionizmus",
+  VALIDATION_NEED: "Figyelemigény"
+};

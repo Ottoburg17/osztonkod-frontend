@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-import { Question } from "../data/testQuestions";
-
-type Answers = Record<string, number>;
 
 const STORAGE_KEY = "mental-pattern-test";
 
-export function useTestEngine(questions: Question[]) {
+export function useTestEngine(questions) {
   const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<Answers>({});
+  const [answers, setAnswers] = useState({});
 
   const total = questions.length;
   const current = questions[step];
@@ -18,6 +15,7 @@ export function useTestEngine(questions: Question[]) {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setStep(parsed.step || 0);
         setAnswers(parsed.answers || {});
       } catch {
@@ -35,7 +33,7 @@ export function useTestEngine(questions: Question[]) {
   }, [step, answers]);
 
   // ✅ ANSWER
-  const answer = (value: number) => {
+  const answer = (value) => {
     if (!current) return;
 
     setAnswers(prev => ({
@@ -46,7 +44,7 @@ export function useTestEngine(questions: Question[]) {
     setStep(prev => prev + 1);
   };
 
-  // 🔙 BACK (PRO verzió!)
+  // 🔙 BACK
   const goBack = () => {
     if (step === 0) return;
 
@@ -56,37 +54,14 @@ export function useTestEngine(questions: Question[]) {
       const updated = { ...prev };
 
       if (prevQuestion) {
-        updated[prevQuestion.category] -= 1; // nem pontos → lent fixeljük
+        updated[prevQuestion.category] =
+          (updated[prevQuestion.category] || 0) - 1;
       }
 
       return updated;
     });
 
     setStep(prev => prev - 1);
-  };
-
-  // 🧠 FIX BACK LOGIC (precíz megoldás)
-  const safeGoBack = () => {
-    if (step === 0) return;
-
-    const prevIndex = step - 1;
-    const prevQ = questions[prevIndex];
-
-    setAnswers(prev => {
-      const updated = { ...prev };
-
-      // Újraszámoljuk teljesen (ez a profi megoldás)
-      const newAnswers: Answers = {};
-
-      questions.slice(0, prevIndex).forEach((q, i) => {
-        // itt feltételezzük, hogy menteni fogjuk később a pontos válaszokat is
-        // egyszerű verzióban ezt most kihagyjuk
-      });
-
-      return updated;
-    });
-
-    setStep(prevIndex);
   };
 
   // 🔄 RESET
@@ -107,7 +82,7 @@ export function useTestEngine(questions: Question[]) {
     current,
     progress: (step / total) * 100,
     answer,
-    goBack, // vagy safeGoBack ha full pontos kell
+    goBack,
     reset,
     isDone: step >= total,
     results
