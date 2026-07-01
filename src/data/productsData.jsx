@@ -128,13 +128,15 @@ const productsData = [
   id: 3,
   title: "Ösztönkód – Teljes Térkép",
   category: "csomag",
-  price: 14990,
+  price: 11990,
   originalPrice: 29990,
   launchOffer: true,
   description:
     "Három egymásra épülő elemzés egy átfogó önismereti rendszerben.",
   longDescription: `
-    Teljes rálátás arra, hogyan működsz – egy rendszerben
+    A három legfontosabb Ösztönkód elemzés egy csomagban, kedvezményes áron.
+    
+    Ha valóban meg szeretnéd érteni, hogyan működnek a gondolataid, az érzelmeid és a reakcióid, ez a legátfogóbb kiindulópont.
 
     Ez a csomag azoknak szól,
     akik nem csak egy részletet szeretnének megérteni,
