@@ -42,7 +42,7 @@ export default function PaymentSuccess() {
     <div className="min-h-screen flex items-center justify-center bg-green-50">
       <div className="bg-white p-8 rounded-2xl shadow text-center">
         <h1 className="text-2xl font-bold text-green-600 mb-4">
-          Fizetés sikeres 🎉
+          Fizetés sikeres 
         </h1>
         <p className="text-gray-600">
           Hozzáférés aktiválása folyamatban…
@@ -51,3 +51,4 @@ export default function PaymentSuccess() {
     </div>
   );
 }
+

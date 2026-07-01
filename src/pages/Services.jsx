@@ -93,11 +93,10 @@ export default function Services() {
 
         <div className="bg-emerald-50 border border-emerald-200 p-6 rounded-2xl text-center mb-12">
           <h3 className="text-lg font-semibold text-emerald-700">
-            Bevezető árak 2026. április 11-ig
+             🔥 Bevezető előfizetői ár
           </h3>
           <p className="text-sm text-gray-600 mt-2">
-            Az első tagok kedvezményes áron férnek hozzá az Ösztönkód rendszerhez.
-            Az ár ezt követően jelentősen emelkedik.
+           Csatlakozz most kedvezményes bevezető áron, és szerezz élethosszig tartó hozzáférést az egyszeri vásárlással elérhető programokhoz.
           </p>
         </div>
 
@@ -169,10 +168,10 @@ export default function Services() {
                         {product.price} Ft / hó
                       </p>
                       <p className="text-sm text-emerald-600 font-medium">
-                        Early member ár – 2026. április 11-ig
+                        🔥 Korlátozott idejű előfizetői ár
                       </p>
                       <p className="text-[11px] text-gray-500">
-                        Ezt követően 4 990 Ft / hó
+                        Normál ár: 4 990 Ft / hó
                       </p>
                     </>
                   )}
@@ -186,11 +185,9 @@ export default function Services() {
                         {product.price} Ft
                       </p>
                       <p className="text-xs text-emerald-600 font-medium">
-                        Bevezető ár – 2026. április 11-ig
+                         🔥 Bevezető ár • Élethosszig tartó hozzáférés
                       </p>
-                      <p className="text-[11px] text-gray-500">
-
-                      </p>
+                     
                     </>
                   )}
 

@@ -6,8 +6,8 @@ const productsData = [
   id: 1,
   title: "BrainMap – működésminták feltérképezése",
   category: "elemzes",
-  price: 7990,
-  originalPrice: 16990,
+  price: 4990,
+  originalPrice: 9990,
   launchOffer: true,
 
   description:
@@ -75,8 +75,8 @@ const productsData = [
   id: 2,
   title: "Ösztönkód - Érzelmi Agytérkép",
   category: "elemzes",
-  price: 8990,
-  originalPrice: 18990,
+  price: 5990,
+  originalPrice: 11990,
   launchOffer: true,
 
   description:
@@ -128,8 +128,8 @@ const productsData = [
   id: 3,
   title: "Ösztönkód – Teljes Térkép",
   category: "csomag",
-  price: 21990,
-  originalPrice: 55880,
+  price: 14990,
+  originalPrice: 29990,
   launchOffer: true,
   description:
     "Három egymásra épülő elemzés egy átfogó önismereti rendszerben.",
@@ -189,8 +189,8 @@ const productsData = [
   id: 4,
   title: "Perception – észlelési minták feltérképezése",
   category: "elemzes",
-  price: 9990,
-  originalPrice: 19900,
+  price: 5990,
+  originalPrice: 11990,
   launchOffer: true,
 
 
@@ -281,8 +281,8 @@ a választás lehetősége.
   id: 5,
   title: "Reaction Break – automatikus reakciók megszakítása",
   category: "program",
-  price: 12990,
-  originalPrice: 21900,
+  price: 7990,
+  originalPrice: 14990,
   launchOffer: true,
   description:
     "7 napos gyakorlati program az automatikus érzelmi reakciók felismerésére és megszakítására.",
@@ -372,7 +372,7 @@ ahol még te döntesz.
   id: 6,
   title: "Dopamin-ciklus – napi önreflexiós rendszer",
   category: "program",
-  price: 2990,
+  price: 1990,
   description:
     "Napi strukturált check-in rendszer az automatikus viselkedési ciklusok felismerésére és megszakítására.",
   longDescription: `
@@ -431,8 +431,8 @@ ha „megveszed”.
   id: 7,
   title: "Automatikus gondolatok elemzése",
   category: "elemzes",
-  price: 9990,
-  originalPrice: 19900,
+  price: 5990,
+  originalPrice: 11990,
   launchOffer: true,
   description:
     "Ismerd fel azokat a gondolatokat, amelyek észrevétlenül irányítják az érzéseidet.",
@@ -479,8 +479,8 @@ Saját tempóban.
   id: 8,
   title: "Érzelmi Elengedési Program",
   category: "program",
-  price: 14000,
-  originalPrice: 21900,
+  price: 8990,
+  originalPrice: 16990,
   launchOffer: true,
 
   description:
@@ -528,8 +528,8 @@ Korlátlan hozzáférés.
   id: 9,
   title: "StruggleBreaker – Ciklusmegszakító Rendszer",
   category: "program",
-  price: 24990,
-  originalPrice: 34990,
+  price: 14990,
+  originalPrice: 29990,
   launchOffer: true,
 
   description:

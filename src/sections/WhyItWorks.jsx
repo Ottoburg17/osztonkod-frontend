@@ -62,7 +62,7 @@ export default function WhyItWorks() {
           {/* CARD */}
           <div className="group p-6 rounded-2xl bg-white/70 backdrop-blur-md shadow-md hover:shadow-lg transition">
             <p className="text-lg font-semibold text-green-800 mb-2">
-              ⚡ Gyors felismerés
+               Gyors felismerés
             </p>
             <p className="text-sm text-gray-700 leading-relaxed">
               Már percek alatt rálátást ad arra,
