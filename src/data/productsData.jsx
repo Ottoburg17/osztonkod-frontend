@@ -530,7 +530,7 @@ Korlátlan hozzáférés.
   id: 9,
   title: "StruggleBreaker – Ciklusmegszakító Rendszer",
   category: "program",
-  price: 14990,
+  price: 10990,
   originalPrice: 29990,
   launchOffer: true,
 
