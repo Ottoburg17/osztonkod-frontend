@@ -6,7 +6,7 @@ import "leaflet/dist/leaflet.css";
 import { Helmet } from "react-helmet";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-
+import api from "../api/axios";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
@@ -36,31 +36,35 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:5000/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+  setIsSubmitting(true);
+  setError(null);
+  setSuccess(null);
 
-      if (!response.ok) {
-        const msg = await response.text();
-        throw new Error(msg);
-      }
+  try {
+    const response = await api.post("/send-email", formData);
 
-      setSuccess("Üzenet sikeresen elküldve!");
+    setSuccess(response.data.message || "Üzenet sikeresen elküldve!");
 
-      setFormData({ name: "", email: "", message: "" });
-      setError(null);
-    } catch (err) {
-      setError(`Nem sikerült elküldeni az üzenetet: ${err.message}`);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  } catch (err) {
+    setError(
+      err.response?.data?.error ||
+      err.message ||
+      "Nem sikerült elküldeni az üzenetet."
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
+
+  
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
