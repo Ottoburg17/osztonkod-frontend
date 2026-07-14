@@ -14,10 +14,10 @@ export const schemaDetails = {
           </p>
            <Section title="Pszichológiai párhuzam" items={[
             'Ez a minta hasonlít a következő pszichológiai jelenségekhez:',
-            '• Kötődési sérülések (attachment insecurity)',
-            '• Elhagyatottság séma (schema therapy)',
-            '• Érzelmi depriváció (emotional deprivation)',
-            '• Szorongó kötődési stílus (anxious attachment)'
+            'Kötődési sérülések (attachment insecurity)',
+            'Elhagyatottság séma (Schema therapy)',
+            'Érzelmi depriváció (emotional deprivation)',
+            'Szorongó kötődési stílus (anxious attachment)'
           ]} />
           <Section title="Jellemzők" items={[
             'Az érzelmi biztonság és a szeretet megélésének nehézségei jellemzik...',
@@ -25,10 +25,25 @@ export const schemaDetails = {
             'Szorongás, kontroll vagy elkerülés az intimitásban.',
             'Gyermekkori érzelmi elhanyagolásból fakadhat.'
           ]} />
+          <Section title="A minta felismerése" items={[
+            'Gyakran attól félsz, hogy a számodra fontos emberek el fognak hagyni.',
+            'Ha valaki későn válaszol, könnyen azt feltételezed, hogy már nem fontos számára a kapcsolat.',
+            'Erősen vágysz a közelségre, mégis nehezen hiszed el, hogy egy kapcsolat tartós lehet.',
+            'Apró távolságtartást vagy kritikát is elutasításként élhetsz meg.',
+            'Gyakran keresel megerősítést arra, hogy szeretnek, elfogadnak vagy számítasz valakinek.'
+          ]} />
           <Section title="A kód kialakulása" items={[
             'Érzelmi szükségletek kielégítetlensége gyermekkorban.',
             'Válás, haláleset vagy más trauma nyomán.',
             'Szülői érzelmi elérhetetlenség.'
+          ]} />
+          <Section title="Mi táplálja a kódot?" items={[
+            'Nem maga a múlt tartja fenn a mintát, hanem azok a jelenben ismétlődő automatikus gondolatok és reakciók, amelyek újra megerősítik.',
+            '„Biztos már nem szeret.”',
+            '„Valamit biztos rosszul csináltam.”',
+            '„Úgyis el fog hagyni.”',
+            '„Nem vagyok elég fontos.”',
+            'Az állandó megerősítés keresése, a túlzott alkalmazkodás vagy a legrosszabb forgatókönyvek elképzelése minden alkalommal tovább erősítheti ezt a működési mintát.'
           ]} />
           <Section title="Jellemző viselkedési minták" items={[
             'Túlságosan függő kapcsolatok kialakítása.',
@@ -40,12 +55,39 @@ export const schemaDetails = {
             'Szakítástól való félelem gátolja az intimitást.',
             'Érzelmi megnyílás nehézsége még közeli kapcsolatokban is.'
           ]} />
+          <Section title="Hogyan szakítható meg a minta?" items={[
+            'A változás első lépése annak felismerése, hogy a félelem nem minden esetben a jelen helyzetet tükrözi, hanem gyakran egy korábban kialakult működési minta aktiválódik.',
+            'Amikor ez a minta megjelenik, érdemes tudatosan megállni, mielőtt automatikusan reagálnál.',
+            'Tedd fel magadnak a kérdést: „Tényekre reagálok, vagy egy régi félelmemre?”',
+            'A tudatos kommunikáció, a türelem és az automatikus következtetések megkérdőjelezése fokozatosan csökkentheti a minta erejét.',
+            'Minden alkalommal, amikor nem a megszokott automatikus reakció szerint cselekszel, egy új, egészségesebb működési mintát erősítesz.'
+          ]} />
+          <Section title="Milyen új működés építhető fel?" items={[
+            'A biztonság érzése fokozatosan egyre kevésbé függ mások folyamatos megerősítésétől.',
+            'A bizonytalanság könnyebben elviselhetővé válhat anélkül, hogy azonnal a legrosszabb következtetésre jutnál.',
+            'A kapcsolatokban nagyobb bizalom, nyíltabb kommunikáció és érzelmi stabilitás alakulhat ki.',
+            'Az önértékelés egyre kevésbé függ mások viselkedésétől vagy visszajelzéseitől.',
+            'A szeretet fokozatosan nem állandó bizonyításként, hanem kölcsönös biztonságként és elfogadásként élhető meg.'
+          ]} />
+          <Section title="Mi erősítheti ezt a kódot a mindennapokban?" items={[
+            'Az érzelmileg kiszámíthatatlan vagy toxikus kapcsolatok.',
+            'A tartós bizonytalanság és a gyakori elutasítás élménye.',
+            'A közösségi médiában történő állandó összehasonlítás mások életével.',
+            'Az érzelmileg elérhetetlen emberekhez való ismétlődő vonzódás.',
+            'A krónikus stressz, amely csökkentheti az érzelmi biztonság érzését.',
+            'Feldolgozatlan veszteségek vagy korábbi kapcsolati traumák.',
+            'Az érzések elfojtása ahelyett, hogy tudatosan foglalkoznánk velük.'
+          ]} />
           <Section title="A kód feldolgozása" items={[
             'Érzelemfeldolgozás a múlt megértésére.',
             'Új viselkedési minták tanulása.',
             'Megküzdési stratégiák fejlesztése a félelem csökkentésére.'
           ]} />
-
+           <Section title="Fontos tudni" items={[
+            'Ennek a kódnak a felismerése nem jelenti azt, hogy egész életedben így fogsz működni.',
+            'Az automatikus érzelmi minták felismerhetők, megérthetők és fokozatosan átalakíthatók.',
+            'A változás általában nem egyik napról a másikra történik, hanem sok apró, tudatos döntés eredményeként épül fel.'
+          ]} />
          
           <p className="text-gray-700 text-base leading-relaxed">
             A Belső Hiányérzet Kódja egy mély, érzelmi alapú tapasztalás, amely a biztonság és érzelmi támogatás hiányáról szól. Gyakran a gyermekkorban kezdődik, és ha nem dolgozzák fel, életünk során visszatérhet. A cél a kód feloldása és új, egészségesebb viselkedési minták kialakítása.
