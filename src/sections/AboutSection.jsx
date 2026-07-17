@@ -25,7 +25,7 @@ export default function AboutSection() {
         relative
         overflow-hidden
         bg-gradient-to-b
-        from-gray-100
+        from-gray-200
         via-white
         to-gray-50
         px-6

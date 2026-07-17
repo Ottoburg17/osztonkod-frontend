@@ -3,9 +3,17 @@ import { Link } from "react-router-dom";
 
 export default function InfinitySection() {
   return (
-    <section className="relative pt-28 pb-32 px-6 md:px-16 
-  bg-gradient-to-b from-gray-50/70 via-white to-gray-100  
-  overflow-hidden">
+    <section className="relative
+        overflow-hidden
+        bg-gradient-to-b
+        from-gray-200
+        via-white
+        to-gray-50
+        px-6
+        pt-28
+        pb-32
+        md:px-16
+  ">
       
       {/* STATIKUS, HALK VÉGTELEN FORMA */}
       <div
