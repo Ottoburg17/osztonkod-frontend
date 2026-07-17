@@ -9,9 +9,14 @@ export default function WhyItWorksBrain() {
       className="
         group
         relative
+        flex
+        h-full
+        flex-col
+
         mx-auto
         w-full
         max-w-[440px]
+
         overflow-hidden
         rounded-3xl
 
@@ -25,6 +30,7 @@ export default function WhyItWorksBrain() {
         duration-500
 
         hover:-translate-y-1
+        hover:border-emerald-200
         hover:shadow-[0_35px_90px_rgba(0,0,0,0.16)]
       "
     >
@@ -33,10 +39,12 @@ export default function WhyItWorksBrain() {
         className="
           absolute
           inset-0
+
           bg-gradient-to-br
           from-emerald-400/10
           via-cyan-300/5
           to-blue-400/10
+
           pointer-events-none
         "
       />
@@ -46,8 +54,17 @@ export default function WhyItWorksBrain() {
         <div
           className="
             relative
+
+            flex
+            h-80
+            items-center
+            justify-center
+
             overflow-hidden
             rounded-2xl
+
+            border
+            border-emerald-100
 
             bg-gradient-to-br
             from-emerald-50
@@ -63,8 +80,9 @@ export default function WhyItWorksBrain() {
               relative
               z-10
 
-              w-full
-              h-auto
+              h-[88%]
+              w-auto
+              max-w-full
 
               select-none
               pointer-events-none
@@ -72,7 +90,7 @@ export default function WhyItWorksBrain() {
               transition-transform
               duration-700
 
-              group-hover:scale-[1.02]
+              group-hover:scale-[1.03]
             "
           />
 
@@ -83,7 +101,7 @@ export default function WhyItWorksBrain() {
       </div>
 
       {/* Bottom */}
-      <div className="relative px-6 pb-6">
+      <div className="relative flex-1 px-6 pb-6">
         <div
           className="
             inline-flex
@@ -106,7 +124,7 @@ export default function WhyItWorksBrain() {
             text-emerald-700
           "
         >
-          <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
           Élő neurális kapcsolatok
         </div>
 

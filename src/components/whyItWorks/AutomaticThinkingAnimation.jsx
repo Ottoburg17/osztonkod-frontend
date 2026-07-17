@@ -1,11 +1,33 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import {
+  Flag,
+  BrainCircuit,
+  Heart,
+  Zap,
+} from "lucide-react";
 
 const steps = [
-  { label: "Helyzet", delay: 0 },
-  { label: "Automatikus\ngondolat", delay: 1 },
-  { label: "Érzelem", delay: 2 },
-  { label: "Reakció", delay: 3 },
+  {
+    label: "Helyzet",
+    icon: Flag,
+    delay: 0,
+  },
+  {
+    label: "Automatikus\ngondolat",
+    icon: BrainCircuit,
+    delay: 1,
+  },
+  {
+    label: "Érzelem",
+    icon: Heart,
+    delay: 2,
+  },
+  {
+    label: "Reakció",
+    icon: Zap,
+    delay: 3,
+  },
 ];
 
 export default function AutomaticThinkingAnimation() {
@@ -13,9 +35,9 @@ export default function AutomaticThinkingAnimation() {
     <div
       className="
         relative
-        h-72
-        rounded-2xl
+        h-80
         overflow-hidden
+        rounded-2xl
 
         border border-emerald-100
 
@@ -27,67 +49,90 @@ export default function AutomaticThinkingAnimation() {
         p-6
       "
     >
-      <div className="flex flex-col items-center h-full justify-between">
-        {steps.map((step, index) => (
-          <div key={step.label} className="flex flex-col items-center">
-            <motion.div
-              animate={{
-                scale: [1, 1.05, 1],
-                borderColor: [
-                  "rgba(229,231,235,1)",
-                  "rgb(16,185,129)",
-                  "rgba(229,231,235,1)",
-                ],
-                boxShadow: [
-                  "0 0 0 rgba(0,0,0,0)",
-                  "0 0 18px rgba(16,185,129,.35)",
-                  "0 0 0 rgba(0,0,0,0)",
-                ],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                repeatDelay: 0,
-                delay: step.delay,
-              }}
-              className="
-                w-48
+      <div className="flex h-full flex-col items-center justify-between">
+        {steps.map((step, index) => {
+          const Icon = step.icon;
 
-                rounded-full
-
-                border
-
-                bg-white/90
-
-                px-4
-                py-2
-
-                text-center
-                text-sm
-                font-medium
-                text-gray-700
-
-                whitespace-pre-line
-              "
+          return (
+            <div
+              key={step.label}
+              className="flex flex-col items-center"
             >
-              {step.label}
-            </motion.div>
-
-            {index !== steps.length - 1 && (
               <motion.div
-                className="my-2 h-8 w-px bg-emerald-200"
                 animate={{
-                  opacity: [0.2, 1, 0.2],
+                  scale: [1, 1.05, 1],
+                  borderColor: [
+                    "#E5E7EB",
+                    "#10B981",
+                    "#E5E7EB",
+                  ],
+                  boxShadow: [
+                    "0 0 0 rgba(0,0,0,0)",
+                    "0 0 20px rgba(16,185,129,.25)",
+                    "0 0 0 rgba(0,0,0,0)",
+                  ],
                 }}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
                   delay: step.delay,
                 }}
-              />
-            )}
-          </div>
-        ))}
+                className="
+                  flex
+                  w-56
+                  items-center
+                  gap-3
+
+                  rounded-full
+
+                  border
+
+                  bg-white/90
+
+                  px-5
+                  py-3
+
+                  shadow-sm
+                "
+              >
+                <Icon
+                  size={18}
+                  className="text-emerald-600"
+                />
+
+                <span
+                  className="
+                    whitespace-pre-line
+                    text-sm
+                    font-medium
+                    text-gray-700
+                  "
+                >
+                  {step.label}
+                </span>
+              </motion.div>
+
+              {index !== steps.length - 1 && (
+                <motion.div
+                  className="
+                    my-2
+                    h-10
+                    w-px
+                    bg-emerald-200
+                  "
+                  animate={{
+                    opacity: [0.2, 1, 0.2],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    delay: step.delay,
+                  }}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -6,7 +6,11 @@ export default function AutomaticThinkingCard() {
       className="
         group
         relative
+        flex
+        h-full
+        flex-col
         overflow-hidden
+
         rounded-3xl
 
         border border-white/60
@@ -21,6 +25,7 @@ export default function AutomaticThinkingCard() {
         duration-500
 
         hover:-translate-y-1
+        hover:border-emerald-200
         hover:shadow-[0_35px_90px_rgba(0,0,0,0.16)]
       "
     >
@@ -40,18 +45,21 @@ export default function AutomaticThinkingCard() {
       />
 
       {/* Animation */}
-      <AutomaticThinkingAnimation />
+      <div className="relative">
+        <AutomaticThinkingAnimation />
+      </div>
 
       {/* Content */}
-      <div className="relative mt-7">
+      <div className="relative mt-8 flex-1">
         <h3 className="text-xl font-bold text-gray-900">
           Automatikus gondolkodás
         </h3>
 
         <p className="mt-3 text-sm leading-7 text-gray-600">
-          Egy esemény önmagában még nem vált ki érzelmet. Az automatikus
-          gondolataink határozzák meg, hogyan értelmezzük a helyzetet,
-          és ezek alakítják a reakcióinkat.
+          Egy helyzet önmagában még nem határozza meg az érzéseinket.
+          Az automatikus gondolataink alakítják, hogyan értelmezzük az
+          eseményeket, és ezek befolyásolják az érzelmeinket és a
+          reakcióinkat.
         </p>
       </div>
     </div>

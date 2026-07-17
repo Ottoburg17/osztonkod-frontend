@@ -15,10 +15,10 @@ export default function WhyItWorks() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-gradient-to-b from-gray-200 to-white py-24 px-6"
+      className="relative overflow-hidden bg-gradient-to-b from-gray-200 to-white px-6 py-24"
     >
       {/* Background Glow */}
-      <div className="absolute top-[-10%] left-[15%] h-[280px] w-[280px] rounded-full bg-emerald-300/15 blur-[120px]" />
+      <div className="absolute left-[15%] top-[-10%] h-[280px] w-[280px] rounded-full bg-emerald-300/15 blur-[120px]" />
 
       <div className="absolute bottom-[-10%] right-[15%] h-[260px] w-[260px] rounded-full bg-green-400/15 blur-[120px]" />
 
@@ -42,11 +42,9 @@ export default function WhyItWorks() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-8 items-start lg:grid-cols-3">
+        <div className="grid items-stretch gap-8 lg:grid-cols-3">
           <WhyItWorksBrain />
-
           <AutomaticThinkingCard />
-
           <EmotionalPatternCard />
         </div>
       </motion.div>
