@@ -9,7 +9,7 @@ export default function InfinitySection() {
 
           bg-gradient-to-b
           from-emerald-300
-          via-white
+          via-emerald
           to-gray-100
 
           px-6
