@@ -22,16 +22,18 @@ export default function AboutSection() {
     <section
       ref={ref}
       className="
-        relative
-        overflow-hidden
-        bg-gradient-to-b
-        from-gray-200
-        via-white
-        to-gray-50
-        px-6
-        pt-28
-        pb-32
-        md:px-16
+       relative
+          overflow-hidden
+          bg-gradient-to-b
+          from-gray-200
+          to-white
+
+          px-6
+
+          pt-28
+          pb-32
+
+          md:px-16
       "
     >
       {/* Background Glow */}
