@@ -23,29 +23,43 @@ function Signal({ path }) {
     <motion.div
       className="absolute rounded-full"
       style={{
-        width: 8,
-        height: 8,
+        width: 10,
+        height: 10,
+        borderRadius: "9999px",
         background: "#ffffff",
+
         boxShadow:
           path.side === "old"
-            ? "0 0 18px rgba(251,113,133,.9)"
-            : "0 0 20px rgba(16,185,129,.95)",
+            ? `
+                0 0 8px rgba(251,113,133,.95),
+                0 0 18px rgba(251,113,133,.75),
+                0 0 35px rgba(251,113,133,.45)
+              `
+            : `
+                0 0 8px rgba(16,185,129,.95),
+                0 0 18px rgba(16,185,129,.75),
+                0 0 35px rgba(16,185,129,.45)
+              `,
       }}
       initial={{
-        x: start.x - 4,
-        y: start.y - 4,
+        x: start.x - 5,
+        y: start.y - 5,
         opacity: 0,
+        scale: 0.4,
       }}
       animate={{
-        x: end.x - 4,
-        y: end.y - 4,
+        x: end.x - 5,
+        y: end.y - 5,
+
         opacity: [0, 1, 1, 0],
+
+        scale: [0.4, 1.25, 1, 0.5],
       }}
       transition={{
         duration: path.duration,
         delay: path.delay,
         repeat: Infinity,
-        repeatDelay: 1,
+        repeatDelay: 0.2,
         ease: "linear",
       }}
     />
@@ -55,19 +69,29 @@ function Signal({ path }) {
 export default function SignalLayer() {
   return (
     <>
+      {/* Old Network */}
+
       <div className="absolute left-12 top-24 w-56 h-56">
         {signalPaths
-          .filter((p) => p.side === "old")
+          .filter((path) => path.side === "old")
           .map((path, index) => (
-            <Signal key={index} path={path} />
+            <Signal
+              key={`old-${index}`}
+              path={path}
+            />
           ))}
       </div>
 
+      {/* New Network */}
+
       <div className="absolute right-12 top-24 w-56 h-56">
         {signalPaths
-          .filter((p) => p.side === "new")
+          .filter((path) => path.side === "new")
           .map((path, index) => (
-            <Signal key={index} path={path} />
+            <Signal
+              key={`new-${index}`}
+              path={path}
+            />
           ))}
       </div>
     </>
