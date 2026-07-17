@@ -1,9 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import PatternNetwork from "./PatternNetwork";
 
-import ConnectionLayer from "./ConnectionLayer";
-import SignalLayer from "./SignalLayer";
-import NeuronLayer from "./NeuronLayer";
 
 export default function AboutAnimation() {
   return (
@@ -66,11 +64,7 @@ export default function AboutAnimation() {
 
       {/* Neural Network */}
 
-      <ConnectionLayer />
-
-      <SignalLayer />
-
-      <NeuronLayer />
+      <PatternNetwork />
 
       {/* Center */}
 

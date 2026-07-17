@@ -1,9 +1,6 @@
 import whyItWorksImage from "../../assets/images/whyitworks.webp";
 
-import NeuronLayer from "./NeuronLayer";
-import ConnectionLayer from "./ConnectionLayer";
-import SignalLayer from "./SignalLayer";
-
+import PatternNetwork from "../about/PatternNetwork";
 
 export default function WhyItWorksBrain() {
   return (
@@ -97,11 +94,8 @@ export default function WhyItWorksBrain() {
           />
 
           {/* Animated Layers */}
-          <ConnectionLayer />
-
-          <SignalLayer />
-
-          <NeuronLayer />
+          
+          <PatternNetwork />
         </div>
       </div>
 
@@ -146,3 +140,5 @@ export default function WhyItWorksBrain() {
     </div>
   );
 }
+
+
