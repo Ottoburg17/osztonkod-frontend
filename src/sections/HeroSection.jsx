@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import GlowOrb from "../components/GlowOrb";
-import PlatformPreview from "../components/platformPreview/PlatformPreview";
-
 
 
 export default function HeroSection() {
@@ -175,17 +173,6 @@ export default function HeroSection() {
         </span>
       </div>
 
-      </motion.div>
-
-        <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay: 0.6, duration: 1 }}
-      className="relative z-10 w-full max-w-7xl mx-auto mt-24 px-2 md:px-0"
-    >
-      <PlatformPreview />
-
-            
       </motion.div>
      
     </section>
