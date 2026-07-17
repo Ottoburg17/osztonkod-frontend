@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import GlowOrb from "../components/GlowOrb";
+import PlatformPreview from "../components/platformPreview/PlatformPreview";
+
+
 
 export default function HeroSection() {
   const { ref, inView } = useInView({
@@ -13,8 +16,19 @@ export default function HeroSection() {
   return (                        
     <section
       ref={ref}
-      className="relative min-h-screen pt-24 md:pt-28 flex flex-col justify-center items-center text-center px-8 overflow-hidden bg-gray-100"
-    >
+      className="relative
+                pt-24
+                md:pt-28
+                pb-28
+                flex
+                flex-col
+                justify-center
+                items-center
+                text-center
+                px-8
+                overflow-hidden
+                bg-gray-100"
+                    >
       {/** -------------------------------------------------------- */}
       {/** 1) FULL MESH GRADIENT BACKGROUND (SVG)                   */}
       {/** -------------------------------------------------------- */}
@@ -147,6 +161,8 @@ export default function HeroSection() {
          Fedezd fel most →
         </Link>
 
+
+
        <div className="mt-5 flex flex-wrap justify-center gap-2 relative z-10">
         <span className="px-3 py-1 bg-white/70 backdrop-blur-md border border-gray-200 rounded-full text-xs text-gray-700 shadow-sm">
           🔒 Biztonságos
@@ -158,6 +174,18 @@ export default function HeroSection() {
           🚫 Nincs regisztráció
         </span>
       </div>
+
+      </motion.div>
+
+        <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ delay: 0.6, duration: 1 }}
+      className="relative z-10 w-full max-w-7xl mx-auto mt-24 px-2 md:px-0"
+    >
+      <PlatformPreview />
+
+            
       </motion.div>
      
     </section>
