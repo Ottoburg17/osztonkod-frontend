@@ -8,8 +8,8 @@ export default function BlogGrid() {
   const latestPosts = postsData.slice(0, 4);
 
   return (
-    <section className="pt-24 pb-32 px-6 md:px-16 max-w-6xl mx-auto ">
-      <h2 className="text-4xl font-bold text-green-600 mb-10 text-center">
+    <section className="pt-28 pb-32 px-6 md:px-16 max-w-6xl mx-auto ">
+      <h2 className="text-4xl md:text-5xl font-bold text-green-600 mb-10 text-center">
         Legfrissebb cikkek
       </h2>
 

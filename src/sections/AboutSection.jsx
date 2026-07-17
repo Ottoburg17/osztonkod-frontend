@@ -29,7 +29,7 @@ export default function AboutSection() {
         via-white
         to-gray-50
         px-6
-        pt-24
+        pt-28
         pb-40
         md:px-16
       "
@@ -50,7 +50,7 @@ export default function AboutSection() {
 
         <div className="mx-auto mb-20 max-w-3xl text-center">
 
-          <h2 className="text-4xl font-bold text-emerald-600 md:text-5xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-emerald-600 md:text-5xl">
             Miért ismétled a mintákat?
           </h2>
 
@@ -161,7 +161,7 @@ export default function AboutSection() {
 
         {/* CTA */}
 
-        <div className="mt-16 text-center">
+        <div className="mt-20 text-center">
 
           <Link
             to="/deepunderstand"

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function InfinitySection() {
   return (
-    <section className="relative pt-24 pb-32 px-6 md:px-16 
+    <section className="relative pt-28 pb-32 px-6 md:px-16 
   bg-gradient-to-b from-gray-50 via-gray-100 to-gray-100 
   overflow-hidden">
       
@@ -69,7 +69,7 @@ export default function InfinitySection() {
       {/* TARTALOM */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         
-        <h2 className="text-3xl md:text-4xl font-bold text-green-600 mb-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-green-600 mb-10">
           A változás végtelen lehetősége
         </h2>
 
@@ -105,7 +105,7 @@ export default function InfinitySection() {
         </div>
 
          
-        <div className="mt-12 flex justify-center">
+        <div className="mt-16 flex justify-center">
           <Link
             to="/test"
             className="
@@ -134,3 +134,4 @@ export default function InfinitySection() {
     </section>
   );
 }
+

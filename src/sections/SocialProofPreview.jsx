@@ -8,7 +8,7 @@ export default function SocialProofPreview() {
       className="
         relative
         min-h-[600px]
-        pt-24 pb-32 px-6 md:px-16
+        pt-28 pb-32 px-6 md:px-16
         flex flex-col items-center
         text-center
         overflow-hidden
@@ -35,15 +35,13 @@ export default function SocialProofPreview() {
           left-[-22%]
           w-[360px] h-[360px] md:w-[560px] md:h-[560px]
           rounded-full
-          bg-emerald-300/15 md:bg-emerald-300/25
+          bg-emerald-300/10 md:bg-emerald-300/15
           blur-[120px] md:blur-[180px]
           pointer-events-none
         "
       />
 
-      
-
-      {/* ===================== JOBB ALSÓ GLOW (TÜKRÖZVE) ===================== */}
+      {/* ===================== JOBB ALSÓ GLOW ===================== */}
       <div
         className="
           absolute
@@ -51,11 +49,12 @@ export default function SocialProofPreview() {
           right-[-22%]
           w-[360px] h-[360px] md:w-[560px] md:h-[560px]
           rounded-full
-          bg-emerald-300/15 md:bg-emerald-300/25
+          bg-emerald-300/10 md:bg-emerald-300/15
           blur-[120px] md:blur-[180px]
           pointer-events-none
         "
       />
+            
 
       
 
@@ -66,7 +65,7 @@ export default function SocialProofPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-4xl font-bold text-green-600 mb-6"
+          className="text-4xl md:text-5xl font-bold text-green-600 mb-6"
         >
           Akiknek már segített a módszer
         </motion.h2>
@@ -125,3 +124,5 @@ export default function SocialProofPreview() {
     </section>
   );
 }
+
+

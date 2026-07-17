@@ -15,7 +15,18 @@ export default function WhyItWorks() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-gradient-to-b from-gray-200 to-white px-6 py-24"
+      className="relative
+          overflow-hidden
+          bg-gradient-to-b
+          from-gray-200
+          to-white
+
+          px-6
+
+          pt-28
+          pb-32
+
+          md:px-16"
     >
       {/* Background Glow */}
       <div className="absolute left-[15%] top-[-10%] h-[280px] w-[280px] rounded-full bg-emerald-300/15 blur-[120px]" />
@@ -30,7 +41,7 @@ export default function WhyItWorks() {
       >
         {/* Header */}
         <div className="mx-auto mb-20 max-w-3xl text-center">
-          <h2 className="text-3xl font-bold text-green-700 md:text-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-700 md:text-4xl">
             Miért működik ez a módszer?
           </h2>
 
