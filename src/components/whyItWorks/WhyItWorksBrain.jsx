@@ -7,25 +7,25 @@ export default function WhyItWorksBrain() {
   return (
     <div
       className="
+        group
         relative
-        w-full
-        max-w-[420px]
         mx-auto
-        rounded-3xl
+        w-full
+        max-w-[440px]
         overflow-hidden
+        rounded-3xl
 
+        border border-white/60
         bg-white/60
         backdrop-blur-xl
-
-        border
-        border-white/60
 
         shadow-[0_20px_60px_rgba(0,0,0,0.12)]
 
         transition-all
         duration-500
+
         hover:-translate-y-1
-        hover:shadow-[0_30px_80px_rgba(0,0,0,0.16)]
+        hover:shadow-[0_35px_90px_rgba(0,0,0,0.16)]
       "
     >
       {/* Background Glow */}
@@ -41,32 +41,49 @@ export default function WhyItWorksBrain() {
         "
       />
 
-      {/* Brain */}
+      {/* Brain Area */}
       <div className="relative p-6">
-        <div className="relative overflow-hidden rounded-2xl">
+        <div
+          className="
+            relative
+            overflow-hidden
+            rounded-2xl
 
+            bg-gradient-to-br
+            from-emerald-50
+            via-white
+            to-cyan-50
+          "
+        >
           <img
             src={whyItWorksImage}
             alt="Miért működik a módszer"
             draggable={false}
             className="
+              relative
+              z-10
+
               w-full
               h-auto
+
               select-none
               pointer-events-none
+
+              transition-transform
+              duration-700
+
+              group-hover:scale-[1.02]
             "
           />
 
           {/* Animated Layers */}
           <ConnectionLayer />
           <NeuronLayer />
-
         </div>
       </div>
 
-      {/* Content */}
+      {/* Bottom */}
       <div className="relative px-6 pb-6">
-
         <div
           className="
             inline-flex
@@ -75,10 +92,10 @@ export default function WhyItWorksBrain() {
 
             rounded-full
 
-            bg-emerald-50
-
             border
             border-emerald-100
+
+            bg-emerald-50
 
             px-3
             py-1
@@ -99,10 +116,9 @@ export default function WhyItWorksBrain() {
 
         <p className="mt-3 text-sm leading-7 text-gray-600">
           Az automatikus érzelmi reakciók mögött ismétlődő minták állnak.
-          A módszer ezek felismerésében segít, hogy tudatosabban reagálhass
-          a hasonló élethelyzetekre.
+          Ezek felismerése segít megérteni, mi aktiválja a reakcióidat,
+          így tudatosabban tudsz válaszolni a hasonló élethelyzetekre.
         </p>
-
       </div>
     </div>
   );
