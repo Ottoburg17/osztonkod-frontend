@@ -6,9 +6,11 @@ export default function InfinitySection() {
     <section className="
           relative
           overflow-hidden
+
           bg-gradient-to-b
-          from-gray-200
-          to-white
+          from-emerald-100
+          via-white
+          to-gray-100
 
           px-6
 
@@ -16,7 +18,7 @@ export default function InfinitySection() {
           pb-32
 
           md:px-16
-  ">
+          ">
       
       {/* STATIKUS, HALK VÉGTELEN FORMA */}
       <div
