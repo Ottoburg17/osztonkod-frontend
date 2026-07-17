@@ -53,14 +53,27 @@ export default function EmotionalPatternAnimation() {
         p-6
       "
     >
-      {/* Fő függőleges vonal */}
-      <div className="absolute left-1/2 top-[12%] h-[63%] w-px -translate-x-1/2 bg-rose-200" />
-
-      {/* Alsó visszafordulás */}
-      <div className="absolute left-1/2 top-[87%] h-px w-24 bg-rose-200" />
-
-      {/* Jobb oldali függőleges */}
-      <div className="absolute left-[calc(50%+6rem)] top-[12%] h-[75%] w-px bg-rose-200" />
+      {/* Ciklus vonalai */}
+      <svg
+        className="absolute inset-0 h-full w-full pointer-events-none"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="
+            M 50 10
+            L 50 85
+            L 74 85
+            L 74 10
+            L 50 10
+          "
+          fill="none"
+          stroke="#fecdd3"
+          strokeWidth="0.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
 
       {steps.map((step) => {
         const Icon = step.icon;

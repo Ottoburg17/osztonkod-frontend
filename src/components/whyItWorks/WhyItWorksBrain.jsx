@@ -2,6 +2,8 @@ import whyItWorksImage from "../../assets/images/whyitworks.webp";
 
 import NeuronLayer from "./NeuronLayer";
 import ConnectionLayer from "./ConnectionLayer";
+import SignalLayer from "./SignalLayer";
+
 
 export default function WhyItWorksBrain() {
   return (
@@ -96,6 +98,9 @@ export default function WhyItWorksBrain() {
 
           {/* Animated Layers */}
           <ConnectionLayer />
+
+          <SignalLayer />
+
           <NeuronLayer />
         </div>
       </div>
