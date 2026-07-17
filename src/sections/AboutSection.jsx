@@ -30,7 +30,7 @@ export default function AboutSection() {
         to-gray-50
         px-6
         pt-28
-        pb-40
+        pb-32
         md:px-16
       "
     >
