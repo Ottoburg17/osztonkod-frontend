@@ -44,6 +44,7 @@ import ProtectedStruggleBreakerRoute from "./components/ProtectedStruggleBreaker
 import Plan from "./pages/Plan.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import CookiePolicy from "./pages/CookiePolicy";
 import Account from "./pages/Account";
 import Orders from "./pages/Orders";
 import SafeProductRoute from "./SafeProductRoute.jsx";
@@ -66,6 +67,7 @@ import PaymentSuccess from "./pages/PaymentSuccess";
 import StripeCancel from "./pages/StripeCancel.jsx";
 import StripeSuccess from "./pages/StripeSuccess.jsx";
 import WhyItWorks from "./sections/WhyItWorks.jsx";
+
 
 /*  Admin   */
 import Admin from "./pages/Admin";
@@ -121,6 +123,7 @@ return (
           <Route path="/contact" element={<Contact />} />
           <Route path="/looprecognitionmobile" element={<LoopRecognitionMobile />} />
           <Route path="/felhasznalasi-feltetelek" element={<Terms />} />
+          <Route path="/cookie-tajekoztato" element={<CookiePolicy />}/>
           <Route path="/socialproof" element={<SocialProof />} />
           <Route path="/feedback" element={<FeedbackForm />} />
           <Route path="/blog" element={<Blog />} />

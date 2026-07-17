@@ -20,3 +20,5 @@ export function setConsent(consent) {
 export function clearConsent() {
   localStorage.removeItem(CONSENT_KEY);
 }
+
+

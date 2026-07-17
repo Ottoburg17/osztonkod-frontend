@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getConsent, setConsent } from "../cookieConsent";
 import { loadAnalytics } from "../analytics/loadAnalytics";
@@ -52,11 +53,14 @@ export default function CookieBanner() {
 
         {/* SZÖVEG */}
         <p className="text-xs sm:text-sm text-gray-600">
-          Az oldal működéséhez szükséges sütiket használunk.
-          Statisztikai és marketing célú sütik csak az Ön hozzájárulásával kerülnek elhelyezésre.{" "}
-          <a href="/cookie-tajekoztato" className="underline">
+        Az oldal működéséhez szükséges sütiket használunk.
+        Analitikai sütik (Google Analytics) csak az Ön hozzájárulásával kerülnek alkalmazásra. {" "}
+         <Link
+            to="/cookie-tajekoztato"
+            className="underline hover:text-green-700"
+          >
             Cookie tájékoztató
-          </a>
+          </Link>
         </p>
 
         {/* GOMBOK */}

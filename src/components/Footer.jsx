@@ -125,6 +125,13 @@ export default function Footer() {
               Előfizetés
             </Link>
 
+            <Link
+              to="/cookie-tajekoztato"
+              className="text-white hover:text-amber-300 hover:underline transition"
+            >
+              Cookie tájékoztató
+            </Link>
+
             <span className="opacity-40">|</span>
 
             {/* ✅ IDE KELL */}
@@ -151,3 +158,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+
