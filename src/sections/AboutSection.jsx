@@ -24,15 +24,13 @@ export default function AboutSection() {
       className="
         relative
         overflow-hidden
-
         bg-gradient-to-b
         from-gray-100
         via-white
         to-gray-50
-
         px-6
-        py-24
-
+        pt-24
+        pb-40
         md:px-16
       "
     >
