@@ -22,7 +22,7 @@ export default function AboutSection() {
     <section
       ref={ref}
       className="
-       relative
+          relative
           overflow-hidden
           bg-gradient-to-b
           from-gray-200
