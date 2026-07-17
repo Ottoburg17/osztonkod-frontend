@@ -16,20 +16,27 @@ function Connections({
   nodes,
   connections,
   color,
-  opacity = 0.25,
+  opacity = 0.35,
   delay = 0,
 }) {
   return (
     <svg
       className="absolute inset-0 h-full w-full overflow-visible"
-      viewBox="0 0 560 260"
-      preserveAspectRatio="none"
+      viewBox="0 0 230 260"
     >
       {connections.map(([from, to], index) => {
         const start = getNode(nodes, from);
         const end = getNode(nodes, to);
 
         if (!start || !end) return null;
+
+        // véletlenszerű vastagság
+        const strokeWidth =
+          index % 5 === 0
+            ? 2.4
+            : index % 2 === 0
+            ? 1.8
+            : 1.2;
 
         return (
           <motion.line
@@ -39,8 +46,7 @@ function Connections({
             x2={end.x}
             y2={end.y}
             stroke={color}
-            strokeWidth="2"
-
+            strokeWidth={strokeWidth}
             strokeLinecap="round"
 
             initial={{
@@ -54,8 +60,8 @@ function Connections({
             }}
 
             transition={{
-              duration: 1.2,
-              delay: delay + index * 0.08,
+              duration: 1,
+              delay: delay + index * 0.04,
             }}
           />
         );
@@ -67,26 +73,22 @@ function Connections({
 export default function ConnectionLayer() {
   return (
     <>
-      {/* Régi hálózat */}
-
-      <div className="absolute left-12 top-24 w-56 h-56">
+      <div className="absolute left-10 top-20 w-64 h-64">
         <Connections
           nodes={oldNodes}
           connections={oldConnections}
           color="#fb7185"
-          opacity={0.35}
+          opacity={0.28}
         />
       </div>
 
-      {/* Új hálózat */}
-
-      <div className="absolute right-12 top-24 w-56 h-56">
+      <div className="absolute right-10 top-20 w-64 h-64">
         <Connections
           nodes={newNodes}
           connections={newConnections}
           color="#10b981"
-          opacity={0.4}
-          delay={0.4}
+          opacity={0.32}
+          delay={0.25}
         />
       </div>
     </>
