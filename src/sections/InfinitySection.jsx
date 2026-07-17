@@ -10,12 +10,12 @@ export default function InfinitySection() {
           bg-gradient-to-b
           from-emerald-300
           via-white
-          to-gray-200
+          to-gray-100
 
           px-6
 
           pt-28
-          pb-32
+          pb-24
 
           md:px-16
           ">
