@@ -27,7 +27,7 @@ export default function EmotionalPatternCard() {
 
         shadow-[0_20px_60px_rgba(0,0,0,0.12)]
 
-        p-8
+        p-6
 
         transition-all
         duration-500
@@ -56,7 +56,7 @@ export default function EmotionalPatternCard() {
       <div
         className="
           relative
-          h-80
+          h-64
           overflow-hidden
 
           rounded-2xl
@@ -67,6 +67,8 @@ export default function EmotionalPatternCard() {
           from-rose-50
           via-white
           to-pink-50
+
+          p-6
         "
       >
         {/* Vertical line */}
@@ -156,7 +158,34 @@ export default function EmotionalPatternCard() {
 
       {/* Content */}
       <div className="relative mt-8 flex-1">
-        <h3 className="text-xl font-bold text-gray-900">
+
+        <div
+          className="
+            inline-flex
+            items-center
+            gap-2
+
+            rounded-full
+
+            border
+            border-rose-100
+
+            bg-rose-50
+
+            px-3
+            py-1
+
+            text-xs
+            font-medium
+
+            text-rose-700
+          "
+        >
+          <span className="h-2 w-2 animate-pulse rounded-full bg-rose-500" />
+          Érzelmi ciklusok
+        </div>
+
+        <h3 className="mt-5 text-xl font-bold text-gray-900">
           Érzelmi minták
         </h3>
 
@@ -170,3 +199,4 @@ export default function EmotionalPatternCard() {
     </div>
   );
 }
+

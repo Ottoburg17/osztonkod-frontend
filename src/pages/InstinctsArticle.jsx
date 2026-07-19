@@ -12,7 +12,7 @@ export default function InstinctsArticle() {
 
       {/* ----- SEO ----- */}
       <Helmet>
-        <title>Ösztönök – Pszichológiai és Biológiai Áttekintés | Ösztönkód</title>
+        <title> Hogyan alakulnak ki a viselkedési mintáink?| Ösztönkód</title>
         <meta
           name="description"
           content="Az ösztönök típusainak, működési elveinek és fejlődéstani szerepének komplex áttekintése. Biológiai, pszichológiai és evolúciós megközelítésben."
@@ -20,7 +20,7 @@ export default function InstinctsArticle() {
 
         <link rel="canonical" href="https://osztonkod.hu/osztonok" />
 
-        <meta property="og:title" content="Ösztönök – Pszichológiai és Biológiai Áttekintés" />
+        <meta property="og:title" content="Ösztönök – Hogyan alakulnak ki a viselkedési mintáink?" />
         <meta property="og:description" content="Az ösztönök típusainak, működési elveinek és fejlődéstani szerepének komplex áttekintése." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://osztonkod.hu/osztonok" />
@@ -33,7 +33,7 @@ export default function InstinctsArticle() {
           {
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": "Ösztönök – Pszichológiai és Biológiai Áttekintés",
+          "headline": "Hogyan alakulnak ki a viselkedési mintáink?",
           "description": "Az ösztönök biológiai, pszichológiai és evolúciós szerepének komplex áttekintése.",
           "author": {
             "@type": "Organization",
@@ -70,8 +70,13 @@ export default function InstinctsArticle() {
           transition={{ duration: 1 }}
           className="text-3xl md:text-4xl font-extrabold text-green-600 text-center tracking-tight mb-10"
         >
-          Ösztönök – Pszichológiai és Biológiai Áttekintés
+          Hogyan alakulnak ki a viselkedési mintáink?
         </motion.h1>
+
+        <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
+          Az ösztönök, az érzelmek és a korábbi tapasztalatok együtt alakítják azt,
+          hogyan gondolkodunk, érzünk és reagálunk a mindennapi életben.
+        </p>
 
         {/* KÁRTYÁS TARTALOMDOBOZ */}
         <motion.div
@@ -84,14 +89,68 @@ export default function InstinctsArticle() {
           "
         >
 
-          <p className="mb-6 text-gray-700">
-            Az ösztönök velünk született, automatikusan működő viselkedésminták,
-            amelyek az egyén túlélését, valamint a faj fennmaradását biztosítják.
-            Bár nincs mindenki által elfogadott végleges felosztásuk, több jól ismert
-            csoportjuk létezik.
+         {/* Saját minták megértése */}
+        <h2 className="section-title font-bold">
+          Saját mintáink megértése
+        </h2>
+
+        <p className="mt-6 mb-6 text-gray-700 leading-8">
+          A legtöbben úgy érezzük, hogy tudatosan hozzuk meg a döntéseinket.
+          A modern pszichológia és idegtudomány kutatásai azonban azt mutatják,
+          hogy reakcióink jelentős részét automatikus folyamatok, korábbi
+          tapasztalatok és mélyen rögzült viselkedési minták befolyásolják.
+        </p>
+
+        <p className="mb-6 text-gray-700 leading-8">
+          Ezek a minták gyakran már gyermekkorban elkezdenek kialakulni.
+          Minden fontosabb élmény nyomot hagy az idegrendszerben, és idővel
+          olyan automatikus reakciókat alakít ki, amelyek meghatározhatják,
+          hogyan viszonyulunk önmagunkhoz, más emberekhez és a mindennapi
+          kihívásokhoz.
+        </p>
+
+        <p className="mb-6 text-gray-700 leading-8">
+          Amikor például kritikát kapunk, elutasítást élünk át vagy egy váratlan
+          helyzettel találkozunk, sokszor nem tudatos döntés születik bennünk.
+          A korábban kialakult érzelmi minták automatikusan aktiválódnak, és ezek
+          határozzák meg első gondolatainkat, érzéseinket és reakcióinkat.
+        </p>
+
+        <p className="mb-6 text-gray-700 leading-8">
+          A jó hír az, hogy ezek a minták nem véglegesek. Az agy képes új idegi
+          kapcsolatokat létrehozni, ezért a felismerés, a tudatos gyakorlás és az
+          ismétlés segítségével fokozatosan új, egészségesebb működési minták
+          alakíthatók ki. A változás nem egyik napról a másikra történik, hanem
+          sok apró, tudatos döntés eredményeként.
+        </p>
+
+        <div className="my-10 rounded-2xl border border-emerald-200 bg-emerald-50 p-6">
+          <p className="text-lg font-semibold text-emerald-700">
+            Ahhoz azonban, hogy megértsük, hogyan alakulnak ki ezek a személyes
+            minták, először érdemes megismernünk az emberi viselkedés biológiai
+            alapjait.
           </p>
 
-          <hr className="my-8 border-emerald-100" />
+          <p className="mt-3 text-gray-700 leading-7">
+            Ezek közé tartoznak azok az ösztönök, amelyek minden ember működésének
+            alapját képezik, és amelyekre később a tanulás, az érzelmek és az
+            egyéni tapasztalatok épülnek.
+          </p>
+        </div>
+
+        <hr className="my-10 border-emerald-100" />
+
+        {/* Biológiai alapok */}
+        <h2 className="section-title font-bold">
+          Az emberi viselkedés biológiai alapjai
+        </h2>
+
+        <p className="mt-6 mb-8 text-gray-700 leading-8">
+          Az ösztönök velünk született biológiai programok, amelyek segítik
+          túlélésünket, támogatják a faj fennmaradását, valamint lehetővé teszik
+          a társas együttműködést. Ezek jelentik azt az alapot, amelyre később a
+          tanulás, az érzelmi fejlődés és a személyes tapasztalatok ráépülnek.
+        </p>
 
 
           {/* 1. Biológiai ösztönök */}
@@ -214,7 +273,7 @@ export default function InstinctsArticle() {
                bg-green-600 hover:bg-green-700 text-white 
                shadow-md transition transform hover:scale-[1.03]"
             >
-              Tovább a személyes elemzéshez →
+              Személyes elemzéshez →
             </Link>
             </div>
 

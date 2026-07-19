@@ -19,7 +19,7 @@ export default function AutomaticThinkingCard() {
 
         shadow-[0_20px_60px_rgba(0,0,0,0.12)]
 
-        p-8
+        p-6
 
         transition-all
         duration-500
@@ -45,13 +45,44 @@ export default function AutomaticThinkingCard() {
       />
 
       {/* Animation */}
-      <div className="relative">
+      <div className="relative
+                      flex
+                      h-64
+                      items-center
+                      justify-center">
         <AutomaticThinkingAnimation />
       </div>
 
       {/* Content */}
-      <div className="relative mt-8 flex-1">
-        <h3 className="text-xl font-bold text-gray-900">
+      <div className="relative mt-6 flex-1">
+
+        <div
+          className="
+            inline-flex
+            items-center
+            gap-2
+
+            rounded-full
+
+            border
+            border-emerald-100
+
+            bg-emerald-50
+
+            px-3
+            py-1
+
+            text-xs
+            font-medium
+
+            text-emerald-700
+          "
+        >
+          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
+          Automatikus gondolatok
+        </div>
+
+        <h3 className="mt-5 text-xl font-bold text-gray-900">
           Automatikus gondolkodás
         </h3>
 
@@ -65,3 +96,4 @@ export default function AutomaticThinkingCard() {
     </div>
   );
 }
+

@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+import ProcessComparison from "../components/about/ProcessComparison";
 
 import {
   Brain,
@@ -22,10 +23,11 @@ export default function AboutSection() {
     <section
       ref={ref}
       className="
-          relative
+        relative
           overflow-hidden
           bg-gradient-to-b
-          from-gray-200
+          from-gray-50
+          via-white
           to-white
 
           px-6
@@ -52,11 +54,35 @@ export default function AboutSection() {
 
         <div className="mx-auto mb-20 max-w-3xl text-center">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-emerald-600 md:text-5xl">
-            Miért ismétled a mintákat?
+          <h2
+            className="
+              text-4xl
+              md:text-5xl
+
+              font-bold
+
+              tracking-tight
+
+              text-slate-900
+            "
+          >
+            Miért ismétled újra{" "}
+            <span className="text-emerald-600">
+              ugyanazokat a mintákat?
+            </span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p
+            className="
+              mt-6
+
+              text-lg
+
+              leading-8
+
+              text-slate-600
+            "
+          >
             A régi minták nem azért ismétlődnek,
             mert gyenge vagy.
             Az agy egyszerűen mindig a már ismert
@@ -64,6 +90,8 @@ export default function AboutSection() {
           </p>
 
         </div>
+
+                
 
         {/* Main */}
 
@@ -131,9 +159,11 @@ export default function AboutSection() {
 
         </div>
 
+        <ProcessComparison />
+
         {/* Features */}
 
-        <div className="mt-24 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
 
           <AboutFeatureCard
             icon={<Brain size={28} />}
@@ -168,15 +198,16 @@ export default function AboutSection() {
           <Link
             to="/deepunderstand"
             className="
+              group
               inline-flex
               items-center
               gap-3
 
-              rounded-full
+              rounded-2xl
 
               border border-emerald-200
 
-              bg-white/80
+              bg-white
 
               px-8
               py-4
@@ -185,14 +216,15 @@ export default function AboutSection() {
 
               text-emerald-700
 
-              shadow-lg
+              shadow-sm
 
               transition-all
               duration-300
 
               hover:-translate-y-1
               hover:border-emerald-300
-              hover:shadow-xl
+              hover:shadow-lg
+              hover:text-emerald-800
             "
           >
             Mélyebb magyarázat
@@ -210,3 +242,4 @@ export default function AboutSection() {
     </section>
   );
 }
+

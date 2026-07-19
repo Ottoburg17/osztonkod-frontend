@@ -2,6 +2,7 @@ import whyItWorksImage from "../../assets/images/whyitworks.webp";
 
 import PatternNetwork from "../about/PatternNetwork";
 
+
 export default function WhyItWorksBrain() {
   return (
     <div
@@ -12,9 +13,7 @@ export default function WhyItWorksBrain() {
         h-full
         flex-col
 
-        mx-auto
         w-full
-        max-w-[440px]
 
         overflow-hidden
         rounded-3xl
@@ -55,7 +54,7 @@ export default function WhyItWorksBrain() {
             relative
 
             flex
-            h-80
+            h-64
             items-center
             justify-center
 
@@ -100,7 +99,7 @@ export default function WhyItWorksBrain() {
       </div>
 
       {/* Bottom */}
-      <div className="relative flex-1 px-6 pb-6">
+      <div className="relative flex-1 px-6 pb-6 pt-1">
         <div
           className="
             inline-flex
@@ -124,7 +123,7 @@ export default function WhyItWorksBrain() {
           "
         >
           <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
-          Élő neurális kapcsolatok
+          Neurális kapcsolatok
         </div>
 
         <h3 className="mt-5 text-xl font-bold text-gray-900">

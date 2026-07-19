@@ -140,13 +140,23 @@ export default function SchemasSection() {
 
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-white text-center">
-      <h2 className="text-3xl md:text-4xl font-bold text-green-600 mb-12">
-        Alapvető Érzelmi Ösztönkódok
+    <section className="py-24 px-6 md:px-16 bg-gray-80 text-center">
+      <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-12">
+        Alapvető{" "}
+        <span className="text-emerald-600">
+          Érzelmi Ösztönkódok
+        </span>
       </h2>
 
+      <p className="mt-6 max-w-3xl mx-auto text-lg leading-8 text-slate-600">
+        Ezek az érzelmi minták gyakran észrevétlenül befolyásolják a
+        gondolkodásunkat, kapcsolatainkat és döntéseinket. Fedezd fel,
+        melyek állnak hozzád a legközelebb.
+      </p>
+
+
       {/* GRID – INSTINCTARTICLE DESIGN */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {schemas.map((schema) => (
           <Link
             key={schema.id}
@@ -169,10 +179,10 @@ export default function SchemasSection() {
               "
             />
 
-            <h3 className="relative z-10 text-2xl font-bold text-green-700 mb-4">
+            <h3 className="relative z-10 text-2xl font-bold text-slate-900 mb-4">
               {schema.title}
             </h3>
-            <p className="relative z-10 text-gray-600 group-hover:text-gray-700">
+            <p className="relative z-10 text-slate-600 group-hover:text-slate-700">
               {schema.description}
             </p>
           </Link>
@@ -186,11 +196,12 @@ export default function SchemasSection() {
         onMouseLeave={() => setHovered(false)}
         className="
           inline-block
-          text-green-700
+          text-emerald-700
           font-semibold
           text-lg
-          underline
-          transition
+          transition-colors
+          hover:text-emerald-800
+
         "
       >
         {hovered
@@ -198,7 +209,7 @@ export default function SchemasSection() {
           : "Ránézek, mi ismerős →"}
       </Link>
 
-      <p className="text-xs text-gray-400">
+      <p className="text-xs text-gray-500">
         Nincs regisztráció. Nem kell írnod.
       </p>
     </div>

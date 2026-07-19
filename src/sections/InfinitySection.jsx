@@ -8,9 +8,9 @@ export default function InfinitySection() {
           overflow-hidden
 
           bg-gradient-to-b
-          from-emerald-300
-          via-emerald
-          to-gray-100
+          from-gray-50
+          via-emerald-25
+          to-white
 
           px-6
 
@@ -82,11 +82,27 @@ export default function InfinitySection() {
       {/* TARTALOM */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         
-        <h2 className="text-4xl md:text-5xl font-bold text-green-600 mb-10">
-          A változás végtelen lehetősége
+         <h2
+          className="
+            text-4xl
+            md:text-5xl
+
+            font-bold
+
+            tracking-tight
+
+            text-slate-900
+
+            mb-10
+          "
+        >
+          Minden tudatos döntés{" "}
+          <span className="text-emerald-600">
+            egy új idegi kapcsolat.
+          </span>
         </h2>
 
-        <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+        <div className="text-lg text-slate-600 leading-relaxed space-y-6">
           
           <p>
             A felismerés után már nem automatikusan reagálsz —
@@ -120,25 +136,41 @@ export default function InfinitySection() {
          
         <div className="mt-16 flex justify-center">
           <Link
-            to="/test"
+            to="/instinctsarticle"
             className="
-            px-8 py-4 
-            bg-green-600 text-white 
-            rounded-2xl 
-            font-semibold 
-            shadow-xl
-            hover:bg-green-700 
-            hover:scale-105 
-            active:scale-95
-            transition-all duration-200
-            relative
-            before:absolute before:inset-0
-            before:rounded-2xl
-            before:blur-xl before:opacity-0
-            hover:before:opacity-40
-            before:bg-green-400"
+            group
+            inline-flex
+            items-center
+            gap-3
+
+            rounded-2xl
+
+            border border-emerald-200
+
+            bg-white
+
+            px-8
+            py-4
+
+            font-semibold
+
+            text-emerald-700
+
+            shadow-sm
+
+            transition-all
+            duration-300
+
+            hover:-translate-y-1
+            hover:border-emerald-300
+            hover:shadow-lg
+            hover:text-emerald-800"
             >
-            Tudd meg, mi irányít valójában →
+            Kezdd el megérteni önmagad
+
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
           </Link>
         </div>
 

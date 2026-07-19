@@ -356,8 +356,8 @@ export default function About() {
 
         <Link 
         to="/products/struggle-breaker"
-        className="px-10 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition shadow-lg hover:shadow-xl">
-          Fedezd fel az Ösztönkód rendszert
+        className="px-8 py-5 bg-green-600 text-white rounded-full hover:bg-green-700 transition shadow-lg hover:shadow-xl">
+          Fedezd fel a rendszert
         </Link>
 
       </div>

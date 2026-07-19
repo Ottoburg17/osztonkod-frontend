@@ -35,7 +35,7 @@ export default function AutomaticThinkingAnimation() {
     <div
       className="
         relative
-        h-80
+        h-full
         overflow-hidden
         rounded-2xl
 
@@ -79,7 +79,7 @@ export default function AutomaticThinkingAnimation() {
                 }}
                 className="
                   flex
-                  w-56
+                  w-52
                   items-center
                   gap-3
 
@@ -90,7 +90,7 @@ export default function AutomaticThinkingAnimation() {
                   bg-white/90
 
                   px-5
-                  py-3
+                  py-2
 
                   shadow-sm
                 "
@@ -115,8 +115,8 @@ export default function AutomaticThinkingAnimation() {
               {index !== steps.length - 1 && (
                 <motion.div
                   className="
-                    my-2
-                    h-10
+                    my-1
+                    h-6
                     w-px
                     bg-emerald-200
                   "

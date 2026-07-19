@@ -1,8 +1,8 @@
-// components/about/PatternNetwork.jsx
+
 
 import { useEffect, useRef } from "react";
 
-export default function PatternNetwork() {
+export default function NeuralNetwork() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -36,25 +36,15 @@ export default function PatternNetwork() {
     function createNodes() {
       nodes.length = 0;
 
-      const centerX = width / 2;
-      const centerY = height / 2;
-
-      const radiusX = width * 0.34;
-      const radiusY = height * 0.42;
-
-      for (let i = 0; i < 24; i++) {
-        const angle = Math.random() * Math.PI * 2;
-
-        const r = 0.45 + Math.random() * 0.55;
-
+      for (let i = 0; i < 1; i++) {
         nodes.push({
-          x: centerX + Math.cos(angle) * radiusX * r,
-          y: centerY + Math.sin(angle) * radiusY * r,
+          x: 30 + Math.random() * (width - 60),
+          y: 30 + Math.random() * (height - 60),
 
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
+          vx: (Math.random() - 0.5) * 0.2,
+          vy: (Math.random() - 0.5) * 0.2,
 
-          size: 2 + Math.random() * 1.4,
+          size: 1 + Math.random() * 1.8,
         });
       }
     }
@@ -68,8 +58,8 @@ export default function PatternNetwork() {
         n.x += n.vx;
         n.y += n.vy;
 
-        if (n.x < width * 0.15 || n.x > width * 0.85) n.vx *= -1;
-        if (n.y < height * 0.12 || n.y > height * 0.88) n.vy *= -1;
+        if (n.x < 0 || n.x > width) n.vx *= -1;
+        if (n.y < 0 || n.y > height) n.vy *= -1;
       });
 
       // Connections
@@ -84,12 +74,10 @@ export default function PatternNetwork() {
 
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 60) {
-            ctx.strokeStyle = `rgba(16,185,129,${
-              0.22 * (1 - dist / 80)
-            })`;
+          if (dist < 120) {
+            ctx.strokeStyle = `rgba(74,222,128,${0.25 * (1 - dist / 120)})`;
 
-            ctx.lineWidth = 0.8;
+            ctx.lineWidth = 1;
 
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
@@ -106,10 +94,10 @@ export default function PatternNetwork() {
 
         ctx.arc(n.x, n.y, n.size, 0, Math.PI * 2);
 
-        ctx.fillStyle = "rgba(41, 172, 15, 0.95)";
+        ctx.fillStyle = "#4ade80";
 
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = "rgba(125, 231, 75, 0.5)";
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = "#4ade80";
 
         ctx.fill();
 
@@ -134,8 +122,7 @@ export default function PatternNetwork() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
+      className="absolute inset-0"
     />
   );
 }
-

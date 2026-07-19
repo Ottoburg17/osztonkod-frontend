@@ -17,7 +17,7 @@ export default function HeroSection() {
       className="relative
                 pt-24
                 md:pt-28
-                pb-28
+                pb-40
                 flex
                 flex-col
                 justify-center
@@ -25,7 +25,7 @@ export default function HeroSection() {
                 text-center
                 px-8
                 overflow-hidden
-                bg-gray-100"
+                bg-white"
                     >
       {/** -------------------------------------------------------- */}
       {/** 1) FULL MESH GRADIENT BACKGROUND (SVG)                   */}
@@ -45,20 +45,7 @@ export default function HeroSection() {
         <rect width="100%" height="100%" fill="url(#meshGradient1)" opacity="0.35" />
       </svg>
 
-      {/** -------------------------------------------------------- */}
-      {/** 2) ANIMATED NOISE OVERLAY                                */}
-      {/** -------------------------------------------------------- */}
-      <motion.div
-        initial={{ opacity: 0.05 }}
-        animate={{ opacity: 0.10, x: [-10, 10, -10], y: [-10, 10, -10] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-        className="pointer-events-none absolute inset-0 mix-blend-overlay opacity-10"
-        style={{
-          backgroundImage:
-            "url('https://grainy-gradients.vercel.app/noise.svg')", // szép, finom zaj
-          backgroundSize: "300%",
-        }}
-      />
+     
 
       {/** -------------------------------------------------------- */}
       {/** TOP TWO GLOWING ORBS (maradnak)                          */}
@@ -68,7 +55,7 @@ export default function HeroSection() {
         rotate={360}
         originX="20%"
         originY="50%"
-        className="absolute w-[26vw] left-1/2 -translate-x-1/2 -translate-y-[34%] opacity-50 pointer-events-none"
+        className="absolute w-[26vw] left-1/2 -translate-x-1/2 -translate-y-[34%] opacity-30 pointer-events-none"
       />
 
       <GlowOrb
@@ -76,7 +63,7 @@ export default function HeroSection() {
         rotate={-360}
         originX="20%"
         originY="50%"
-        className="absolute w-[26vw] left-1/2 -translate-x-1/2 translate-y-[32%] opacity-45 pointer-events-none"
+        className="absolute w-[26vw] left-1/2 -translate-x-1/2 translate-y-[32%] opacity-25 pointer-events-none"
       />
 
       {/** -------------------------------------------------------- */}
@@ -92,56 +79,88 @@ export default function HeroSection() {
           bg-emerald-400 opacity-20 blur-[110px] rounded-full pointer-events-none"
       />
 
+
+      <div
+        className="
+          mt-2
+          inline-flex
+          items-center
+          gap-2
+          rounded-full
+          border
+          border-emerald-200
+          bg-emerald-50
+          px-4
+          py-2
+          text-sm
+          font-medium
+          text-emerald-700
+          relative
+          z-10
+        "
+      >
+        🧠 Interaktív önismereti elemzés
+      </div>
+
       {/** -------------------------------------------------------- */}
       {/** TEXT ELEMENTS (TITLE + DESCRIPTION + CTA)               */}
       {/** -------------------------------------------------------- */}
-      <motion.h1
+       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1.1 }}
-        className="max-w-3xl mx-auto text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-amber-400 drop-shadow-md relative z-10 leading-tight"
+        className="
+          max-w-4xl
+          mx-auto
+          text-2xl
+          sm:text-3xl
+          md:text-5xl
+          lg:text-6xl
+          font-extrabold
+          tracking-tight
+          leading-tight
+          text-slate-900
+          relative
+          z-10
+        "
       >
-        Miért reagálsz mindig ugyanúgy? <br />
-
-       <span className="block mt-2 text-green-800">
-          Fedezd fel az érzelmi reakcióid mögötti <br className="hidden sm:block" />
-          <span className="text-amber-500 font-semibold drop-shadow-sm">
-            valódi mintát
-          </span>
-        </span>
+        Miért reagálsz mindig ugyanúgy?
       </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ delay: 0.1, duration: 0.8 }}
+        className="
+          mt-5
+          text-xl
+          md:text-2xl
+          font-medium
+          text-slate-600
+          max-w-3xl
+          mx-auto
+        "
+      >
+        Fedezd fel, mi irányítja valójában a reakcióidat.
+      </motion.p>
 
       <motion.p
         initial={{ opacity: 0, y: 35 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, delay: 0.2 }}
-        className="text-base sm:text-lg md:text-xl mt-6 max-w-xl md:max-w-2xl text-gray-700 leading-relaxed relative z-10"
+        className="text-lg
+        md:text-xl
+        mt-8
+        max-w-2xl
+        leading-relaxed
+        text-slate-600
+        relative
+        z-10"
       >
-      Érzelmi Ösztönkód – egy önismereti módszer,
-      amely segít megérteni az automatikus érzelmi reakcióidat,
-      és kilépni a visszatérő mintákból.
+       Az Ösztönkód segít felismerni az ismétlődő érzelmi mintákat, hogy tudatosabban reagálhass a mindennapi helyzetekben.
       </motion.p>
 
-      <motion.p
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, delay: 0.3 }}
-      className="text-base md:text-lg mt-4 text-gray-600 relative z-10"
-    >
-     Ha már próbáltál változtatni, de mégis ugyanazokba a helyzetekbe jutsz vissza
-    </motion.p>
-
-      <motion.p
-        initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 0.35 }}
-        className="text-sm md:text-base mt-6 max-w-xl text-gray-600 italic relative z-10"
-      >
-        Ez nem személyiségteszt, és nem tanácsadás –
-        hanem egy másfajta ránézés arra, ahogyan működsz.
-      </motion.p>
-
-
+  
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -149,14 +168,30 @@ export default function HeroSection() {
         className="mt-10 md:mt-12 relative z-10"
       >
 
+        <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ delay: 0.38, duration: 0.8 }}
+        className="mb-8
+                max-w-xl
+                text-lg
+                leading-relaxed
+                text-slate-600"
+          >
+        Válaszolj néhány kérdésre, és fedezd fel,
+        <span className="font-semibold text-green-700">
+          {" "}milyen érzelmi minták alakítják a reakcióidat.
+        </span>
+      </motion.p>
+
         <Link
-          to="/instinctsarticle"
+          to="/test"
           className="px-10 py-4 rounded-2xl text-lg font-semibold 
                     bg-gradient-to-r from-green-500 to-emerald-600 
                     hover:from-green-600 hover:to-emerald-700
                     text-white shadow-xl transition transform hover:scale-[1.06] active:scale-[0.98]"
         >
-         Fedezd fel most →
+        Indítsd el az elemzést
         </Link>
 
 
@@ -171,6 +206,7 @@ export default function HeroSection() {
         <span className="px-3 py-1 bg-white/70 backdrop-blur-md border border-gray-200 rounded-full text-xs text-gray-700 shadow-sm">
           🚫 Nincs regisztráció
         </span>
+
       </div>
 
       </motion.div>
@@ -178,3 +214,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+

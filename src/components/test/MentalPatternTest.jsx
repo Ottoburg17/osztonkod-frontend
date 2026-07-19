@@ -1,14 +1,22 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import WelcomeScreen from "./WelcomeScreen";
+
+
 import { TEST_QUESTIONS } from "../../data/testQuestions";
 import { useTestEngine } from "../../hooks/useTestEngine";
 import { CATEGORY_INSIGHTS } from "../../data/testResults";
+
+
+
+
 
 const SCALE = [1, 2, 3, 4, 5];
 
 export default function MentalPatternTest() {
   const engine = useTestEngine(TEST_QUESTIONS);
+  const [started, setStarted] = useState(false);
 
   // ⌨️ KEYBOARD
   useEffect(() => {
@@ -27,7 +35,13 @@ export default function MentalPatternTest() {
     if (info.offset.x > 120) engine.answer(5);
     if (info.offset.x < -120) engine.answer(1);
   };
+  
+   if (!started) {
+  return <WelcomeScreen onStart={() => setStarted(true)} />;
+}
 
+
+   
   // 🏁 RESULT SCREEN (PRO)
   if (engine.isDone) {
     return (
