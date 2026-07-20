@@ -140,7 +140,7 @@ export default function SchemasSection() {
 
 
   return (
-    <section className="py-24 px-6 md:px-16 bg-gray-80 text-center">
+    <section className="py-24 px-6 md:px-16 bg-gray-100 text-center">
       <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-12">
         Alapvető{" "}
         <span className="text-emerald-600">

@@ -13,6 +13,8 @@ import {
 import AboutAnimation from "../components/about/AboutAnimation";
 import AboutFeatureCard from "../components/about/AboutFeatureCard";
 
+
+
 export default function AboutSection() {
   const { ref, inView } = useInView({
     threshold: 0.2,
@@ -26,8 +28,8 @@ export default function AboutSection() {
         relative
           overflow-hidden
           bg-gradient-to-b
-          from-gray-50
-          via-white
+          from-gray-100
+          via-emerald-50/70
           to-white
 
           px-6
@@ -159,7 +161,7 @@ export default function AboutSection() {
 
         </div>
 
-        <ProcessComparison />
+        <ProcessComparison /> 
 
         {/* Features */}
 

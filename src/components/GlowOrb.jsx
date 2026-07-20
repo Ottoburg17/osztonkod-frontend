@@ -24,3 +24,4 @@ export default function GlowOrb({ id, rotate, originX, originY, className }) {
     </motion.svg>
   );
 }
+

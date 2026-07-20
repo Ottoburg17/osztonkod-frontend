@@ -12,25 +12,27 @@ export default function BlogGrid() {
   return (
     <section
       className="
-          relative
-          bg-gradient-to-b
-          from-gray-50
-          via-emerald-25
-          to-white
+        relative
+        overflow-hidden
 
-          px-6
+        bg-gradient-to-b
+        from-gray-50
+        via-emerald-25
+        to-white
 
-          pt-28
-          pb-24
+        px-6
 
-          md:px-16
-      "
+        pt-28
+        pb-24
+
+        md:px-16
+          "
     >
       {/* Glow */}
 
       <div
         className="
-          absolute
+         absolute
           top-0
           left-1/2
           -translate-x-1/2
@@ -38,7 +40,7 @@ export default function BlogGrid() {
           w-[700px]
           h-[700px]
 
-          rounded-full
+          rounded-full 
 
           bg-emerald-300/10
 

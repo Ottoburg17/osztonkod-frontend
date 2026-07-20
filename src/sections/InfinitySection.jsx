@@ -8,8 +8,8 @@ export default function InfinitySection() {
           overflow-hidden
 
           bg-gradient-to-b
-          from-gray-50
-          via-emerald-25
+          from-gray-100
+          via-emerald-50/70
           to-white
 
           px-6
