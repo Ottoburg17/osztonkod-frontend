@@ -1,6 +1,6 @@
 import whyItWorksImage from "../../assets/images/whyitworks.webp";
 
-import PatternNetwork from "../about/PatternNetwork";
+import PatternNetwork from "./PatternNetwork";
 
 
 export default function WhyItWorksBrain() {
@@ -94,7 +94,7 @@ export default function WhyItWorksBrain() {
 
           {/* Animated Layers */}
           
-      {/*   <PatternNetwork />  */}
+       <PatternNetwork />  
  
         </div>
       </div>

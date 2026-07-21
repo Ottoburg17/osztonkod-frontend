@@ -1,8 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
-import ProcessComparison from "../components/about/ProcessComparison";
 
 import {
   Brain,
@@ -10,27 +6,27 @@ import {
   Sprout,
 } from "lucide-react";
 
-import AboutAnimation from "../components/about/AboutAnimation";
+import AboutIllustration from "../components/about/AboutIllustration";
+import PatternComparison from "../components/about/PatternComparison";
 import AboutFeatureCard from "../components/about/AboutFeatureCard";
-
-
 
 export default function AboutSection() {
   return (
-    <section className="
+    <section
+      className="
         relative
-          overflow-hidden
-          bg-gradient-to-b
-          from-gray-100
-          via-emerald-50/70
-          to-white
+        overflow-hidden
 
-          px-6
+        bg-gradient-to-b
+        from-gray-100
+        via-emerald-50/70
+        to-white
 
-          pt-28
-          pb-20
+        px-6
+        pt-28
+        pb-28
 
-          md:px-16
+        md:px-16
       "
     >
       {/* Background Glow */}
@@ -39,61 +35,31 @@ export default function AboutSection() {
 
       <div className="absolute right-0 bottom-20 h-96 w-96 rounded-full bg-cyan-300/10 blur-3xl" />
 
-       <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.9 }}
-          className="relative mx-auto max-w-7xl"
-        >
+      <div className="relative mx-auto max-w-7xl">
 
-
-        {/* Heading */}
+        {/* Header */}
 
         <div className="mx-auto mb-20 max-w-3xl text-center">
 
-          <h2
-            className="
-              text-4xl
-              md:text-5xl
-
-              font-bold
-
-              tracking-tight
-
-              text-slate-900
-            "
-          >
-            Miért ismétled újra{" "}
+          <h2 className="text-4xl font-bold text-slate-900 md:text-5xl">
+            Miért ismételjük újra{" "}
             <span className="text-emerald-600">
               ugyanazokat a mintákat?
             </span>
           </h2>
 
-          <p
-            className="
-              mt-6
-
-              text-lg
-
-              leading-8
-
-              text-slate-600
-            "
-          >
+          <p className="mt-6 text-lg leading-8 text-slate-600">
             A régi minták nem azért ismétlődnek,
-            mert gyenge vagy.
-            Az agy egyszerűen mindig a már ismert
-            idegi útvonalakat választja.
+            mert gyengék vagyunk.
+            Az agy mindig a már ismert
+            idegi kapcsolatokat választja.
           </p>
 
         </div>
 
-                
+        {/* Top */}
 
-        {/* Main */}
-
-        <div className="grid items-center gap-16 lg:grid-cols-2">
+        <div className="grid items-center gap-20 lg:grid-cols-2">
 
           {/* Left */}
 
@@ -102,22 +68,20 @@ export default function AboutSection() {
             <div className="space-y-8 text-lg leading-9 text-gray-700">
 
               <p>
-                Lehet, hogy észrevetted:
-                hiába változik a helyzet,
-                a reakció ugyanaz marad.
-                Mintha a tudattalan újra és újra
-                ugyanarra az útra terelne —
+                Sokszor ugyanazokat az érzelmi reakciókat
+                ismételjük újra,
                 még akkor is,
-                amikor tudod,
-                hogy máshogyan szeretnél reagálni.
+                amikor tudjuk,
+                hogy másképp szeretnénk viselkedni.
               </p>
 
               <p>
-                Ennek oka nem gyengeség,
-                hanem az agy természetes működése.
-                A korábbi tapasztalatokból
-                gyors idegi útvonalak épülnek fel,
-                amelyek automatikusan aktiválódnak.
+                Ennek oka,
+                hogy az ismétlődő tapasztalatok
+                erős idegi útvonalakat alakítanak ki.
+                Az agy automatikusan ezeket aktiválja,
+                mert ezek jelentik számára
+                a legkisebb energiafelhasználást.
               </p>
 
             </div>
@@ -128,15 +92,15 @@ export default function AboutSection() {
 
                 rounded-3xl
 
-                border border-emerald-100
+                border
+                border-emerald-100
 
-                bg-emerald-50/80
+                bg-emerald-50
 
-                p-6
+                p-7
 
                 text-xl
                 font-semibold
-
                 leading-9
 
                 text-emerald-700
@@ -144,66 +108,67 @@ export default function AboutSection() {
                 shadow-lg
               "
             >
-              A felismerés az első lépés ahhoz,
-              hogy ne a múlt vezesse a jelenedet —
-              hanem te alakítsd az irányt.
+              A felismerés az első lépés.
+              Ha megérted,
+              mi történik benned,
+              már nem ugyanaz az automatikus
+              folyamat irányít.
             </div>
 
           </div>
 
           {/* Right */}
 
-          <AboutAnimation />
+          <AboutIllustration />
 
         </div>
 
-       <ProcessComparison />  
+        {/* Pattern Comparison */}
+
+        <PatternComparison />
 
         {/* Features */}
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-24 grid gap-8 md:grid-cols-3">
 
           <AboutFeatureCard
             icon={<Brain size={28} />}
             title="Tudatos felismerés"
-            description="Megérted, mi aktiválja benned a régi mintákat, és miért ismétlődnek újra."
+            description="Megérted, mi aktiválja benned a régi mintákat és hogyan indulnak el az automatikus reakciók."
             color="emerald"
-            delay={0}
           />
 
           <AboutFeatureCard
             icon={<Network size={28} />}
             title="Új idegi kapcsolatok"
-            description="A tudatos ismétlés fokozatosan új idegpályákat épít fel."
+            description="Az ismételt tudatos döntések fokozatosan új idegpályákat alakítanak ki."
             color="sky"
-            delay={0.15}
           />
 
           <AboutFeatureCard
             icon={<Sprout size={28} />}
             title="Tartós változás"
-            description="Az új reakciók idővel természetessé válnak és felülírják a régi mintákat."
+            description="Az új reakciók idővel természetessé válnak és felülírják a korábbi automatikus mintákat."
             color="emerald"
-            delay={0.3}
           />
 
         </div>
 
         {/* CTA */}
 
-        <div className="mt-20 text-center">
+        <div className="mt-24 text-center">
 
           <Link
             to="/deepunderstand"
             className="
-              group
               inline-flex
               items-center
               gap-3
 
               rounded-2xl
 
-              border border-emerald-200
+              border
+              border-emerald-200
 
               bg-white
 
@@ -222,22 +187,16 @@ export default function AboutSection() {
               hover:-translate-y-1
               hover:border-emerald-300
               hover:shadow-lg
-              hover:text-emerald-800
             "
           >
             Mélyebb magyarázat
-
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-
+            <span>→</span>
           </Link>
 
         </div>
 
-      </motion.div>
+      </div>
 
     </section>
   );
 }
-
