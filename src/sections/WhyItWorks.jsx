@@ -93,7 +93,7 @@ export default function WhyItWorks() {
       
         <div className="grid items-stretch gap-8 lg:grid-cols-3">
           <WhyItWorksBrain />
-          <AutomaticThinkingCard />
+        {/*  <AutomaticThinkingCard /> */}
           <EmotionalPatternCard />
 
         </div>
