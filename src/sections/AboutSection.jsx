@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useInView } from "react-intersection-observer";
+
 import ProcessComparison from "../components/about/ProcessComparison";
 
 import {
@@ -16,15 +16,8 @@ import AboutFeatureCard from "../components/about/AboutFeatureCard";
 
 
 export default function AboutSection() {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
-
   return (
-    <section
-      ref={ref}
-      className="
+    <section className="
         relative
           overflow-hidden
           bg-gradient-to-b
@@ -35,7 +28,7 @@ export default function AboutSection() {
           px-6
 
           pt-28
-          pb-32
+          pb-20
 
           md:px-16
       "
@@ -46,12 +39,15 @@ export default function AboutSection() {
 
       <div className="absolute right-0 bottom-20 h-96 w-96 rounded-full bg-cyan-300/10 blur-3xl" />
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.9 }}
-        className="relative mx-auto max-w-7xl"
-      >
+       <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.9 }}
+          className="relative mx-auto max-w-7xl"
+        >
+
+
         {/* Heading */}
 
         <div className="mx-auto mb-20 max-w-3xl text-center">

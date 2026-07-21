@@ -17,10 +17,10 @@ export default function HeroSection() {
       className="relative
                 pt-24
                 md:pt-28
-                pb-40
+                pb-16 md:pb-24
                 flex
                 flex-col
-                justify-center
+               
                 items-center
                 text-center
                 px-8

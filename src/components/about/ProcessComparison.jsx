@@ -57,15 +57,15 @@ function FlowColumn({
 }) {
   return (
     <div
-      className={`rounded-3xl border ${border} ${bg} p-8`}
+      className={`rounded-3xl border ${border} ${bg} p-6 sm:p-8`}
     >
       <h3
-        className={`mb-8 text-center text-xl font-bold ${color}`}
+        className={`mb-6 text-center text-xl font-bold ${color}`}
       >
         {title}
       </h3>
 
-      <div className="flex flex-col items-center">
+      <div className="flex w-full flex-col items-center">
 
         {items.map((item, index) => {
 
@@ -74,7 +74,7 @@ function FlowColumn({
           return (
             <div
               key={item.title}
-              className="flex flex-col items-center"
+              className="flex w-full flex-col items-center"
             >
               <motion.div
                 initial={{
@@ -92,32 +92,32 @@ function FlowColumn({
                   delay: index * 0.15,
                 }}
                 className="
-                  flex
-                  w-56
-                  items-center
-                  gap-4
+                flex
+                w-[220px]
+                items-center
+                gap-4
 
-                  rounded-2xl
+                rounded-2xl
 
-                  border
+                border
 
-                  bg-white
+                bg-white
 
-                  p-4
+                p-3
 
-                  shadow-sm
+                shadow-sm
                 "
               >
                 <div
-                  className={`rounded-xl p-3 ${bg}`}
+                  className={`rounded-xl p-2 ${bg}`}
                 >
                   <Icon
-                    className={color.replace("text-", "")}
-                    size={22}
+                    className={color}
+                    size={20}
                   />
                 </div>
 
-                <span className="font-medium text-gray-700">
+                <span className="text-sm font-medium text-gray-700">
                   {item.title}
                 </span>
               </motion.div>
@@ -128,9 +128,11 @@ function FlowColumn({
                   <motion.div
                     className={`
                       absolute
-                      left-0
-                      w-px
+                      left-1/2
+                      -translate-x-1/2
+                      w-1
                       h-5
+                      rounded-full
                       ${
                         color.includes("emerald")
                           ? "bg-emerald-400"
