@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import { motion } from "framer-motion";
 import {
   Target,
   Zap,
@@ -56,9 +54,7 @@ function FlowColumn({
   items,
 }) {
   return (
-    <div
-      className={`rounded-3xl border ${border} ${bg} p-6 sm:p-8`}
-    >
+    <div className={`rounded-3xl border ${border} ${bg} p-6 sm:p-8`}>
       <h3
         className={`mb-6 text-center text-xl font-bold ${color}`}
       >
@@ -66,9 +62,7 @@ function FlowColumn({
       </h3>
 
       <div className="flex w-full flex-col items-center">
-
         {items.map((item, index) => {
-
           const Icon = item.icon;
 
           return (
@@ -76,41 +70,20 @@ function FlowColumn({
               key={item.title}
               className="flex w-full flex-col items-center"
             >
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  delay: index * 0.15,
-                }}
+              <div
                 className="
-                flex
-                w-[220px]
-                items-center
-                gap-4
-
-                rounded-2xl
-
-                border
-
-                bg-white
-
-                p-3
-
-                shadow-sm
+                  flex
+                  w-[220px]
+                  items-center
+                  gap-4
+                  rounded-2xl
+                  border
+                  bg-white
+                  p-3
+                  shadow-sm
                 "
               >
-                <div
-                  className={`rounded-xl p-2 ${bg}`}
-                >
+                <div className={`rounded-xl p-2 ${bg}`}>
                   <Icon
                     className={color}
                     size={20}
@@ -120,38 +93,10 @@ function FlowColumn({
                 <span className="text-sm font-medium text-gray-700">
                   {item.title}
                 </span>
-              </motion.div>
+              </div>
 
-               {index < items.length - 1 && (
-                <div className="relative my-3 h-8 w-px bg-gray-300 overflow-hidden">
-
-                  <motion.div
-                    className={`
-                      absolute
-                      left-1/2
-                      -translate-x-1/2
-                      w-1
-                      h-5
-                      rounded-full
-                      ${
-                        color.includes("emerald")
-                          ? "bg-emerald-400"
-                          : "bg-rose-400"
-                      }
-                    `}
-                    animate={{
-                      y: [-20, 32],
-                      opacity: [0, 1, 1, 0],
-                    }}
-                    transition={{
-                      duration: 2.4,
-                      repeat: Infinity,
-                      ease: "linear",
-                      delay: index * 0.25,
-                    }}
-                  />
-
-                </div>
+              {index < items.length - 1 && (
+                <div className="my-3 h-8 w-px bg-gray-300" />
               )}
             </div>
           );
@@ -164,9 +109,7 @@ function FlowColumn({
 export default function ProcessComparison() {
   return (
     <section className="mt-24">
-
       <div className="mb-14 text-center">
-
         <h2 className="text-3xl font-bold text-slate-500">
           Hogyan alakulnak ki a minták?
         </h2>
@@ -176,11 +119,9 @@ export default function ProcessComparison() {
           hanem abban,
           hogyan reagálsz rá.
         </p>
-
       </div>
 
       <div className="grid gap-8 lg:grid-cols-2">
-
         <FlowColumn
           title="Automatikus minta"
           color="text-rose-600"
@@ -196,10 +137,7 @@ export default function ProcessComparison() {
           border="border-emerald-100"
           items={newFlow}
         />
-
       </div>
-
     </section>
   );
 }
-

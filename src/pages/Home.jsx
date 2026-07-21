@@ -45,12 +45,12 @@ export default function Home() {
       <main>
         <HeroSection />
       
-        <WhyItWorks />
-        <AboutSection />
-        <InfinitySection />
-        <SchemasSection />
-        <SocialProofPreview /> 
-        <BlogGrid /> 
+        <WhyItWorks />  
+       <AboutSection /> 
+        <InfinitySection /> 
+       <SchemasSection /> 
+        <SocialProofPreview />  
+         <BlogGrid /> 
 
       </main>
     </div>

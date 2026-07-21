@@ -94,7 +94,8 @@ export default function WhyItWorksBrain() {
 
           {/* Animated Layers */}
           
-          <PatternNetwork />
+        {/*  <PatternNetwork /> */}
+
         </div>
       </div>
 

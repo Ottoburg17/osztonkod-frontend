@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+
 import WhyItWorksBrain from "../components/whyItWorks/WhyItWorksBrain";
 import AutomaticThinkingCard from "../components/whyItWorks/AutomaticThinkingCard";
 import EmotionalPatternCard from "../components/whyItWorks/EmotionalPatternCard";
@@ -9,15 +9,10 @@ import EmotionalPatternCard from "../components/whyItWorks/EmotionalPatternCard"
 
 
 export default function WhyItWorks() {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
-    triggerOnce: true,
-  });
+ 
 
   return (
-    <section
-      ref={ref}
-      className="relative
+    <section className="relative
           overflow-hidden
           bg-gradient-to-b
           from-gray-100
@@ -36,12 +31,15 @@ export default function WhyItWorks() {
 
       <div className="absolute bottom-[-10%] right-[15%] h-[260px] w-[260px] rounded-full bg-green-400/10 blur-[120px]" />
 
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 mx-auto max-w-7xl"
-      >
+         <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+            className="relative z-10 mx-auto max-w-7xl"
+          >
+        
+
         {/* Header */}
          <div className="mx-auto mb-16 max-w-3xl text-center">
 
@@ -91,14 +89,16 @@ export default function WhyItWorks() {
         </div>
 
         {/* Cards */}
+
+      
         <div className="grid items-stretch gap-8 lg:grid-cols-3">
-          
           <WhyItWorksBrain />
           <AutomaticThinkingCard />
-           <EmotionalPatternCard />
+          <EmotionalPatternCard />
 
         </div>
-        
+      
+  
       </motion.div>
     </section>
   );

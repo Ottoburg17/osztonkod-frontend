@@ -157,7 +157,7 @@ export default function AboutSection() {
 
         </div>
 
-        <ProcessComparison /> 
+       <ProcessComparison />  
 
         {/* Features */}
 
