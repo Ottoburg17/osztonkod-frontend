@@ -54,7 +54,7 @@ export default function MentalPatternTest() {
 
         <div className="max-w-xl w-full z-10 text-center">
 
-          <h2 className="text-3xl font-bold mb-8 text-green-700">
+          <h2 className="mt-6 text-3xl font-bold mb-8 text-green-700">
             Ez határozza meg leginkább a működésed
           </h2>
 
@@ -89,7 +89,7 @@ export default function MentalPatternTest() {
 
           <button
             onClick={engine.reset}
-            className="mt-8 px-8 py-3 rounded-2xl 
+            className="mt-5 px-8 py-3 rounded-2xl 
             bg-gradient-to-r from-green-500 to-emerald-600 
             text-white font-semibold shadow-lg 
             hover:scale-105 hover:shadow-xl 

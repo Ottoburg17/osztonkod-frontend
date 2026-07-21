@@ -12,13 +12,13 @@ export default function WelcomeScreen({ onStart }) {
         items-center
         justify-center
         px-4
-        py-6
+        py-3 sm:py-6
         bg-gradient-to-br
         from-green-50
         via-emerald-100
         to-green-200
         relative
-        overflow-hidden
+        overflow-y-auto
       "
     >
       {/* Glow */}
@@ -42,8 +42,8 @@ export default function WelcomeScreen({ onStart }) {
           border
           border-white/40
           shadow-2xl
-          px-6
-          py-8
+          px-5
+          py-6
           sm:px-10
           sm:py-10
           text-center
@@ -58,8 +58,8 @@ export default function WelcomeScreen({ onStart }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
           className="
-            w-36
-            sm:w-44
+            w-28
+            sm:w-40
             md:w-48
             mx-auto
             mb-6
@@ -71,7 +71,7 @@ export default function WelcomeScreen({ onStart }) {
 
         <h1
           className="
-            text-3xl
+            text-2xl
             sm:text-4xl
             md:text-5xl
             font-bold
@@ -100,7 +100,7 @@ export default function WelcomeScreen({ onStart }) {
 
         {/* Features */}
 
-        <div className="mt-8 space-y-4 max-w-sm mx-auto text-left">
+        <div className="mt-6 space-y-4 max-w-sm mx-auto text-left">
 
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -132,14 +132,14 @@ export default function WelcomeScreen({ onStart }) {
 
         </div>
 
-        <p className="mt-8 text-sm text-slate-500">
+        <p className="mt-6 text-sm text-slate-500">
           Körülbelül <span className="font-semibold">2 perc</span> alatt elkészül.
         </p>
 
         <button
           onClick={onStart}
           className="
-            mt-6
+            mt-5
             w-full
             sm:w-auto
             px-12
