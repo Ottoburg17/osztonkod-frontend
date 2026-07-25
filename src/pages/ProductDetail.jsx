@@ -6,7 +6,7 @@ import productsData from "../data/productsData";
 import { useCart } from "../hooks/useCart";
 import { useToast } from "../context/ToastContext";
 import { useAuth } from "../context/useAuth";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 
 
 
@@ -54,31 +54,16 @@ export default function ProductDetail() {
   return (
 
     <div className="bg-white px-6 py-24">
- 
-       <Helmet>
-      <title>{product.title} | Ösztönkód</title>
 
-      <meta
-        name="description"
-        content={product.description}
+      <SEO
+        title={`${product.title} | Érzelmi Ösztönkód`}
+        description={product.description}
+        canonical={`https://www.osztonkod.hu/products/${product.slug}`}
+        image="https://www.osztonkod.hu/og-image.jpg"
       />
-
-      <link
-        rel="canonical"
-        href={`https://osztonkod.hu/products/${product.slug}`}
-      />
-
-      <meta property="og:title" content={`${product.title} | Ösztönkód`} />
-      <meta property="og:description" content={product.description} />
-      <meta property="og:type" content="product" />
-      <meta property="og:url" content={`https://osztonkod.hu/products/${product.slug}`} />
-      <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-      <meta property="og:site_name" content="Ösztönkód" />
-      <meta property="og:locale" content="hu_HU" />
-
-      <meta name="twitter:card" content="summary_large_image" />
-    </Helmet>
-     
+      
+            
+          
      
       <div className="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-gray-200">
         <Link to="/services" className="text-green-600 underline">

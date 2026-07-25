@@ -1,7 +1,10 @@
 import React from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
+
+
+
 
 export default function InnerLoop() {
 
@@ -54,44 +57,12 @@ export default function InnerLoop() {
   return (
     <div className="w-full min-h-screen bg-white">
 
-       <Helmet>
-  <title>Dopamin ciklus – Hogyan alakul ki a jutalmazási kör | Ösztönkód</title>
-
-      <meta
-        name="description"
-        content="Ismerd meg a dopamin-alapú jutalmazási ciklus működését: trigger, viselkedés, jutalom és rögzülés. Miért válnak bizonyos szokások automatikussá?"
+     <SEO
+        title="Dopamin ciklus – Hogyan alakul ki a jutalmazási kör? | Érzelmi Ösztönkód"
+        description="Ismerd meg a dopamin-alapú jutalmazási ciklus működését: trigger, viselkedés, jutalom és rögzülés. Értsd meg, miért válnak bizonyos szokások automatikussá."
+        canonical="https://www.osztonkod.hu/dopamin-ciklus"
+        image="https://www.osztonkod.hu/og-image.jpg"
       />
-
-      <link rel="canonical" href="https://osztonkod.hu/dopamin-ciklus" />
-
-      <meta property="og:title" content="Dopamin ciklus – Hogyan működik a jutalmazási kör" />
-      <meta property="og:description" content="A dopamin-alapú jutalmazási ciklus működése és hatása a szokások kialakulására." />
-      <meta property="og:type" content="article" />
-      <meta property="og:url" content="https://osztonkod.hu/dopamin-ciklus" />
-      <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-      <meta property="og:site_name" content="Ösztönkód" />
-      <meta property="og:locale" content="hu_HU" />
-
-      <script type="application/ld+json">
-        {`
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Dopamin ciklus – Hogyan működik a jutalmazási kör",
-          "description": "A dopamin-alapú jutalmazási ciklus működése és hatása a szokások kialakulására.",
-          "author": {
-            "@type": "Organization",
-            "name": "Ösztönkód"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Ösztönkód"
-          },
-          "mainEntityOfPage": "https://osztonkod.hu/dopamin-ciklus"
-        }
-        `}
-      </script>
-    </Helmet>
 
       <div className="px-6 py-24 md:pt-32 pb-20 max-w-6xl mx-auto">
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 
 /* =========================
    KÉRDÉSEK – LOOP LOGIKA
@@ -107,25 +107,12 @@ export default function LoopRecognitionMobile() {
 
       <div className="max-w-2xl mx-auto">
 
-      <Helmet>
-
-        <title>Loop felismerés – viselkedési minták felismerése | Ösztönkód</title>
-
-        <meta
-          name="description"
-          content="Interaktív önreflexiós eszköz a viselkedési loopok felismeréséhez. Segít megérteni, hogyan alakul ki a trigger–érzés–viselkedés ciklus."
-        />
-
-        <link rel="canonical" href="https://osztonkod.hu/loop-felismeres" />
-
-        <meta property="og:title" content="Loop felismerés – Ösztönkód eszköz" />
-        <meta property="og:description" content="Interaktív eszköz a viselkedési ciklusok és ismétlődő minták felismeréséhez." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://osztonkod.hu/loop-felismeres" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-        <meta property="og:locale" content="hu_HU" />
-
-      </Helmet>
+       <SEO
+        title="Loop felismerés – Viselkedési minták felismerése | Érzelmi Ösztönkód"
+        description="Interaktív önreflexiós eszköz a viselkedési loopok felismeréséhez. Ismerd fel, hogyan alakul ki a trigger–érzés–viselkedés ciklus."
+        canonical="https://www.osztonkod.hu/loop-felismeres"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
 
         {/* CÍM – KÁRTYÁN KÍVÜL */}
         <motion.h1
@@ -134,7 +121,7 @@ export default function LoopRecognitionMobile() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-extrabold text-green-600 text-center tracking-tight mb-10"
         >
-          Loop felismerés
+          Viselkedési Loop felismerés
         </motion.h1>
 
         <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">

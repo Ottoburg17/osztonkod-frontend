@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 
 
@@ -10,30 +10,14 @@ export default function DeepUnderstand() {
     <div className="w-full min-h-screen bg-white relative overflow-hidden">
 
       {/* ----- SEO ----- */}
-      <Helmet>
-        <title>Mélyebb Megértés – Az érzelmi működés tudományos alapjai | Ösztönkód</title>
-        <meta
-          name="description"
-          content="Az érzelmi minták, ösztönkódok és tudattalan működés tudományos, pszichológiai és idegrendszeri áttekintése."
-        />
 
-        <link rel="canonical" href="https://www.osztonkod.hu/melyebb-megertes" />
-
-        <meta property="og:title" content="Mélyebb Megértés – Az érzelmi működés tudományos alapjai" />
-        <meta property="og:description" content="Az érzelmi minták, ösztönkódok és tudattalan működés pszichológiai és idegrendszeri magyarázata." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.osztonkod.hu/melyebb-megertes" />
-        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
-        <meta property="og:site_name" content="Ösztönkód" />
-        <meta property="og:locale" content="hu_HU" />
-
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mélyebb Megértés – Az érzelmi működés tudományos alapjai" />
-        <meta name="twitter:description" content="Az érzelmi minták és ösztönkódok pszichológiai és idegrendszeri működése." />
-        <meta name="twitter:image" content="https://www.osztonkod.hu/og-image.jpg" />
-      </Helmet>
-
+      <SEO
+        title="Mélyebb megértés – Az érzelmi működés tudományos alapjai | Érzelmi Ösztönkód"
+        description="Ismerd meg az érzelmi minták, a tudattalan működés és az idegrendszeri folyamatok tudományos hátterét. Fedezd fel, hogyan alakulnak ki a visszatérő viselkedési minták."
+        canonical="https://www.osztonkod.hu/melyebb-megertes"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
+            
       {/* ----- OPTIMALIZÁLT PARALLAX GLOW ----- */}
       <motion.div
         className="absolute inset-0 -z-10"

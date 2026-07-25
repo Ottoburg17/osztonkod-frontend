@@ -1,7 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
+
+
+
+
 
 export default function PrivacyPolicy() {
   return (
@@ -10,20 +14,14 @@ export default function PrivacyPolicy() {
 
         {/* SEO */}
 
-        <Helmet>
-        <title>Adatkezelési tájékoztató – Ösztönkód</title>
+        <SEO
+        title="Adatkezelési tájékoztató – Érzelmi Ösztönkód"
+        description="Ismerd meg, hogyan kezeli az Érzelmi Ösztönkód a személyes adatokat, milyen adatokat tárol, milyen célból és milyen jogok illetik meg a felhasználókat."
+        canonical="https://www.osztonkod.hu/privacy"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
 
-        <meta
-          name="description"
-          content="Adatkezelési tájékoztató Németh Ottó adószámos magánszemély által üzemeltetett weboldalhoz."
-        />
-
-        <link rel="canonical" href="https://osztonkod.hu/privacy" />
-      </Helmet>
-          
-
-
-      
+    
 
         {/* Háttér glow */}
         <motion.div
@@ -73,7 +71,7 @@ export default function PrivacyPolicy() {
 
             <p className="text-gray-700 leading-relaxed mt-2">
               <strong>Székhely / lakcím:</strong><br />
-              1141 Budapest, Cinkotai út 91/C
+              1141. Budapest Cinkotai út 91/C
             </p>
 
             <p className="text-gray-700 leading-relaxed mt-2">

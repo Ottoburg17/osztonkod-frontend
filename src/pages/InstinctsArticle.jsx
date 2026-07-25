@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 
 
@@ -11,44 +11,12 @@ export default function InstinctsArticle() {
     <div className="w-full min-h-screen bg-white relative overflow-hidden">
 
       {/* ----- SEO ----- */}
-      <Helmet>
-        <title> Hogyan alakulnak ki a viselkedési mintáink?| Ösztönkód</title>
-        <meta
-          name="description"
-          content="Az ösztönök típusainak, működési elveinek és fejlődéstani szerepének komplex áttekintése. Biológiai, pszichológiai és evolúciós megközelítésben."
-        />
-
-        <link rel="canonical" href="https://osztonkod.hu/osztonok" />
-
-        <meta property="og:title" content="Ösztönök – Hogyan alakulnak ki a viselkedési mintáink?" />
-        <meta property="og:description" content="Az ösztönök típusainak, működési elveinek és fejlődéstani szerepének komplex áttekintése." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://osztonkod.hu/osztonok" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-        <meta property="og:site_name" content="Ösztönkód" />
-        <meta property="og:locale" content="hu_HU" />
-
-        <script type="application/ld+json">
-          {`
-          {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": "Hogyan alakulnak ki a viselkedési mintáink?",
-          "description": "Az ösztönök biológiai, pszichológiai és evolúciós szerepének komplex áttekintése.",
-          "author": {
-            "@type": "Organization",
-            "name": "Ösztönkód"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Ösztönkód"
-          },
-          "mainEntityOfPage": "https://osztonkod.hu/osztonok"
-          }
-          `}
-          </script>
-
-      </Helmet>
+       <SEO
+        title="Hogyan alakulnak ki a viselkedési mintáink? – Érzelmi Ösztönkód"
+        description="Ismerd meg, hogyan alakulnak ki a viselkedési minták az ösztönök, érzelmek és tapasztalatok hatására. Biológiai, pszichológiai és evolúciós áttekintés."
+        canonical="https://www.osztonkod.hu/osztonok"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
 
       {/* ----- PARALLAX SMARAGD GLOW ----- */}
       <motion.div

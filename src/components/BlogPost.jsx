@@ -1,8 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import { formatDate } from "../utils/formatDate";
-
+import SEO from "../components/SEO";
 
 const posts = {
  
@@ -926,11 +925,7 @@ Hanem az, hogy az agyad mit tart érdemesnek.
 },
 
 
-
 }
-
-
-
 
 
 export default function BlogPost() {
@@ -961,63 +956,17 @@ export default function BlogPost() {
   <div className="w-full min-h-screen bg-white relative overflow-hidden">
     <div className="px-6 pt-24 md:pt-32 pb-20 max-w-4xl mx-auto">
 
-      <Helmet>
+      <SEO
+        title={post.title}
+        description={description}
+        canonical={`https://www.osztonkod.hu/blog/${slug}`}
+        image="https://www.osztonkod.hu/og-image.jpg"
+        type="article"
+        publishedAt={post.publishedAt || post.date}
+        updatedAt={post.updatedAt}
+        article={post}
+      />
 
-        <title>{post.title} – Ösztönkód Blog</title>
-
-        <meta name="description" content={description} />
-
-        <link rel="canonical" href={`https://www.osztonkod.hu/blog/${slug}`} />
-
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://www.osztonkod.hu/blog/${slug}`} />
-        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
-        <meta property="og:site_name" content="Érzelmi Ösztönkód" />
-        <meta property="og:locale" content="hu_HU" />
-
-        <meta
-          name="article:published_time"
-          content={post.publishedAt || post.date}
-        />
-
-        {post.updatedAt && (
-          <meta
-            name="article:modified_time"
-            content={post.updatedAt || post.date}
-          />
-        )}
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": post.title,
-            "description": description,
-            "author": {
-              "@type": "Person",
-              "name": "Ösztönkód"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Ösztönkód",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.osztonkod.hu/logo.png"
-              }
-            },
-            "datePublished": post.publishedAt || post.date,
-            "dateModified":
-              post.updatedAt || post.publishedAt || post.date,
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": `https://www.osztonkod.hu/blog/${slug}`
-            }
-          })}
-        </script>
-
-      </Helmet>
 
       <article>
 

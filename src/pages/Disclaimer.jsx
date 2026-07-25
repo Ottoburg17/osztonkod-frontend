@@ -1,7 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
+
+
 
 export default function Disclaimer() {
   return (
@@ -9,54 +11,13 @@ export default function Disclaimer() {
       <div className="px-6 pt-24 md:pt-32 pb-20 max-w-4xl mx-auto">
 
         {/* SEO */}
-        <Helmet>
-        {/* TITLE */}
-        <title>Felelősségkizárás | Ösztönkód alkalmazás jogi nyilatkozat</title>
-
-        {/* META DESCRIPTION */}
-        <meta
-          name="description"
-          content="Az Ösztönkód alkalmazás felelősségkizárása. Az oldal ismerteti az önismereti eszköz használatának feltételeit és jogi korlátait."
+        <SEO
+          title="Felelősségkizárás – Érzelmi Ösztönkód"
+          description="Ismerd meg az Érzelmi Ösztönkód felelősségkizáró nyilatkozatát, a szolgáltatás jellegét, jogi korlátait és a használat feltételeit."
+          canonical="https://www.osztonkod.hu/disclaimer"
+          image="https://www.osztonkod.hu/og-image.jpg"
         />
-
-        {/* CANONICAL */}
-        <link rel="canonical" href="https://www.osztonkod.hu/disclaimer" />
-
-        {/* OPEN GRAPH (social preview) */}
-        <meta property="og:title" content="Felelősségkizárás – Ösztönkód" />
-        <meta
-          property="og:description"
-          content="Az Ösztönkód alkalmazás jogi felelősségkizárása és használati feltételei."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.osztonkod.hu/disclaimer" />
-        <meta property="og:site_name" content="Ösztönkód" />
-
-        {/* TWITTER (nem kötelező, de jó) */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Felelősségkizárás – Ösztönkód" />
-        <meta
-          name="twitter:description"
-          content="Az Ösztönkód alkalmazás jogi felelősségkizárása."
-        />
-
-        {/* STRUCTURED DATA */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "Felelősségkizárás",
-              "url": "https://osztonkod.hu/disclaimer",
-              "description": "Az Ösztönkód alkalmazás felelősségkizáró nyilatkozata."
-            }
-          `}
-        </script>
-      </Helmet>
-            
-
-
-
+                  
 
         {/* Háttér glow */}
         <motion.div

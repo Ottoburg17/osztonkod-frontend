@@ -1,7 +1,8 @@
 // src/pages/Services.jsx
 
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
+
+import SEO from "../components/SEO";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -60,28 +61,14 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-6xl mx-auto px-6 pt-28 pb-20">
-        <Helmet>
-
-          <title>
-          Önismereti programok és elemzések – Érzelmi Ösztönkód
-          </title>
-
-          <meta
-          name="description"
-          content="Fedezd fel az Érzelmi Ösztönkód önismereti programjait és elemzéseit. Eszközök az érzelmi minták felismeréséhez és a tudatos működés kialakításához."
-          />
-
-          <link rel="canonical" href="https://osztonkod.hu/services" />
-
-          <meta property="og:title" content="Önismereti programok – Érzelmi Ösztönkód" />
-          <meta property="og:description" content="Programok és eszközök az érzelmi minták felismeréséhez és a tudatos működéshez." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://osztonkod.hu/services" />
-          <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-          <meta property="og:site_name" content="Érzelmi Ösztönkód" />
-          <meta property="og:locale" content="hu_HU" />
         
-        </Helmet>
+
+        <SEO
+          title="Önismereti programok és elemzések – Érzelmi Ösztönkód"
+          description="Fedezd fel az Érzelmi Ösztönkód önismereti programjait és elemzéseit. Eszközök az érzelmi minták felismeréséhez és a tudatos működés kialakításához."
+          canonical="https://www.osztonkod.hu/services"
+          image="https://www.osztonkod.hu/og-image.jpg"
+        />
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

@@ -35,7 +35,7 @@ export default function WelcomeScreen({ onStart }) {
           relative
           z-10
           w-full
-          max-w-xl
+          max-w-lg
           rounded-3xl
           bg-white/80
           backdrop-blur-xl
@@ -43,9 +43,9 @@ export default function WelcomeScreen({ onStart }) {
           border-white/40
           shadow-2xl
           px-5
-          py-6
-          sm:px-10
-          sm:py-10
+          py-5
+          sm:px-8
+          sm:py-8
           text-center
         "
       >
@@ -58,9 +58,9 @@ export default function WelcomeScreen({ onStart }) {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
           className="
-            w-28
-            sm:w-40
-            md:w-48
+            w-20
+            sm:w-28
+            md:w-32
             mx-auto
             mb-6
             drop-shadow-xl
@@ -72,8 +72,8 @@ export default function WelcomeScreen({ onStart }) {
         <h1
           className="
             text-2xl
-            sm:text-4xl
-            md:text-5xl
+            sm:text-3xl
+            md:text-4xl
             font-bold
             text-slate-800
             leading-tight
@@ -84,9 +84,9 @@ export default function WelcomeScreen({ onStart }) {
 
         <p
           className="
-            mt-5
+            mt-3
             text-base
-            sm:text-lg
+            sm:text-base
             leading-relaxed
             text-slate-600
             max-w-lg
@@ -100,7 +100,7 @@ export default function WelcomeScreen({ onStart }) {
 
         {/* Features */}
 
-        <div className="mt-6 space-y-4 max-w-sm mx-auto text-left">
+        <div className="mt-5 space-y-3 max-w-sm mx-auto text-left">
 
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -142,8 +142,8 @@ export default function WelcomeScreen({ onStart }) {
             mt-5
             w-full
             sm:w-auto
-            px-12
-            py-4
+            px-10
+            py-3
             rounded-2xl
             bg-gradient-to-r
             from-green-500
@@ -164,7 +164,7 @@ export default function WelcomeScreen({ onStart }) {
 
         <p
           className="
-            mt-5
+            mt-4
             text-xs
             sm:text-sm
             text-slate-500

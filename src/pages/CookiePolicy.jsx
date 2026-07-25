@@ -1,7 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
+
+
 
 export default function CookiePolicy() {
   return (
@@ -9,39 +11,18 @@ export default function CookiePolicy() {
       <div className="px-6 pt-24 md:pt-32 pb-20 max-w-4xl mx-auto">
 
         {/* SEO */}
-        <Helmet>
-          <title>Cookie tájékoztató – Ösztönkód</title>
 
-          <meta
-            name="description"
-            content="Cookie tájékoztató az Ösztönkód weboldalon alkalmazott sütikről, helyi adattárolásról és Google Analytics használatáról."
-          />
+        <SEO
+          title="Cookie tájékoztató – Érzelmi Ösztönkód"
+          description="Ismerd meg, milyen sütiket és helyi adattárolási technológiákat használ az Érzelmi Ösztönkód, hogyan kezeljük a hozzájárulásokat és a Google Analytics szolgáltatást."
+          canonical="https://www.osztonkod.hu/cookie-tajekoztato"
+          image="https://www.osztonkod.hu/og-image.jpg"
+        />
 
-          <link
-            rel="canonical"
-            href="https://osztonkod.hu/cookie-tajekoztato"
-          />
 
-          <meta
-            property="og:title"
-            content="Cookie tájékoztató – Ösztönkód"
-          />
 
-          <meta
-            property="og:description"
-            content="Tájékoztató az Ösztönkód weboldalon alkalmazott sütikről és helyi adattárolásról."
-          />
 
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:url"
-            content="https://osztonkod.hu/cookie-tajekoztato"
-          />
-
-          <meta property="og:site_name" content="Ösztönkód" />
-          <meta property="og:locale" content="hu_HU" />
-        </Helmet>
-
+        
         {/* Háttér glow */}
         <motion.div
           className="absolute inset-0 -z-10"

@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 
 
@@ -12,24 +12,12 @@ export default function About() {
       <div className="px-6 pt-24 md:pt-32 pb-20 max-w-4xl mx-auto">
 
         {/* ----- SEO ----- */}
-        <Helmet>
-          <title>Németh Ottó – Az Érzelmi Ösztönkód önismereti rendszer megalkotója</title>
-          <meta
-            name="description"
-            content="Ismerd meg az Érzelmi Ösztönkód történetét és Németh Ottó gondolkodását az ismétlődő érzelmi mintákról, önreflexióról és tudatos működésről."
-          />
-
-          <link rel="canonical" href="https://www.osztonkod.hu/about" />
-
-          <meta property="og:title" content="Németh Ottó – Az Érzelmi Ösztönkód megalkotója" />
-          <meta property="og:description" content="Ismerd meg az Érzelmi Ösztönkód történetét és a mögötte álló gondolkodást." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.osztonkod.hu/about" />
-          <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
-          <meta property="og:site_name" content="Érzelmi Ösztönkód" />
-          <meta property="og:locale" content="hu_HU" />
-
-        </Helmet>
+       <SEO
+        title="Németh Ottó – Az Érzelmi Ösztönkód önismereti rendszer megalkotója"
+        description="Ismerd meg az Érzelmi Ösztönkód történetét és Németh Ottó gondolkodását az ismétlődő érzelmi mintákról, önreflexióról és tudatos működésről."
+        canonical="https://www.osztonkod.hu/about"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
 
         {/* ----- HÁTTÉR GLOW ----- */}
         <motion.div

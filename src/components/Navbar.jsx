@@ -8,6 +8,9 @@ import { useCart } from "../hooks/useCart";
 
 import { useAuth } from "../context/useAuth";
 import { FaUserCircle } from "react-icons/fa";
+import logo from "../assets/images/logo.webp";
+
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,11 +40,22 @@ const Navbar = () => {
           
           {/* LOGO */}
           <div className="justify-self-start">
-            <Link to="/" className="text-lg font-extrabold tracking-wide">
-              Ösztönkód
+            <Link
+              to="/"
+              className="flex items-center gap-1"
+            >
+              <img
+                src={logo}
+                alt="Ösztönkód logó"
+                className="w-18 h-12 object-contain"
+              />
+
+              <span className="text-2xl font-extrabold tracking-wide">
+                Ösztönkód
+              </span>
             </Link>
           </div>
-
+          
           {/* NAV – desktop */}
           <nav className="hidden lg:flex justify-center space-x-6">
             {navLinks.map((link, i) => (

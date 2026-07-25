@@ -1,8 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+
 import "./index.css";
 import App from "./App.jsx";
-import { BrowserRouter } from "react-router-dom";
+
+
+
 import { CartProvider } from "./context/CartContext.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import { ToastProvider } from "./context/ToastContext.jsx";
@@ -10,6 +15,7 @@ import { ToastProvider } from "./context/ToastContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <HelmetProvider>
     <BrowserRouter>
       <AuthProvider>
         <ToastProvider>
@@ -19,5 +25,6 @@ createRoot(document.getElementById("root")).render(
         </ToastProvider>
       </AuthProvider>
     </BrowserRouter>
+    </HelmetProvider>
   </StrictMode>
 );

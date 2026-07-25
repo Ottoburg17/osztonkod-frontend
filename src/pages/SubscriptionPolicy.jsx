@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 
 
 export default function SubscriptionPolicy() {
@@ -10,53 +10,12 @@ export default function SubscriptionPolicy() {
       <div className="px-6 pt-24 md:pt-32 pb-20 max-w-4xl mx-auto">
 
         {/* SEO */}
-        <Helmet>
-        {/* TITLE */}
-        <title>Előfizetés és lemondás | Ösztönkód előfizetési feltételek</title>
-
-        {/* META DESCRIPTION */}
-        <meta
-          name="description"
-          content="Az Ösztönkód alkalmazás előfizetési és lemondási feltételei. Információk a havi előfizetésről, a számlázásról és a Stripe fizetési rendszer működéséről."
-        />
-
-        {/* CANONICAL */}
-        <link rel="canonical" href="https://osztonkod.hu/jogi/elofizetes" />
-
-        {/* OPEN GRAPH */}
-        <meta property="og:title" content="Előfizetés és lemondás – Ösztönkód" />
-        <meta
-          property="og:description"
-          content="Az Ösztönkód alkalmazás előfizetési és lemondási feltételei."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://osztonkod.hu/jogi/elofizetes" />
-        <meta property="og:site_name" content="Ösztönkód" />
-
-        {/* TWITTER */}
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Előfizetés és lemondás – Ösztönkód" />
-        <meta
-          name="twitter:description"
-          content="Az Ösztönkód alkalmazás előfizetési feltételei és lemondási szabályai."
-        />
-
-        {/* STRUCTURED DATA */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "Előfizetés és lemondás",
-              "url": "https://osztonkod.hu/jogi/elofizetes",
-              "description": "Az Ösztönkód alkalmazás előfizetési feltételei és lemondási szabályai."
-            }
-          `}
-        </script>
-
-      </Helmet>
-
-
+        <SEO
+        title="Előfizetés és lemondás"
+        description="Az Ösztönkód alkalmazás előfizetési és lemondási feltételei. Információk a havi előfizetésről, a számlázásról és a Stripe fizetési rendszer működéséről."
+        canonical="https://www.osztonkod.hu/jogi/elofizetes"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
 
 
         {/* Háttér glow */}

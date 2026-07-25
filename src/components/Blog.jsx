@@ -1,7 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+
+import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 import { formatDate } from "../utils/formatDate";
 
@@ -131,26 +132,14 @@ export default function Blog() {
 
 
       {/* ----- SEO ------- */}
-     <Helmet>
-        <title>
-        Önismeret, trauma és érzelmi minták – Ösztönkód Blog
-        </title>
 
-        <meta
-        name="description"
-        content="Önismereti és pszichológiai cikkek az idegrendszer működéséről, traumáról, érzelmi mintákról és tudatos működésről."
-        />
-
-        <link rel="canonical" href="https://www.osztonkod.hu/blog" />
-
-        <meta property="og:title" content="Ösztönkód Blog – Önismereti cikkek" />
-        <meta property="og:description" content="Cikkek az idegrendszerről, traumáról és érzelmi mintákról." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.osztonkod.hu/blog" />
-        <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
-        <meta property="og:site_name" content="Érzelmi Ösztönkód" />
-        <meta property="og:locale" content="hu_HU" />
-    </Helmet>
+      <SEO
+        title="Önismeret, trauma és érzelmi minták – Ösztönkód Blog"
+        description="Önismereti és pszichológiai cikkek az idegrendszer működéséről, traumáról, érzelmi mintákról és tudatos működésről."
+        canonical="https://www.osztonkod.hu/blog"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
+          
 
 
        <nav className="text-sm text-gray-500 mb-10">

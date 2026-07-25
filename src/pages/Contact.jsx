@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import "leaflet/dist/leaflet.css";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import api from "../api/axios";
@@ -69,60 +69,13 @@ export default function Contact() {
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
 
-        <Helmet>
-
-          <title>Kapcsolat – Érzelmi Ösztönkód</title>
-
-          <meta
-            name="description"
-            content="Lépj kapcsolatba az Érzelmi Ösztönkód csapatával. Cím: 1026 Budapest, Pasaréti út 121–123. Küldj üzenetet vagy látogass el hozzánk."
-          />
-
-          <link rel="canonical" href="https://www.osztonkod.hu/kapcsolat" />
-
-          <meta property="og:title" content="Kapcsolat – Érzelmi Ösztönkód" />
-          <meta property="og:image:alt" content="Érzelmi Ösztönkód – kapcsolat és elérhetőség" />
-          <meta property="og:description" content="Kapcsolatfelvétel az Érzelmi Ösztönkód csapatával Budapesten vagy online üzenetben." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.osztonkod.hu/kapcsolat" />
-          <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
-          <meta property="og:site_name" content="Érzelmi Ösztönkód" />
-          <meta property="og:locale" content="hu_HU" />
-
-
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Kapcsolat – Érzelmi Ösztönkód" />
-          <meta name="twitter:description" content="Kapcsolatfelvétel az Érzelmi Ösztönkód csapatával Budapesten vagy online üzenetben." />
-          <meta name="twitter:image" content="https://www.osztonkod.hu/og-image.jpg" />
-
-           <script type="application/ld+json">
-              {`
-              {
-                "@context": "https://schema.org",
-                "@type": "ProfessionalService",
-                "@id": "https://www.osztonkod.hu/kapcsolat",
-                "name": "Érzelmi Ösztönkód",
-                "url": "https://www.osztonkod.hu/kapcsolat",
-                "telephone": "+36301170238",
-                "areaServed": "HU",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "Pasaréti út 121–123",
-                  "addressLocality": "Budapest",
-                  "postalCode": "1026",
-                  "addressCountry": "HU"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 47.5219,
-                  "longitude": 19.0421
-                }
-              }
-              `}
-              </script>
-
-          </Helmet>
-              
+        <SEO
+          title="Kapcsolat – Érzelmi Ösztönkód"
+          description="Vedd fel velünk a kapcsolatot! Küldj üzenetet az Érzelmi Ösztönkód csapatának, vagy látogass el budapesti irodánkba."
+          canonical="https://www.osztonkod.hu/kapcsolat"
+          image="https://www.osztonkod.hu/og-image.jpg"
+        />
+                      
 
       <div className="px-6 pt-24 md:pt-32 pb-20 max-w-4xl mx-auto relative z-10">
 

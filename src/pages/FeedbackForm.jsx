@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
+
 
 const PRODUCTS = [
   "BrainMap",
@@ -16,6 +18,14 @@ const PRODUCTS = [
 export default function FeedbackForm() {
   return (
     <div className="w-full min-h-screen bg-white py-24 px-6 relative overflow-hidden">
+      
+      <SEO
+        title="Személyes felismerés megosztása"
+        description="Oszd meg személyes felismeréseidet az Érzelmi Ösztönkód használata után. Visszajelzésed segíthet másoknak is."
+        canonical="https://www.osztonkod.hu/feedback-success"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
+            
 
       {/* Finom háttér glow */}
       <motion.div

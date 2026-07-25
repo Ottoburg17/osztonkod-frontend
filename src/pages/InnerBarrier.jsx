@@ -1,7 +1,7 @@
 import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 
 
 /* =========================
@@ -109,26 +109,12 @@ export default function InnerBarrier() {
   return (
     <div className="w-full bg-white flex flex-col items-center px-6 pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-20">
 
-        <Helmet>
-
-        <title>Belső gát – önreflexiós eszköz | Ösztönkód</title>
-
-        <meta
-          name="description"
-          content="Interaktív önreflexiós eszköz az ellenállás és a belső gát felismeréséhez. Segít tudatosítani, mi akadályozza a cselekvést egy adott pillanatban."
+       <SEO
+          title="Belső gát – ÖNreflexiós eszköz | Érzelmi Ösztönkód"
+          description="Interaktív önreflexiós eszköz a belső ellenállás és a halogatás felismeréséhez. Segít tudatosítani, mi akadályozza a cselekvést egy adott pillanatban."
+          canonical="https://www.osztonkod.hu/belso-gat"
+          image="https://www.osztonkod.hu/og-image.jpg"
         />
-
-        <link rel="canonical" href="https://osztonkod.hu/belso-gat" />
-
-        <meta property="og:title" content="Belső gát – önreflexiós eszköz" />
-        <meta property="og:description" content="Interaktív eszköz a belső ellenállás felismeréséhez és tudatosításához." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://osztonkod.hu/belso-gat" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-        <meta property="og:site_name" content="Ösztönkód" />
-        <meta property="og:locale" content="hu_HU" />
-
-        </Helmet>
 
 
          {/* PAGE HEADER */}

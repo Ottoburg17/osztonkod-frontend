@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 
 
 
@@ -45,30 +45,13 @@ export default function InstinctAware({
   return (
     <div className="w-full min-h-screen bg-white">
 
-      <Helmet>
-
-      <title>Gondolati minta felismerés – Ösztönkód önreflexiós eszköz</title>
-
-      <meta
-        name="description"
-        content="Interaktív önreflexiós eszköz a visszatérő gondolati minták felismeréséhez. Segít tudatosítani az automatikus reakciókat és új nézőpontokat találni."
+      <SEO
+        title="Gondolati minta felismerés – Érzelmi Ösztönkód"
+        description="Interaktív önreflexiós eszköz a visszatérő gondolati minták felismeréséhez. Segít tudatosítani az automatikus reakciókat és új nézőpontokat találni."
+        canonical="https://www.osztonkod.hu/gondolati-minta-felismeres"
+        image="https://www.osztonkod.hu/og-image.jpg"
       />
 
-      <link rel="canonical" href="https://osztonkod.hu/gondolati-minta-felismeres" />
-
-      <meta property="og:title" content="Gondolati minta felismerés – Ösztönkód" />
-      <meta property="og:description" content="Interaktív eszköz a visszatérő gondolati minták felismeréséhez." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://osztonkod.hu/gondolati-minta-felismeres" />
-      <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-      <meta property="og:locale" content="hu_HU" />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Gondolati minta felismerés – Ösztönkód" />
-      <meta name="twitter:description" content="Interaktív eszköz a visszatérő gondolati minták felismeréséhez." />
-      <meta name="twitter:image" content="https://osztonkod.hu/og-image.jpg" />
-
-      </Helmet>
 
       {/* MAX WIDTH WRAPPER */}
       <div className="px-6 py-24 max-w-xl mx-auto">

@@ -1,7 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import React from "react";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
+
+
+
 
 export default function Terms() {
   return (
@@ -9,22 +12,15 @@ export default function Terms() {
       <div className="px-6 pt-24 md:pt-32 pb-20 max-w-4xl mx-auto">
 
         {/* SEO */}
-        <Helmet>
-          <title>Felhasználási feltételek – Ösztönkód</title>
-          <meta
-            name="description"
-            content="Felhasználási feltételek az Ösztönkód weboldal és szolgáltatások igénybevételéhez."
-          />
+        <SEO
+          title="Felhasználási feltételek"
+          description="Felhasználási feltételek az Ösztönkód weboldal és szolgáltatásainak igénybevételéhez."
+          canonical="https://www.osztonkod.hu/terms"
+          image="https://www.osztonkod.hu/og-image.jpg"
+        />
 
-          <link rel="canonical" href="https://osztonkod.hu/terms" />
 
-          <meta property="og:title" content="Felhasználási feltételek – Ösztönkód" />
-          <meta property="og:description" content="Felhasználási feltételek az Ösztönkód weboldal használatához." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://osztonkod.hu/terms" />
-          <meta property="og:site_name" content="Ösztönkód" />
-          <meta property="og:locale" content="hu_HU" />
-        </Helmet>
+                
 
         {/* Háttér glow */}
         <motion.div

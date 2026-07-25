@@ -1,33 +1,18 @@
 import { Link } from "react-router-dom";
 import { schemaDetails } from "../data/schemaDetails";
-import { Helmet } from "react-helmet";
-
-
+import SEO from "../components/SEO";
 
 
 export default function Schemas() {
   return (
     <div className="max-w-3xl mx-auto mt-20 px-6">
 
-       <Helmet>
-        <title>Ösztönkódok – érzelmi sémák és viselkedési minták | Ösztönkód</title>
-
-        <meta
-          name="description"
-          content="Az érzelmi ösztönkódok és viselkedési sémák áttekintése. Ismerd meg azokat a belső mintákat, amelyek befolyásolják a reakcióidat és kapcsolataidat."
-        />
-
-        <link rel="canonical" href="https://osztonkod.hu/schemas" />
-
-        <meta property="og:title" content="Ösztönkódok – érzelmi sémák és viselkedési minták" />
-        <meta property="og:description" content="Ismerd meg az érzelmi sémákat és viselkedési mintákat, amelyek az ösztönkód működését formálják." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://osztonkod.hu/schemas" />
-        <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-        <meta property="og:site_name" content="Ösztönkód" />
-        <meta property="og:locale" content="hu_HU" />
-      </Helmet>
-
+       <SEO
+        title="Ösztönkódok – érzelmi sémák és viselkedési minták"
+        description="Az érzelmi ösztönkódok és viselkedési sémák áttekintése. Ismerd meg azokat a belső mintákat, amelyek befolyásolják a reakcióidat és kapcsolataidat."
+        canonical="https://www.osztonkod.hu/schemas"
+        image="https://www.osztonkod.hu/og-image.jpg"
+      />
 
       <h1 className="text-3xl md:text-4xl font-bold text-green-600 text-center mb-10 mt-24">
         Ösztönkódok
@@ -44,7 +29,7 @@ export default function Schemas() {
               {schema.title}
             </h2>
             <p className="text-gray-600 text-sm">
-              {schema.description.substring(0, 120)}...
+             {schema.description?.slice(0, 120) ?? ""}...
             </p>
           </Link>
         ))}

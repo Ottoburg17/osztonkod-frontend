@@ -2,13 +2,13 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 import { schemaDetails } from "../data/schemaDetails";
 
 export default function SchemaDetail() {
   const { schemaId } = useParams();
   const schema = schemaDetails[schemaId];
-
+  
   if (!schema) {
     return (
       <div className="text-center text-red-600 text-xl mt-20">
@@ -17,44 +17,25 @@ export default function SchemaDetail() {
     );
   }
 
+  const description = schema.description?.slice(0, 155) ?? "";
+
+
+
+
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
 
       {/* SEO */}
-      <Helmet>
-        <title>{schema.title} | Ösztönkód</title>
+      <SEO
+        title={schema.title}
+        description={description}
+        canonical={`https://www.osztonkod.hu/schemas/${schemaId}`}
+        image="https://www.osztonkod.hu/og-image.jpg"
+        type="article"
+        article={schema}
+      />
 
-        <meta
-          name="description"
-          content={schema.description.substring(0, 155)}
-        />
-
-        <link
-          rel="canonical"
-          href={`https://osztonkod.hu/schema/${schemaId}`}
-        />
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": schema.title,
-            "description": schema.description,
-            "author": {
-              "@type": "Organization",
-              "name": "Ösztönkód"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Ösztönkód"
-            },
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": `https://osztonkod.hu/schema/${schemaId}`
-            }
-          })}
-        </script>
-      </Helmet>
+        
 
       {/* ---- TARTALOM ---- */}
       <div className="relative z-10 max-w-3xl mx-auto px-6 py-24">

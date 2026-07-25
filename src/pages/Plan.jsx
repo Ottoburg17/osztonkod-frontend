@@ -2,7 +2,9 @@ import React, { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
+
+
 
 
 /* ---- OPCIÓK ---- */
@@ -150,25 +152,12 @@ export default function Plan() {
   <div className="w-full min-h-screen bg-white">
    
 
-    <Helmet>
-
-    <title>Viselkedési Navigátor – Ösztönkód önreflexiós eszköz</title>
-
-    <meta
-      name="description"
-      content="Interaktív önreflexiós eszköz a viselkedési minták felismeréséhez. A Viselkedési Navigátor segít megfigyelni stressz-, kommunikációs és motivációs helyzeteket."
+    <SEO
+      title="Viselkedési Navigátor – Ösztönkód önreflexiós eszköz"
+      description="Interaktív önreflexiós eszköz a viselkedési minták felismeréséhez. A Viselkedési Navigátor segít megfigyelni stressz-, kommunikációs és motivációs helyzeteket."
+      canonical="https://www.osztonkod.hu/viselkedesi-navigator"
+      image="https://www.osztonkod.hu/og-image.jpg"
     />
-
-    <link rel="canonical" href="https://www.osztonkod.hu/viselkedesi-navigator" />
-
-    <meta property="og:title" content="Viselkedési Navigátor – Ösztönkód" />
-    <meta property="og:description" content="Interaktív eszköz a viselkedési minták megfigyeléséhez és tudatosításához." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.osztonkod.hu/viselkedesi-navigator" />
-    <meta property="og:image" content="https://www.osztonkod.hu/og-image.jpg" />
-    <meta property="og:locale" content="hu_HU" />
-
-    </Helmet>
 
 
 

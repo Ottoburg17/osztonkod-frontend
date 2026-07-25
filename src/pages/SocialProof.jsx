@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import GlowOrb from "../components/GlowOrb";
-import { Helmet } from "react-helmet";
+import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 
 export default function SocialProof() {
@@ -28,29 +28,14 @@ export default function SocialProof() {
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
       
       
-      <Helmet>
-
-<title>Felhasználói visszajelzések – Érzelmi Ösztönkód</title>
-
-<meta
-  name="description"
-  content="Olvasd el mások személyes felismeréseit és megéléseit az Érzelmi Ösztönkód rendszerrel kapcsolatban. Valós tapasztalatok és visszajelzések."
-/>
-
-    <link rel="canonical" href="https://osztonkod.hu/visszajelzesek" />
-
-    <meta property="og:title" content="Visszajelzések – Érzelmi Ösztönkód" />
-    <meta property="og:description" content="Személyes felismerések és megélések az Érzelmi Ösztönkód rendszerrel kapcsolatban." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://osztonkod.hu/visszajelzesek" />
-    <meta property="og:image" content="https://osztonkod.hu/og-image.jpg" />
-    <meta property="og:site_name" content="Érzelmi Ösztönkód" />
-    <meta property="og:locale" content="hu_HU" />
-
-    </Helmet>
+      <SEO
+      title="Felhasználói visszajelzések"
+      description="Olvasd el mások személyes felismeréseit és megéléseit az Érzelmi Ösztönkód rendszerrel kapcsolatban. Valós tapasztalatok és visszajelzések."
+      canonical="https://www.osztonkod.hu/feedback"
+      image="https://www.osztonkod.hu/og-image.jpg"
+    />
+              
           
-          
-      
       {/* Glow háttér */}
       <GlowOrb
         id="socialFull1"
