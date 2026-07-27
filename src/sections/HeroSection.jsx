@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import GlowOrb from "../components/GlowOrb";
-
+import { Brain } from "lucide-react";
 
 export default function HeroSection() {
   const { ref, inView } = useInView({
@@ -80,26 +80,9 @@ export default function HeroSection() {
       />
 
 
-      <div
-        className="
-          mt-2
-          inline-flex
-          items-center
-          gap-2
-          rounded-full
-          border
-          border-emerald-200
-          bg-emerald-50
-          px-4
-          py-2
-          text-sm
-          font-medium
-          text-emerald-700
-          relative
-          z-10
-        "
-      >
-        🧠 Interaktív önismereti elemzés
+        <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-700">
+        <Brain className="w-4 h-4" />
+        Fedezd fel rejtett érzelmi mintáidat
       </div>
 
       {/** -------------------------------------------------------- */}
@@ -124,7 +107,7 @@ export default function HeroSection() {
           z-10
         "
       >
-        Miért reagálsz mindig ugyanúgy?
+        Miért ismétlődnek ugyanazok a helyzetek az életedben?
       </motion.h1>
 
       <motion.p
@@ -144,23 +127,28 @@ export default function HeroSection() {
         Fedezd fel, mi irányítja valójában a reakcióidat.
       </motion.p>
 
+
       <motion.p
         initial={{ opacity: 0, y: 35 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1, delay: 0.2 }}
         className="text-lg
-        md:text-xl
-        mt-8
-        max-w-2xl
-        leading-relaxed
-        text-slate-600
-        relative
-        z-10"
+          md:text-xl
+          mt-8
+          max-w-2xl
+          leading-relaxed
+          text-slate-600
+          relative
+          z-10"
       >
-       Az Ösztönkód segít felismerni az ismétlődő érzelmi mintákat, hogy tudatosabban reagálhass a mindennapi helyzetekben.
+        Ne hagyd, hogy az ismétlődő érzelmi minták újra és újra ugyanazokra az eredményekre vezessenek.
+        <span className="font-semibold text-green-700">
+        {" "}Válaszolj néhány kérdésre,
+        </span>{" "}
+        és fedezd fel, milyen érzelmi minták alakítják a reakcióidat.
       </motion.p>
 
-  
+
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -168,21 +156,6 @@ export default function HeroSection() {
         className="mt-10 md:mt-12 relative z-10"
       >
 
-        <motion.p
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ delay: 0.38, duration: 0.8 }}
-        className="mb-8
-                max-w-xl
-                text-lg
-                leading-relaxed
-                text-slate-600"
-          >
-        Válaszolj néhány kérdésre, és fedezd fel,
-        <span className="font-semibold text-green-700">
-          {" "}milyen érzelmi minták alakítják a reakcióidat.
-        </span>
-      </motion.p>
 
         <Link
           to="/test"
