@@ -1,183 +1,137 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import { CircleHelp } from "lucide-react";
 
-import brainImage from "../../assets/images/whyitworks.webp";
 
 export default function WelcomeScreen({ onStart }) {
   return (
-    <div
-      className="
-        min-h-screen
-        flex
-        items-center
-        justify-center
-        px-4
-        py-3 sm:py-6
-        bg-gradient-to-br
-        from-green-50
-        via-emerald-100
-        to-green-200
-        relative
-        overflow-y-auto
-      "
-    >
-      {/* Glow */}
+    <div className="w-full min-h-screen bg-white px-4 py-24">
 
-      <div className="absolute top-[-15%] left-[10%] w-[320px] h-[320px] bg-emerald-400/15 blur-[140px] rounded-full" />
+      <div className="max-w-2xl mx-auto">
 
-      <div className="absolute bottom-[-15%] right-[10%] w-[320px] h-[320px] bg-green-400/15 blur-[140px] rounded-full" />
-
-      <motion.div
-        initial={{ opacity: 0, y: 25 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="
-          relative
-          z-10
-          w-full
-          max-w-lg
-          rounded-3xl
-          bg-white/80
-          backdrop-blur-xl
-          border
-          border-white/40
-          shadow-2xl
-          px-5
-          py-5
-          sm:px-8
-          sm:py-8
-          text-center
-        "
-      >
-        {/* Brain */}
-
-        <motion.img
-          src={brainImage}
-          alt="Brain"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="
-            w-20
-            sm:w-28
-            md:w-32
-            mx-auto
-            mb-6
-            drop-shadow-xl
-            pointer-events-none
-            select-none
-          "
-        />
-
-        <h1
-          className="
-            text-2xl
-            sm:text-3xl
-            md:text-4xl
-            font-bold
-            text-slate-800
-            leading-tight
-          "
+        {/* CÍM */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-extrabold text-green-600 text-center tracking-tight mb-10"
         >
           Önismereti teszt
-        </h1>
+        </motion.h1>
 
-        <p
-          className="
-            mt-3
-            text-base
-            sm:text-base
-            leading-relaxed
-            text-slate-600
-            max-w-lg
-            mx-auto
-          "
+        {/* LEÍRÁS */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          className="text-gray-600 text-center max-w-xl mx-auto mb-10"
         >
-          Fedezd fel, milyen érzelmi minták
-          befolyásolják a reakcióidat,
+          Fedezd fel, milyen érzelmi minták befolyásolják a reakcióidat,
           és ismerd meg önmagad néhány perc alatt.
-        </p>
+        </motion.p>
 
-        {/* Features */}
-
-        <div className="mt-5 space-y-3 max-w-sm mx-auto text-left">
-
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span className="text-slate-700 font-medium">
-              10 rövid kérdés
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span className="text-slate-700 font-medium">
-              Kitöltési idő: kb. 2 perc
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span className="text-slate-700 font-medium">
-              Nincs szükség regisztrációra
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span className="text-slate-700 font-medium">
-              Az első elemzés ingyenes
-            </span>
-          </div>
-
-        </div>
-
-        <p className="mt-6 text-sm text-slate-500">
-          Körülbelül <span className="font-semibold">2 perc</span> alatt elkészül.
-        </p>
-
-        <button
-          onClick={onStart}
+        {/* FŐ KÁRTYA */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
           className="
-            mt-5
-            w-full
-            sm:w-auto
-            px-10
-            py-3
-            rounded-2xl
-            bg-gradient-to-r
-            from-green-500
-            to-emerald-600
-            hover:from-green-600
-            hover:to-emerald-700
-            text-white
-            text-lg
-            font-semibold
+            bg-white/90
+            backdrop-blur-xl
+            border
+            border-green-200
             shadow-xl
-            transition-all
-            duration-300
-            hover:scale-105
+            rounded-3xl
+            p-8
           "
         >
-          Teszt indítása →
-        </button>
+          {/* KÉP */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="w-24 h-24 rounded-full bg-green-50 flex items-center justify-center border border-green-200 shadow-sm">
+              <CircleHelp
+                size={52}
+                strokeWidth={2.2}
+                className="text-green-600"
+              />
+            </div>
+          </motion.div>
+          
 
-        <p
-          className="
-            mt-4
-            text-xs
-            sm:text-sm
-            text-slate-500
-            leading-relaxed
-          "
-        >
-          Nincsenek jó vagy rossz válaszok.
-          <br />
-          Csak válaszolj őszintén.
-        </p>
-      </motion.div>
+          {/* LISTA */}
+          <div className="space-y-4 max-w-md mx-auto">
+
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-green-500" />
+              <span className="text-gray-700">
+                18 rövid kérdés
+              </span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-green-500" />
+              <span className="text-gray-700">
+                Kitöltési idő: kb. 3 perc
+              </span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-green-500" />
+              <span className="text-gray-700">
+                Nincs szükség regisztrációra
+              </span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-green-500" />
+              <span className="text-gray-700">
+                Az első elemzés ingyenes
+              </span>
+            </div>
+
+          </div>
+
+          {/* INFORMÁCIÓ */}
+          <p className="mt-8 text-center text-sm text-gray-500">
+            Körülbelül <span className="font-semibold">3 perc</span> alatt elkészül.
+          </p>
+
+          {/* GOMB */}
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={onStart}
+              className="
+                px-10
+                py-3
+                rounded-2xl
+                bg-green-600
+                hover:bg-green-700
+                text-white
+                font-semibold
+                transition
+                shadow-lg
+              "
+            >
+              Teszt indítása →
+            </button>
+          </div>
+
+          {/* ALSÓ SZÖVEG */}
+          <p className="mt-6 text-center text-sm text-gray-500">
+            Nincsenek jó vagy rossz válaszok.
+            <br />
+            Csak válaszolj őszintén.
+          </p>
+
+        </motion.div>
+
+      </div>
+
     </div>
   );
 }
-
 

@@ -10,8 +10,6 @@ import { CATEGORY_INSIGHTS } from "../../data/testResults";
 
 
 
-
-
 const SCALE = [1, 2, 3, 4, 5];
 
 export default function MentalPatternTest() {
@@ -45,18 +43,31 @@ export default function MentalPatternTest() {
   // 🏁 RESULT SCREEN (PRO)
   if (engine.isDone) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4 
-      bg-gradient-to-br from-green-50 via-emerald-100 to-green-200 relative overflow-hidden">
+      <div className="min-h-screen
+          bg-gradient-to-br
+          from-green-50
+          via-emerald-100
+          to-green-200
+          px-4
+          pt-28
+          pb-10
+          relative
+          overflow-hidden">
 
         {/* GLOW */}
         <div className="absolute top-[-10%] left-[10%] w-[300px] h-[300px] bg-emerald-400 opacity-20 blur-[120px] rounded-full" />
         <div className="absolute bottom-[-10%] right-[10%] w-[300px] h-[300px] bg-green-300 opacity-20 blur-[120px] rounded-full" />
 
-        <div className="max-w-xl w-full z-10 text-center">
+        <div className="max-w-2xl mx-auto w-full relative z-10">
 
-          <h2 className="mt-6 text-3xl font-bold mb-8 text-green-700">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-green-600 text-center tracking-tight mb-6">
             Ez határozza meg leginkább a működésed
           </h2>
+
+          <p className="text-gray-600 text-center max-w-xl mx-auto mb-10">
+            Az elemzésed alapján ez a három legerősebb érzelmi minta,
+            amely jelenleg a legnagyobb hatással van a döntéseidre és kapcsolataidra.
+          </p>
 
           {engine.results.map(([category], index) => {
             const insight = CATEGORY_INSIGHTS[category];
@@ -68,9 +79,9 @@ export default function MentalPatternTest() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="mb-6 p-6 rounded-2xl 
-                bg-white/80 backdrop-blur-md 
-                border border-white/40 shadow-xl text-left"
+                className="mb-6 p-6 rounded-3xl 
+                bg-white/90 backdrop-blur-xl 
+                border border-green-200 shadow-xl text-left"
               >
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
                   {insight.title}
@@ -87,16 +98,27 @@ export default function MentalPatternTest() {
             );
           })}
 
-          <button
-            onClick={engine.reset}
-            className="mt-5 px-8 py-3 rounded-2xl 
-            bg-gradient-to-r from-green-500 to-emerald-600 
-            text-white font-semibold shadow-lg 
-            hover:scale-105 hover:shadow-xl 
-            transition-all duration-200"
-          >
-            Újrakezdés
-          </button>
+          <div className="flex justify-center mt-2">
+            <button
+              onClick={engine.reset}
+              className="
+                px-8
+                py-3
+                rounded-2xl
+                bg-gradient-to-r
+                from-green-500
+                to-emerald-600
+                text-white
+                font-semibold
+                shadow-lg
+                hover:scale-105
+                transition-all
+                duration-200
+              "
+            >
+              Újrakezdés
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -104,14 +126,23 @@ export default function MentalPatternTest() {
 
   // 🧠 QUESTION UI (PRO)
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 
-    bg-gradient-to-br from-green-50 via-emerald-100 to-green-200 relative overflow-hidden select-none">
+    <div className="min-h-screen
+          bg-gradient-to-br
+          from-green-50
+          via-emerald-100
+          to-green-200
+          px-4
+          pt-28
+          pb-10
+          relative
+          overflow-hidden
+          select-none">
 
       {/* GLOW */}
       <div className="absolute top-[-10%] left-[10%] w-[300px] h-[300px] bg-emerald-400 opacity-20 blur-[120px] rounded-full" />
       <div className="absolute bottom-[-10%] right-[10%] w-[300px] h-[300px] bg-green-300 opacity-20 blur-[120px] rounded-full" />
 
-      <div className="max-w-xl w-full z-10">
+      <div className="max-w-2xl mx-auto w-full relative z-10">
 
         {/* HEADER */}
         <div className="flex justify-between items-center mb-4 text-gray-600">
@@ -148,9 +179,9 @@ export default function MentalPatternTest() {
             exit={{ opacity: 0, scale: 0.95, y: -30 }}
             transition={{ duration: 0.25 }}
             className="p-8 rounded-3xl 
-            bg-white/80 backdrop-blur-md 
-            border border-white/40 
-            shadow-2xl text-center"
+            bg-white/90 backdrop-blur-xl 
+            border border-green-200
+            shadow-xl text-center"
           >
             <h2 className="text-xl md:text-2xl font-medium mb-8 leading-relaxed text-gray-800">
               {engine.current?.text}
